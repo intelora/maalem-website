@@ -11,6 +11,7 @@ import Button from 'common/src/components/Button';
 import Heading from 'common/src/components/Heading';
 import Rating from 'common/src/components/Rating';
 import Container from 'common/src/components/UI/Container';
+import styled from 'styled-components';
 import BannerWrapper, {
   BannerContent,
   RatingInfo,
@@ -21,6 +22,25 @@ import BannerWrapper, {
   CustomerWrapper,
   ImageWrapper,
 } from './banner.style';
+
+import {
+  fontFamily,
+  fontWeight,
+  textAlign,
+  lineHeight,
+  letterSpacing,
+} from 'styled-system';
+import { base, themed } from '../../../../../common/src/components/base';
+
+const HeadingWrapper = styled('p')(
+  base,
+  fontFamily,
+  fontWeight,
+  textAlign,
+  lineHeight,
+  letterSpacing,
+  themed('Heading')
+);
 
 import microsoft from 'common/src/assets/image/maalem/envato-icon.png';
 import bannerImg from 'common/src/assets/image/maalem/banner2.png';
@@ -85,42 +105,43 @@ const Banner = () => {
     <BannerWrapper id="home">
       <Container>
         <BannerContent>
-          <Fade up>
+        {/* <HeadingWrapper >Download Mobile App</HeadingWrapper> */}
+           {/* <Fade up>
             <RatingInfo>
               <Rating rating={5} />
               Maalem - The Loan Facilitation
             </RatingInfo>
-          </Fade>
+          </Fade> */}
           <Fade up delay={100}>
             <Heading
               as="h1"
-              content="SME LoanOfferings"
+              content="Download Mobile App"
             />
           </Fade>
           <Fade up delay={200}>
             <Text
-              content="We help SME to increase the contribution that SME's can make to the economy."
+              content="The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters 0, as opposed to using 'Content here, content here', making 0 it look like readable English. Lorem Ipsum is simply dummy text of the printing.."
             />
           </Fade>
           <Fade up delay={300}>
             <ButtonGroup>
-              <Button className="primary" title="About Us" />
-              <Button
+              <Button className="primary" title="Download App" />
+              {/* <Button
                 className="text"
                 variant="textButton"
                 icon={<Icon icon={playCircle} />}
                 iconPosition="left"
                 title="Watch Video"
-              />
+              /> */}
             </ButtonGroup>
           </Fade>
-          <VideoGroup>
+          {/*<VideoGroup>
             <img
               src={videoBanner1}
               onClick={handleVideoModal}
               alt="Microsoft-0"
             />
-          </VideoGroup>
+          </VideoGroup> */}
         </BannerContent>
         <BannerImage>
           <Fade up delay={100}>
