@@ -6,14 +6,25 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { DrawerContext } from '../../contexts/DrawerContext';
 
 const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
+  
   const { dispatch } = useContext(DrawerContext);
   // empty array for scrollspy items
   const scrollItems = [];
-
+  
+  // toggle language in menu
+  const toggleLanguage = () => {
+    if(window.sessionStorage.getItem('lang')==='en'){
+      window.sessionStorage.setItem('lang', 'ar');
+    }else{
+      window.sessionStorage.setItem('lang', 'en');
+    }
+    
+  };
+  
   // convert menu path to scrollspy items
   menuItems.forEach(item => {
-    scrollItems.push(item.path.slice(1));
-  });
+    scrollItems.push(item.href);
+  });    
 
   // Add all classs to an array
   const addAllClasses = ['scrollspy__menu'];
@@ -29,14 +40,7 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
       type: 'TOGGLE',
     });
   };
-  const toggleLanguage = () => {
-    console.log("hdjsjdns", window.sessionStorage.getItem('lang'))
-    if(window.sessionStorage.getItem('lang')=='En'){
-      window.sessionStorage.setItem('lang', 'Ar')
-    }else{
-      window.sessionStorage.setItem('lang', 'En')
-    }
-  };
+
   return (
     <Scrollspy
       items={scrollItems}
@@ -52,15 +56,15 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
             <>
               {drawerClose ? (
                 <AnchorLink
-                  href={menu.path}
-                  offset={menu.offset}
+                  href={menu.href}
+                  // offset={}
                   onClick={toggleDrawer}
                 >
-                  {menu.label}
+                  {menu.item}
                 </AnchorLink>
               ) : (
-                <AnchorLink href={menu.path} offset={menu.offset}>
-                  {menu.label}
+                <AnchorLink href={menu.href} > {/*offset={} */}
+                  {menu.item}
                 </AnchorLink>
               )}
             </>

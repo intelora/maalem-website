@@ -15,13 +15,14 @@ import useOnClickOutside from 'common/src/hooks/useOnClickOutside';
 import NavbarWrapper, { MenuArea, MobileMenu, Search } from './navbar.style';
 import LogoImage from 'common/src/assets/image/maalem/logo-white.png';
 import LogoImageAlt from 'common/src/assets/image/maalem/logo.png';
+import axios from 'axios';
 
 const Navbar = () => {
   if(window.sessionStorage.getItem("lang") == null){
     window.sessionStorage.setItem("lang", "en")
     console.log("English is selected 111")
   }
-  const data = useStaticQuery(graphql`
+/*  const data = useStaticQuery(graphql`
     query {
       maalemJson {
         navbar {
@@ -38,13 +39,32 @@ const Navbar = () => {
       }
     }
   `);
+
+
+
   const { navMenu } = data.maalemJson.navbar;
+*/
   const [state, setState] = useState({
     search: '',
     searchToggle: false,
     mobileMenu: false,
   });
 
+  // Code to fetch data for menu items...
+  axios.get(`http://122.166.172.240:1337/navbars`)
+  .then(res => { 
+    setState({ ...state, navMenu: res.data[1].menu.menu});
+  })
+  /*
+  if(window.sessionStorage.getItem('lang')===res.data[0].menu.menu.lang){
+    setState({ ...state, navMenu: res.data[0].menu.menu, navMenuArr :res.data  });
+    }
+    else{
+    setState({ ...state, navMenu: res.data[1].menu.menu, navMenuArr :res.data  });
+    }
+  */
+  const  navMenu = state.navMenu ? state.navMenu : [];
+  
   const searchRef = useRef(null);
   useOnClickOutside(searchRef, () =>
     setState({ ...state, searchToggle: false })
@@ -91,10 +111,10 @@ const Navbar = () => {
   };
 
   const scrollItems = [];
-
   navMenu.forEach(item => {
-    scrollItems.push(item.path.slice(1));
+    scrollItems.push(item.href);
   });
+  
 
   const handleRemoveMenu = () => {
     setState({
@@ -103,101 +123,106 @@ const Navbar = () => {
     });
   };
   const toggleLanguage = () => {
-    console.log("hdjsjdns", window.sessionStorage.getItem('lang'))
-    if(window.sessionStorage.getItem('lang')=='En'){
-      window.sessionStorage.setItem('lang', 'Ar')
+    // console.log("hdjsjdns", window.sessionStorage.getItem('lang'))
+    
+    if(window.sessionStorage.getItem('lang')=='en'){
+      window.sessionStorage.setItem('lang', 'ar')
     }else{
-      window.sessionStorage.setItem('lang', 'En')
+      window.sessionStorage.setItem('lang', 'en')
     }
+    
   };
 
-  return (
-    <NavbarWrapper className="navbar">
-      <Container>
-        <Logo
-          href="/maalem"
-          logoSrc={LogoImage}
-          title="Maalem Financing"
-          className="main-logo"
-        />
-        <Logo
-          href="/maalem"
-          logoSrc={LogoImageAlt}
-          title="Maalem Financing"
-          className="logo-alt"
-        />
-        {/* end of logo */}
 
-        <MenuArea className={state.searchToggle ? 'active' : ''}>
-          <ScrollSpyMenu className="menu" menuItems={navMenu} offset={-84} />
-          {/* end of main menu */}
-
-          <Search className="search" ref={searchRef}>
-            <form onSubmit={handleSearchForm}>
-              <input
-                type="text"
-                value={state.search}
-                placeholder="Enter your keyword"
-                onChange={handleOnChange}
-              />
-            </form>
-            <Button
-              className="text"
-              variant="textButton"
-              icon={<Icon icon={state.searchToggle ? x : search} />}
-              onClick={() => toggleHandler('search')}
-            />
-          </Search>
-          
-          {/* end of search */}
-
-          
-
-          <Button
-            className="menubar"
-            icon={
-              state.mobileMenu ? (
-                <Icon className="bar" icon={x} />
-              ) : (
-                <Fade>
-                  <Icon className="close" icon={menu} />
-                </Fade>
-              )
-            }
-            color="#0F2137"
-            variant="textButton"
-            onClick={() => toggleHandler('menu')}
-          />
-        </MenuArea>
-      </Container>
-
-      {/* start mobile menu */}
-      <MobileMenu className={`mobile-menu ${state.mobileMenu ? 'active' : ''}`}>
+     return (
+   
+      <NavbarWrapper className="navbar">
         <Container>
-          <Scrollspy
-            className="menu"
-            items={scrollItems}
-            offset={-84}
-            currentClassName="active"
-          >
-            {navMenu.map((menu, index) => (
-              <li key={`menu_key${index}`}>
-                <AnchorLink
-                  href={menu.path}
-                  offset={menu.offset}
-                  onClick={handleRemoveMenu}
-                >
-                  {menu.label}
-                </AnchorLink>
-              </li>
-            ))}
-          </Scrollspy>
-          <Button title={"Change Language ("+window.sessionStorage.getItem('lang')+") "} onClick={toggleLanguage}></Button>
+          <Logo
+            href="/maalem"
+            logoSrc={LogoImage}
+            title="Maalem Financing"
+            className="main-logo"
+          />
+          <Logo
+            href="/maalem"
+            logoSrc={LogoImageAlt}
+            title="Maalem Financing"
+            className="logo-alt"
+          />
+          {/* end of logo */}
+  
+          <MenuArea className={state.searchToggle ? 'active' : ''}>
+            <ScrollSpyMenu className="menu" menuItems={navMenu} offset={-84} />
+            {/* end of main menu */}
+  
+            <Search className="search" ref={searchRef}>
+              <form onSubmit={handleSearchForm}>
+                <input
+                  type="text"
+                  value={state.search}
+                  placeholder="Enter your keyword"
+                  onChange={handleOnChange}
+                />
+              </form>
+              <Button
+                className="text"
+                variant="textButton"
+                icon={<Icon icon={state.searchToggle ? x : search} />}
+                onClick={() => toggleHandler('search')}
+              />
+            </Search>
+            
+            {/* end of search */}
+  
+            
+  
+            <Button
+              className="menubar"
+              icon={
+                state.mobileMenu ? (
+                  <Icon className="bar" icon={x} />
+                ) : (
+                  <Fade>
+                    <Icon className="close" icon={menu} />
+                  </Fade>
+                )
+              }
+              color="#0F2137"
+              variant="textButton"
+              onClick={() => toggleHandler('menu')}
+            />
+          </MenuArea>
         </Container>
-      </MobileMenu>
-      {/* end of mobile menu */}
-    </NavbarWrapper>
-  );
+  
+        {/* start mobile menu */}
+        <MobileMenu className={`mobile-menu ${state.mobileMenu ? 'active' : ''}`}>
+          <Container>
+            <Scrollspy
+              className="menu"
+              items={scrollItems}
+              offset={-84}
+              currentClassName="active"
+            >
+              {navMenu.map((menu, index) => (
+                <li key={`menu_key${index}`}>
+                  <AnchorLink
+                    href={menu.path}
+                    offset={menu.offset}
+                    onClick={handleRemoveMenu}
+                  >
+                    {menu.label}
+                  </AnchorLink>
+                </li>
+              ))}
+            </Scrollspy>
+            <Button title={"Change Language ("+window.sessionStorage.getItem('lang')+") "} onClick={toggleLanguage}></Button>
+          </Container>
+        </MobileMenu>
+        {/* end of mobile menu */}
+      </NavbarWrapper>
+    );
+ 
 };
 
 export default Navbar;
