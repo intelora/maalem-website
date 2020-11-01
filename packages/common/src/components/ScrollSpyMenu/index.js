@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import Scrollspy from 'react-scrollspy';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
@@ -10,19 +10,26 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
   const { dispatch } = useContext(DrawerContext);
   // empty array for scrollspy items
   const scrollItems = [];
+
+  const [state, setState] = useState({
+    menuItems: menuItems
+  });
   
   // toggle language in menu
   const toggleLanguage = () => {
+    
     if(window.sessionStorage.getItem('lang')==='en'){
       window.sessionStorage.setItem('lang', 'ar');
+      setState({menuItems:JSON.parse(window.sessionStorage.getItem('menuItems'))[1].menu.menu})
+
     }else{
       window.sessionStorage.setItem('lang', 'en');
+      setState({menuItems:JSON.parse(window.sessionStorage.getItem('menuItems'))[0].menu.menu})
     }
-    
   };
   
   // convert menu path to scrollspy items
-  menuItems.forEach(item => {
+  state.menuItems.forEach(item => {
     scrollItems.push(item.href);
   });    
 
@@ -48,8 +55,8 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
       drawerClose={drawerClose}
       {...props}
     >
-      {menuItems.map((menu, index) => (
-        <li key={`menu-item-${index}`}>
+      {state.menuItems.map((menu, index) => (
+        <li className="dropdown" key={`menu-item-${index}`}>
           {menu.staticLink ? (
             <a href={menu.path}>{menu.label}</a>
           ) : (
@@ -69,6 +76,12 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
               )}
             </>
           )}
+        <div className="dropdown-content">
+        <a href="/#">Link 1</a>
+        <a href="/#">Link 2</a>
+        <a href="/#">Link 3</a>
+        
+      </div>
         </li>  
       ))}
       <li key="999">

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, getMenuFromServer } from 'gatsby';
 import Fade from 'react-reveal/Fade';
 import ScrollSpyMenu from 'common/src/components/ScrollSpyMenu';
 import Scrollspy from 'react-scrollspy';
@@ -15,7 +15,7 @@ import useOnClickOutside from 'common/src/hooks/useOnClickOutside';
 import NavbarWrapper, { MenuArea, MobileMenu, Search } from './navbar.style';
 import LogoImage from 'common/src/assets/image/maalem/logo-white.png';
 import LogoImageAlt from 'common/src/assets/image/maalem/logo.png';
-import axios from 'axios';
+
 
 const Navbar = () => {
   if(window.sessionStorage.getItem("lang") == null){
@@ -48,23 +48,12 @@ const Navbar = () => {
     search: '',
     searchToggle: false,
     mobileMenu: false,
+    navIndex: window.sessionStorage.getItem('lang')==='ar' ? 0 : 1
   });
 
-  // Code to fetch data for menu items...
-  axios.get(`http://122.166.172.240:1337/navbars`)
-  .then(res => { 
-    setState({ ...state, navMenu: res.data[1].menu.menu});
-  })
-  /*
-  if(window.sessionStorage.getItem('lang')===res.data[0].menu.menu.lang){
-    setState({ ...state, navMenu: res.data[0].menu.menu, navMenuArr :res.data  });
-    }
-    else{
-    setState({ ...state, navMenu: res.data[1].menu.menu, navMenuArr :res.data  });
-    }
-  */
-  const  navMenu = state.navMenu ? state.navMenu : [];
   
+getMenuFromServer();
+const navMenu = JSON.parse(window.sessionStorage.getItem('menuItems'));
   const searchRef = useRef(null);
   useOnClickOutside(searchRef, () =>
     setState({ ...state, searchToggle: false })
@@ -111,7 +100,7 @@ const Navbar = () => {
   };
 
   const scrollItems = [];
-  navMenu.forEach(item => {
+  navMenu[state.navIndex].menu.menu.forEach(item => {
     scrollItems.push(item.href);
   });
   
@@ -123,12 +112,12 @@ const Navbar = () => {
     });
   };
   const toggleLanguage = () => {
-    // console.log("hdjsjdns", window.sessionStorage.getItem('lang'))
-    
     if(window.sessionStorage.getItem('lang')=='en'){
       window.sessionStorage.setItem('lang', 'ar')
+      state.setState({navIndex:0})
     }else{
       window.sessionStorage.setItem('lang', 'en')
+      state.setState({navIndex:1})
     }
     
   };
@@ -152,8 +141,8 @@ const Navbar = () => {
           />
           {/* end of logo */}
   
-          <MenuArea className={state.searchToggle ? 'active' : ''}>
-            <ScrollSpyMenu className="menu" menuItems={navMenu} offset={-84} />
+          <MenuArea className={state.searchToggle ? '' : ''}>
+            <ScrollSpyMenu className="menu navbar" menuItems={navMenu[state.navIndex].menu.menu} offset={-84} />
             {/* end of main menu */}
   
             <Search className="search" ref={searchRef}>
@@ -204,7 +193,7 @@ const Navbar = () => {
               offset={-84}
               currentClassName="active"
             >
-              {navMenu.map((menu, index) => (
+              {navMenu[state.navIndex].menu.menu.map((menu, index) => (
                 <li key={`menu_key${index}`}>
                   <AnchorLink
                     href={menu.path}
