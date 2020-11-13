@@ -32,11 +32,12 @@ const Testimonial = () => {
       }
     }
   `);
-  const { slogan, title, reviews } = data.maalemJson.testimonial;
+  const { slogan, title, reviews,isVisible } = data.maalemJson.testimonial;
 
   const glideOptions = {
     type: 'carousel',
     gap: 0,
+    isVisible:false,
     autoplay: 5000,
     perView: 2,
     animationDuration: 700,
@@ -46,14 +47,17 @@ const Testimonial = () => {
       },
     },
   };
-
+  const faqItems = JSON.parse(window.sessionStorage.getItem('faqItems'));
+  const langIndex = window.sessionStorage.getItem('lang')==='ar' ? 0: 1;
   return (
     <SectionWrapper id="testimonial">
       <Container>
-        <SectionHeader>
+        <SectionHeader  style={
+                  window.sessionStorage.getItem('lang')==='en' ? { direction: "rtl", textAlign: 'right' } : null
+                }>
           <Fade up>
-            <Heading as="h5" content={slogan} />
-            <Heading content={title} />
+            <Heading as="h5" content={faqItems[langIndex].title} />
+            <Heading content={faqItems[langIndex].detail} />
           </Fade>
         </SectionHeader>
 
@@ -77,11 +81,11 @@ const Testimonial = () => {
               }
             >
               <Fragment>
-                {reviews.map(item => (
-                  <GlideSlide key={`testimonial--key${item.id}`}>
+                {faqItems[langIndex].faqs.item.map(item => (
+                  <GlideSlide key={`testimonial--key${1}`}>
                     <div className="review-card">
-                      <Heading as="h3" content={item.title} />
-                      <Text content={item.description} />
+                      <Heading as="h3" content={item.q} />
+                      <Text content={item.a} />
                       <div className="card-footer">
                         {/* <div className="image">
                           <Image src={item.avatar} alt="Client Image" />

@@ -24,30 +24,43 @@ const DashboardSection = ({
 }) => {
   const ButtonGroup = () => (
     <Fragment>
-      <Button title="Download App" {...btnStyle} />
+      <Button title={cmsItems[langIndex].websiteMaalemRow42Text} />
     </Fragment>
   );
+  const cmsItems = JSON.parse(window.sessionStorage.getItem('cmsItems'));
+  const langIndex = window.sessionStorage.getItem('lang')==='ar' ? 1 : 0;
+
   return (
     <DashboardWrapper id="banner_section">
       <Particles />
-      <Container>
+      <Container  >
         <Box className="row" {...row}>
-          <Box className="col" {...col}>
-            <Heading className="subtitle" as="h5" content="Digital connect" />
-            <FeatureBlock
+          <Box style={
+              window.sessionStorage.getItem('lang')==='en' ? { direction: "rtl", textAlign: 'right' } : null
+            } 
+            className="col" {...col}>
+            <Heading  className="subtitle" as="h5" content={cmsItems[langIndex].websiteMaalemRow24} />
+            <FeatureBlock 
               title={
                 <Heading
-                  content="Download Mobile App"
+                  content={cmsItems[langIndex].websiteMaalemRow25}
                   {...title}
                 />
               }
               description={
                 <Text
-                  content="The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters 0, as opposed to using 'Content here, content here', making 0 it look like readable English. Lorem Ipsum is simply dummy text of the printing.."
+                  content={cmsItems[langIndex].websiteMaalemRow26}
                   {...description}
                 />
               }
-              button={<ButtonGroup />}
+              description={
+                <Text
+                  content={cmsItems[langIndex].websiteMaalemRow27}
+                  {...description}
+                />
+              }
+              
+              // button={<ButtonGroup />}
             />
           </Box>
         </Box>

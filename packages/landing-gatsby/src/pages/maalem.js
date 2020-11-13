@@ -40,14 +40,14 @@ export default function() {
           <ContentWrapper>
             <Banner />
             <Features />
-            <AppSlider />
-            <ProductSlide />
-            <DashboardFeatures />
-            <Testimonial /> 
-            <DesignedAndBuilt />
             <PricingPolicy />
-            <TeamPortfolio />
-            <Newsletter />
+            <DesignedAndBuilt />
+            <AppSlider />
+            {/* <ProductSlide /> */}
+            <DashboardFeatures />
+            {/* <Testimonial />  */}
+            {/* <DesignedAndBuilt />
+            <Newsletter /> */}
           </ContentWrapper>
           <Footer />
         </AppWrapper>

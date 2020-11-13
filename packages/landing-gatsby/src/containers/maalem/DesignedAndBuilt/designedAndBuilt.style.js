@@ -2,23 +2,60 @@ import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 const SectionWrapper = styled.div`
-  padding: 75px 0 25px;
-  overflow: hidden;
-  @media (max-width: 1600px) {
-    padding: 25px 0 0px;
+  // padding: 75px 0 25px;
+  // overflow: hidden;
+  // .calc-icon {
+  //   width: 50px;
+  //   position: fixed;
+  //   right: -5px;
+  //   top: 50%;
+  //   z-index: 9;
+  //   background: #fff;
+  //   padding: 7px 5px;
+  //   border-radius: 5px;
+  //   cursor: pointer;
+  // }
+  // .calcWrapper {
+    position: fixed;
+    top: 30%;
+    right: -15px;
+    z-index: 99;
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    transform: translateX(100%);
+    transition: transform 0.6s ease;
+    background: #ffffff;
+    margin-right: 15px;
+    padding: 35px;
+  // }
+  .close-btn {
+    border: 0;
+    cursor:pointer;
+    margin-bottom: 10px;
+    right: 45px;
+    top: 15px;
+    position: absolute;
+    font-size: 30px;
+    background: transparent;
+    color: #0f2137;
+    padding: 0;
+    font-weight: bold;
   }
-  @media only screen and (max-width: 1366px) {
-    padding: 30px 0;
+  .openCalcWrapper{
+    transform: translateX(0);
   }
-  @media only screen and (max-width: 667px) {
-    padding: 30px 0 0;
-  }
+
 `;
 
 export const ContentWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  #loancalculator {
+    display: none;
+  }
   .image {
     width: calc(100% - 410px);
     @media only screen and (max-width: 991px) {

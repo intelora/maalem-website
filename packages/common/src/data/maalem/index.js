@@ -185,7 +185,6 @@ export const appSlider = {
 // Design and built data section
 /* ------------------------------------ */
 import codingImage from 'common/src/assets/image/maalem/code.png';
-
 export const designAndBuilt = {
   image: codingImage,
   slogan: 'Loan Calculator',
@@ -193,6 +192,7 @@ export const designAndBuilt = {
   description:
     'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt labore dolore features that Lorem ipsum dolor sit amet consectetur.',
 };
+
 
 /* ------------------------------------ */
 // Product  Slide  section
@@ -487,6 +487,13 @@ export const footer = {
     },
     {
       id: 3,
+      icon: group,
+      title: 'Customer Support',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    },
+    {
+      id: 4,
       icon: group,
       title: 'Customer Support',
       description:

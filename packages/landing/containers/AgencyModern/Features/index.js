@@ -26,7 +26,7 @@ const Features = () => {
     <SectionWrapper id="feature">
       <Container>
         <ContentWrapper>
-          <div className="image">
+          <div className="image" >
             <Image src={feature} alt="Feature Image" />
           </div>
           <div className="content">

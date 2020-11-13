@@ -6,6 +6,7 @@ const BannerWrapper = styled.div`
   min-height: 802px;
   overflow: hidden;
   position: relative;
+  z-index: 99;
   background-image: -moz-linear-gradient(
     139deg,
     rgb(100, 43, 115) 0%,
@@ -110,47 +111,63 @@ export const RatingInfo = styled.div`
 export const BannerImage = styled.div`
   flex-shrink: 0;
   img {
-    margin-left: -40px;
+    max-width: 55%;
+    margin-right: 100px;
     margin-top: 50px;
     @media only screen and (max-width: 1440px) {
-      margin-top: 0px;
+      margin-top: 50px;
     }
   }
   @media only screen and (max-width: 1199px) {
     display: none;
+    margin-top: 50px;
   }
 `;
 
 export const ButtonGroup = styled.div`
-  margin-top: 35px;
-
+  // margin-top: 0px;
   .reusecore__button {
     text-transform: inherit;
-    border-radius: 5px;
-    padding-left: 16px;
-    padding-right: 16px;
+    border-radius: 25px;
+    // margin-bottom:254px;
+    width:200px;
+    height:10px;
+    margin-right:100px;
+    margin-top:13%;
+    margin-left:0px !important;
 
     &.primary {
-      background-color: ${themeGet('colors.white', '#fff')};
-      color: rgb(15, 33, 55);
-      font-size: 16px;
+      position: relative;
+     
+      // left:50px;
+      background-color: ${themeGet('colors.white', '#ffffff')};
+      color: ${themeGet('colors.black','#00000')};
+      font-size: 19px;
+      font-family: Arial, Helvetica, sans-serif;
       letter-spacing: -0.1px;
+      padding: 15px 32px;
+      text-align: center;
+      // margin-bottom:200px;
+      display: inline-block;
       &:hover {
         box-shadow: #1e2a4a 0px 12px 24px -10px;
       }
     }
 
     &.text {
+      position: absolute;
+      font-family: Arial, Helvetica, sans-serif;
+      // top:300px;
       font-size: 16px;
-      color: ${themeGet('colors.white', '#fff')};
-      letter-spacing: -0.1px;
-      font-weight: 500;
+      color: ${themeGet('colors.black','#00000')};
+     
+      font-weight: bold;
       .btn-icon {
         i {
-          color: #fff;
+          color: #00000;
         }
         svg {
-          width: auto;
+          width: 50%;
           height: 25px;
         }
       }
@@ -167,9 +184,9 @@ export const VideoGroup = styled.div`
     flex-direction: column;
   }
   img {
-    margin-right: 10px;
+    margin-right: 500px;
     max-width: 100%;
-    object-fit: cover;
+    object-fit: content;
     cursor: pointer;
     height: 100%;
     @media only screen and (max-width: 600px) {
@@ -228,6 +245,8 @@ export const CustomerWrapper = styled.div`
 export const ImageWrapper = styled.div`
   display: flex;
   align-items: center;
+  max-width: 55%
+
   @media only screen and (max-width: 991px) {
     flex-wrap: wrap;
     justify-content: center;
@@ -235,6 +254,7 @@ export const ImageWrapper = styled.div`
   }
   img {
     margin: 0 12px;
+    margin-right:400px; 
     @media only screen and (max-width: 667px) {
       margin: 5px 10px;
     }

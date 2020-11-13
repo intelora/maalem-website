@@ -50,7 +50,7 @@ export const FooterWidget = styled.div`
   h4 {
     font-family: DM Sans;
     letter-spacing: -0.5px;
-    color: ${themeGet('colors.headingColor')};
+    color: ${themeGet('colors.white','#fffff')};
     font-weight: 500;
     font-size: 18px;
     line-height: 30px;

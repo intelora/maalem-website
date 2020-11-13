@@ -34,7 +34,7 @@ const DashboardWrapper = styled.section`
   @media (max-width: 767px) {
     padding-top: 20px;
     padding-bottom: 20px;
-    min-height: auto;
+    min-height: 100%;
   }
 
   @media only screen and (max-width: 480px) {
@@ -99,7 +99,11 @@ const DashboardObject = styled.div`
   position: absolute;
   width: 50%;
   height: 100%;
-  top: 20px;
+  flex:right;
+  top: 0px;
+  
+  
+  padding-bottom:20px;
   right: 0;
   display: flex;
   align-items: center;
@@ -110,7 +114,10 @@ const DashboardObject = styled.div`
     display: none;
   }
   .dashboardWrapper {
-    height: 100%;
+    // height: 50%
+    width:50%;
+    padding:30px;
+    margin:20px;
   }
 `;
 

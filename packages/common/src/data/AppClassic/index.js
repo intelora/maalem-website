@@ -191,7 +191,7 @@ import featureIcon6 from 'common/src/assets/image/appClassic/featureIcon-6.svg';
 
 export const features = {
   slogan: 'PRODUCT COMPARISON',
-  title: 'Why You Choose Our Loan',
+  title: 'Why You Choose Our Loan0',
   items: [
     {
       id: 1,

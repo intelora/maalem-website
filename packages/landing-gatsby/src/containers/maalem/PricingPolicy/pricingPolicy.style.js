@@ -80,12 +80,15 @@ export const InnerWrapper = styled.div`
 `;
 
 export const PricingCard = styled.div`
-  width: calc(100% / 2 - 25px);
+  // width: calc(100% / 2 - 25px);
   max-width: 340px;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 6px 50px ${themeGet('colors.shadow', 'rgba(38, 78, 118, 0.1)')};
   position: relative;
+  .openCalcWrapper{
+    transform: translateX(0);
+  }
   @media only screen and (max-width: 1366px) {
     width: calc(100% / 2 - 20px);
   }
@@ -105,7 +108,12 @@ export const PricingCard = styled.div`
     width: 100%;
     margin-right: 0;
   }
-
+  .sub-ul{
+    display:inline-flex;
+    li{
+        &:first-child{width: 30px;}
+    }
+ }
   .tag {
     display: inline-flex;
     align-items: center;
@@ -171,7 +179,8 @@ export const PricingCard = styled.div`
   }
 
   .card-footer {
-    padding: 17px 30px;
+    // padding: 17px 30px;
+    padding:20px;
     border-top: 1px solid #f3f4f5;
     text-align: center;
     @media only screen and (max-width: 480px) {
@@ -199,14 +208,14 @@ export const PricingCard = styled.div`
         width: 100%;
       }
     }
-    .trail {
-      margin-top: 22px;
-      a {
-        color: rgba(37, 99, 255, 0.9);
-        font-size: 15px;
-        font-weight: 500;
-      }
-    }
+    // .trail {
+    //   margin-top: 22px;
+    //   a {
+    //     color: rgba(37, 99, 255, 0.9);
+    //     font-size: 15px;
+    //     font-weight: 500;
+    //   }
+    // }
   }
 `;
 

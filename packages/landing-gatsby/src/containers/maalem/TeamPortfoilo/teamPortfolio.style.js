@@ -4,6 +4,7 @@ import { themeGet } from '@styled-system/theme-get';
 const SectionWrapper = styled.div`
   padding: 175px 0 175px;
   overflow: hidden;
+  display: none;
   @media only screen and (max-width: 1440px) {
     padding: 175px 0 125px;
   }

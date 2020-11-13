@@ -21,7 +21,9 @@ const HeadingWrapper = styled('p')(
 );
 
 const Heading = ({ content, ...props }) => (
+  
   <HeadingWrapper {...props}>{content}</HeadingWrapper>
+ 
 );
 
 export default Heading;

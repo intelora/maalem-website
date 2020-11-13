@@ -12,6 +12,8 @@ import Heading from 'common/src/components/Heading';
 import Rating from 'common/src/components/Rating';
 import Container from 'common/src/components/UI/Container';
 import styled from 'styled-components';
+import Appstore from 'common/src/assets/image/maalem/Appstore.png'
+import GooglePlay from 'common/src/assets/image/maalem/GooglePlay.png'
 import BannerWrapper, {
   BannerContent,
   RatingInfo,
@@ -101,10 +103,27 @@ const Banner = () => {
       closeOnClickOutside: true,
     });
   };
+  const cmsItems = JSON.parse(window.sessionStorage.getItem('cmsItems'));
+  const langIndex = window.sessionStorage.getItem('lang')==='ar' ? 1 : 0;
+  console.log("cms items ==== ===");
   return (
     <BannerWrapper id="home">
       <Container>
+        <Fade up delay={300}>
+            <ButtonGroup href="https://play.google.com/store/apps/details?id=com.maalem">
+            <a href='https://play.google.com/store/apps/details?id=com.maalem'>
+            <Image width="70%" height="70%"  type="button" src={Appstore} />
+            </a>
+            <a href='https://play.google.com/store/apps/details?id=com.maalem'>
+                <Image width="70%" height="70%" type="button"style={{marginTop:'30px'}} src={GooglePlay}/>
+            </a>
+            <a href='https://play.google.com/store/apps/details?id=com.maalem'>
+              <Button className="primary" title={cmsItems[langIndex].websiteMaalemRow42Text} />
+              </a>
+            </ButtonGroup>
+          </Fade>
         <BannerContent>
+          
         {/* <HeadingWrapper >Download Mobile App</HeadingWrapper> */}
            {/* <Fade up>
             <RatingInfo>
@@ -113,28 +132,35 @@ const Banner = () => {
             </RatingInfo>
           </Fade> */}
           <Fade up delay={100}>
+            
             <Heading
+             style={
+              window.sessionStorage.getItem('lang')==='en' ? { direction: "rtl", textAlign: 'right' } : null
+            }
               as="h1"
-              content="Download Mobile App"
+              content={cmsItems[langIndex].websiteMaalemRow5Text}
             />
           </Fade>
           <Fade up delay={200}>
             <Text
-              content="The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters 0, as opposed to using 'Content here, content here', making 0 it look like readable English. Lorem Ipsum is simply dummy text of the printing.."
+             style={
+              window.sessionStorage.getItem('lang')==='en' ? { direction: "rtl", textAlign: 'right' } : null
+            }
+              content={cmsItems[langIndex].websiteMaalemRow6Text}
+            />
+            <Text  style={
+                  window.sessionStorage.getItem('lang')==='en' ? { direction: "rtl", textAlign: 'right' } : null
+                }
+              content={cmsItems[langIndex].websiteMaalemRow7Text}
+            />
+            <Text  style={
+                  window.sessionStorage.getItem('lang')==='en' ? { direction: "rtl", textAlign: 'right' } : null
+                }
+              content={cmsItems[langIndex].websiteMaalemRow8Text}
             />
           </Fade>
-          <Fade up delay={300}>
-            <ButtonGroup>
-              <Button className="primary" title="Download App" />
-              {/* <Button
-                className="text"
-                variant="textButton"
-                icon={<Icon icon={playCircle} />}
-                iconPosition="left"
-                title="Watch Video"
-              /> */}
-            </ButtonGroup>
-          </Fade>
+          
+          
           {/*<VideoGroup>
             <img
               src={videoBanner1}
@@ -145,7 +171,7 @@ const Banner = () => {
         </BannerContent>
         <BannerImage>
           <Fade up delay={100}>
-            <Image src={bannerImg} alt="Banner" />
+            <Image src={bannerImg} alt="Banner"/>
           </Fade>
         </BannerImage>
       </Container>

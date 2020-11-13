@@ -12,6 +12,13 @@ const SectionWrapper = styled.section`
   }
 `;
 
+export const FeatureArabicText = styled.div`
+  transform: "rotateY(180deg)",
+  direction: "rtl",
+  textAlign: 'right' 
+`;
+
+
 export const FeatureWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -25,10 +32,10 @@ export const FeatureWrapper = styled.div`
       width: calc(100% / 4 - 30px);
     }
     @media only screen and (max-width: 991px) {
-      width: calc(100% / 2 - 30px);
+      width: calc(100% / 1 - 30px);
     }
     @media only screen and (max-width: 767px) {
-      width: calc(100% / 2 - 15px);
+      width: calc(100% / 1 - 15px);
     }
     @media only screen and (max-width: 480px) {
       width: 100%;
@@ -81,26 +88,34 @@ export const FeatureWrapper = styled.div`
     .content__wrapper {
       padding-left: 0;
       margin-top: -5px;
+      direction:rt1;
       @media only screen and (max-width: 1366px) {
       }
       @media only screen and (max-width: 767px) {
       }
       h3 {
         color: ${themeGet('colors.heading')};
-        font-size: 19px;
-        line-height: 30px;
-        font-weight: 500;
-        margin-bottom: 15px;
+        font-size: 20px;
+        font-weight: 700;
+        padding-top: 10px;
+        margin-bottom: 25px;
         @media only screen and (max-width: 1366px) {
-          font-size: 18px;
+          font-size: 16px;
           margin-bottom: 5px;
+          min-height: 50px;
+        }
+        @media only screen and (max-width: 2400px) {
+          min-height: 55px;
         }
       }
       p {
         color: ${themeGet('colors.textColor')};
-        font-size: 15px;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 20px;
+        padding-top: 5px;
+        text-align: justify;
         margin: 0;
+
       }
     }
     &:hover {

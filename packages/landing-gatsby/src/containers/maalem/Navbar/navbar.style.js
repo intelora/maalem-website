@@ -9,6 +9,14 @@ const NavbarWrapper = styled.nav`
   position: fixed;
   z-index: 9999;
   transition: all 0.3s ease;
+  ul.scrollspy__menu.menu.navbar li,
+  ul.scrollspy__menu.menu.navbar li a:focus{
+    // font-weight: bold;
+    transition: all 0.3s ease;
+    // font-size: 18px;
+    text-decoration: underline;
+    color:white;
+  }
   @media only screen and (max-width: 1366px) {
     padding: 20px 0 21px;
   }
@@ -32,17 +40,18 @@ const NavbarWrapper = styled.nav`
   ul {
     li {
       a {
-        color: ${themeGet('colors.menu', '#fff')};
+        color: ${themeGet('colors.menu', '#fffff')};
         font-size: 16px;
         font-weight: 400;
         transition: all 0.3s ease;
         &:hover {
-          font-weight: 700;
+          // font-weight: bold;
         }
       }
       &.is-current {
         a {
           font-weight: 700;
+        
         }
       }
     }
@@ -82,6 +91,7 @@ export const MenuArea = styled.div`
     .menu {
       opacity: 0;
       visibility: hidden;
+      color: ${themeGet('colors.menu', '#fffff')};
     }
     .search {
       form {
@@ -143,7 +153,7 @@ export const MenuArea = styled.div`
         padding: 0;
         justify-content: flex-end;
         min-width: 35px;
-        color: #fff;
+        color: #00000;
         svg {
           width: 27px;
           height: auto;
@@ -158,12 +168,15 @@ export const MenuArea = styled.div`
   
   .navbar a {
     float: left;
-    font-size: 16px;
+    // font-size: 16px;
     color: white;
     text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
   }
-  
+  ul.scrollspy__menu.menu.navbar {
+    box-shadow: none;
+  }
   .dropdown {
     float: left;
     overflow: hidden;
@@ -173,16 +186,14 @@ export const MenuArea = styled.div`
     font-size: 16px;  
     border: none;
     outline: none;
-    color: white;
+    color: black;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
   }
   
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    
-  }
+ 
   
   .dropdown-content {
     display: none;
@@ -190,31 +201,36 @@ export const MenuArea = styled.div`
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-image: -webkit-linear-gradient( 139deg, rgb(100,43,115) 0%, rgb(198,66,110) 100% );   
     z-index: 1;
-    margin-top:20px;
+    margin-top:30px;
+    border-top: solid #343d48;
   }
-  
+  .bgGradient{
+    background-image: -webkit-linear-gradient( 139deg, rgb(100,43,115) 0%, rgb(198,66,110) 100% );   
+  }
   .dropdown-content a {
     float: none;
-    color: black;
+    color: #00000;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
   }
   
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
+  // .dropdown-content a:hover {
+  //   background-color: #eee;
+  //   color: #000000;
+  // }
   
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+  // .dropdown:hover .dropdown-content {
+  //   display: inline-block;
+  // }
 `;
 
 export const Search = styled.div`
   position: relative;
-  display: flex;
+  display: none;
   align-items: center;
   form {
     opacity: 0;
@@ -251,6 +267,7 @@ export const MobileMenu = styled.div`
   @media only screen and (max-width: 991px) {
     display: flex;
     width: 100%;
+    text-transform: uppercase;
     height: calc(100vh - 70px);
     padding: 27px 0 40px;
     opacity: 0;
@@ -259,17 +276,18 @@ export const MobileMenu = styled.div`
     top: 82px;
     flex-direction: column;
     background-color: ${themeGet('colors.white', '#ffffff')};
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     color: ${themeGet('colors.secondary', '#000')};
     &.active {
       opacity: 1;
       visibility: visible;
+      height: auto;
       box-shadow: 0 3px 12px
         ${themeGet('colors.shadow', 'rgba(38, 78, 118, 0.1)')};
     }
     .container {
       width: 100%;
-      height: 100%;
+      height: auto;
       display: flex;
       flex-direction: column;
       justify-content: space-between;

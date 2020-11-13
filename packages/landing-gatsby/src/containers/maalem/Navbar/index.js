@@ -20,8 +20,8 @@ import LogoImageAlt from 'common/src/assets/image/maalem/logo.png';
 const Navbar = () => {
   if(window.sessionStorage.getItem("lang") == null){
     window.sessionStorage.setItem("lang", "en")
-    console.log("English is selected 111")
   }
+
 /*  const data = useStaticQuery(graphql`
     query {
       maalemJson {
@@ -48,11 +48,64 @@ const Navbar = () => {
     search: '',
     searchToggle: false,
     mobileMenu: false,
-    navIndex: window.sessionStorage.getItem('lang')==='ar' ? 0 : 1
+    navIndex: window.sessionStorage.getItem('lang')==='en' ? 1: 0
   });
-
-  
+function getMenuFromServer  () {
+  if(window.sessionStorage.getItem('menuItems')==null){
+    fetch("http://122.166.172.240:1337/navbars")
+    .then(res => res.json())
+    .then(
+      (result) => {
+        window.sessionStorage.setItem('menuItems', JSON.stringify(result));
+      })
+  }
+}
 getMenuFromServer();
+function  getFaqFromServer () {
+  if(window.sessionStorage.getItem('faqItems')==null){
+    fetch("http://122.166.172.240:1337/faqs")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          window.sessionStorage.setItem('faqItems', JSON.stringify(result));
+        })
+    }
+}
+getFaqFromServer();
+function getCMSFromServer () {
+  if(window.sessionStorage.getItem('cmsItems')==null){
+    fetch("http://122.166.172.240:1337/website-maalem-financings")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          window.sessionStorage.setItem('cmsItems', JSON.stringify(result));
+        })
+    }
+}
+getCMSFromServer();
+
+if(window.sessionStorage.getItem('menuItems')== null){
+  
+  var questionGlobal = {
+    
+    "menu": [{
+      "item": "a",
+      "href": "#"
+    }, {
+      "item": "b",
+      "href": "#"
+    }],
+    "menu": [{
+      "item": "c",
+      "href": "#"
+    }, {
+      "item": "d",
+      "href": "#"
+    }]
+  };
+  window.sessionStorage.setItem('menuItems', JSON.stringify(questionGlobal))
+}
+
 const navMenu = JSON.parse(window.sessionStorage.getItem('menuItems'));
   const searchRef = useRef(null);
   useOnClickOutside(searchRef, () =>
@@ -119,23 +172,23 @@ const navMenu = JSON.parse(window.sessionStorage.getItem('menuItems'));
       window.sessionStorage.setItem('lang', 'en')
       state.setState({navIndex:1})
     }
-    
   };
 
 
+  console.log("navMenu=",navMenu);
      return (
    
       <NavbarWrapper className="navbar">
         <Container>
           <Logo
-            href="/maalem"
+            href="https://maalem.com.sa/en"
             logoSrc={LogoImage}
             title="Maalem Financing"
             className="main-logo"
           />
           <Logo
-            href="/maalem"
-            logoSrc={LogoImageAlt}
+            href="https://maalem.com.sa/en"
+            logoSrc={LogoImage}
             title="Maalem Financing"
             className="logo-alt"
           />
@@ -200,7 +253,7 @@ const navMenu = JSON.parse(window.sessionStorage.getItem('menuItems'));
                     offset={menu.offset}
                     onClick={handleRemoveMenu}
                   >
-                    {menu.label}
+                    {menu.item}
                   </AnchorLink>
                 </li>
               ))}

@@ -24,6 +24,45 @@ import '@redq/reuse-modal/es/index.css';
 
 import SEO from '../components/seo';
 
+function getMenuFromServer  () {
+  fetch("http://122.166.172.240:1337/navbars")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          window.sessionStorage.setItem('menuItems', JSON.stringify(result));
+          redirectToMaalem();
+        })
+}
+getMenuFromServer();
+function  getFaqFromServer () {
+  fetch("http://122.166.172.240:1337/faqs")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          window.sessionStorage.setItem('faqItems', JSON.stringify(result));
+          redirectToMaalem();
+        })
+}
+getFaqFromServer();
+function getCMSFromServer () {
+  fetch("http://122.166.172.240:1337/website-maalem-financings")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          window.sessionStorage.setItem('cmsItems', JSON.stringify(result));
+          redirectToMaalem();
+        })
+}
+getCMSFromServer();
+function redirectToMaalem(){
+  if(window.sessionStorage.getItem('faqItems')!=null && window.sessionStorage.getItem('faqItems')!=null && window.sessionStorage.getItem('faqItems')!=null ){
+    if(window.location.href.indexOf("maalem")==-1){
+      window.location = window.location+"maalem";
+    }
+  }
+}
+  
+
 export default function() {
   return (
     <ThemeProvider theme={theme}>
@@ -37,18 +76,7 @@ export default function() {
           <Sticky top={0} innerZ={9999} activeClass="sticky-active">
             <Navbar />
           </Sticky>
-          <ContentWrapper>
-            <Banner />
-            <DashboardFeatures />
-            <Features />
-            <AppSlider />
-            <ProductSlide />
-            <Testimonial /> 
-            <DesignedAndBuilt />
-            <PricingPolicy />
-            <TeamPortfolio />
-            <Newsletter />
-          </ContentWrapper>
+          
           <Footer />
         </AppWrapper>
       </>

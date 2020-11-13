@@ -77,7 +77,7 @@ const BulletButton = styled.button`
   cursor: pointer;
   width: 10px;
   height: 10px;
-  margin: 4px;
+  z
   border: 0;
   padding: 0;
   outline: none;

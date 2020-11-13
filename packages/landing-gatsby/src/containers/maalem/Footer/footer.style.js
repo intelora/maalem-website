@@ -3,7 +3,7 @@ import { themeGet } from '@styled-system/theme-get';
 
 const FooterArea = styled.footer`
   padding: 96px 0 60px;
-  background-color: ${themeGet('colors.secondary', '#09142E')};
+  background-color: ${themeGet('colors.dark gray', '#595959')};
   @media only screen and (max-width: 1366px) {
     padding-top: 80px;
   }
@@ -28,7 +28,7 @@ export const WidgetArea = styled.div`
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
   .col {
-    width: calc(100% / 3);
+    width: calc(100% / 5);
     text-align: center;
     padding: 0 21px;
     margin-bottom: 50px;
@@ -45,15 +45,8 @@ export const WidgetArea = styled.div`
 
     img {
       display: inline-block;
-      height: 41px;
-      width: auto;
-      margin-bottom: 27px;
-      @media only screen and (max-width: 1366px) {
-        height: 35px;
-      }
-      @media only screen and (max-width: 1366px) {
-        margin-bottom: 20px;
-      }
+      margin-bottom: 25px;
+      width: 65px;
     }
 
     h3 {
@@ -84,6 +77,59 @@ export const WidgetArea = styled.div`
 `;
 
 export const MenuArea = styled.div`
+  .pointer-cursor {
+    cursor: pointer;
+  }
+  .contact-items {
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+    width: 301px;
+    height: auto;
+    background: #f3f3f3;
+    font-weight: 700;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transition: transform 0.6s ease;
+    -webkit-transition: transform 0.6s ease;
+    -ms-transition: transform 0.6s ease;
+    padding: 10px;
+    border: solid 1px #ddd label {
+      display: inline-block;
+      max-width: 100%;
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+    input,
+    textarea {
+      background: transparent;
+      width: 100%;
+      margin-bottom: 10px;
+      border: solid 1px #0f2137;
+      padding: 10px;
+    }
+    button {
+      background: #0f2137;
+      border: 0;
+      color: #fff;
+      padding: 10px 15px;
+    }
+    .close-btn {
+      margin-bottom: 10px;
+      width: 100%;
+      text-align: right;
+      font-size: 20px;
+      background: transparent;
+      color: #0f2137;
+      padding: 0;
+      font-weight: bold;
+    }
+  }
+  .formOpen {
+    transform: translateX(0);
+    padding-top: 10px;
+  }
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -127,6 +173,13 @@ export const CopyrightText = styled.p`
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 0;
   font-size: 14px;
+  a {
+    color: ${themeGet('colors.white', '#ffffff')};
+    transition: all 0.3s ease;
+    &:hover {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
 `;
 
 export default FooterArea;

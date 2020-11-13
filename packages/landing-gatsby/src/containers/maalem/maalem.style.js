@@ -4,6 +4,10 @@ import { themeGet } from '@styled-system/theme-get';
 const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Heebo', sans-serif;
+
+  }
+  body:lang(ar) {
+    direction: rtl;
   }
   .reuseModalParentWrapper,
   .reuseModalOverlay {
@@ -54,10 +58,10 @@ export const AppWrapper = styled.div`
   .sticky-active {
     .navbar {
       padding: 20px 0 21px;
-      background-color: ${themeGet('colors.white', '#ffffff')};
-      box-shadow: 0px 3px 8px 0px rgba(43, 83, 135, 0.08);
+      background-color: ${themeGet('colors.primary', '#d1397c')};
+      // box-shadow: 0px 3px 8px 0px rgba(43, 83, 135, 0.08);
       @media only screen and (max-width: 1366px) {
-        padding: 15px 0 16px;
+        // padding: 15px 0 16px;
       }
       .main-logo {
         display: none;
@@ -71,17 +75,17 @@ export const AppWrapper = styled.div`
       ul {
         li {
           a {
-            color: ${themeGet('colors.secondary', '#000')};
+            color: ${themeGet('colors.white', '#fffff')};
             font-size: 16px;
             font-weight: 400;
             transition: all 0.3s ease;
             &:hover {
-              color: ${themeGet('colors.primary', '#d1397c')};
+              color: ${themeGet('colors.white', '#fffff')};
             }
           }
           &.is-current {
             a {
-              color: ${themeGet('colors.primary', '#d1397c')};
+              color: ${themeGet('colors.white', '#00000')};
             }
           }
         }

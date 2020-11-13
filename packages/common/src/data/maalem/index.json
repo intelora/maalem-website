@@ -72,7 +72,7 @@
 
 	"features": {
 		"slogan": "KEY FEATURES",
-		"title": "Why You Choose Our Loan",
+		"title": "Why You Choose Our Loan2",
 		"items": [
 			{
 				"id": 1,
@@ -359,7 +359,7 @@
 
 	"testimonial": {
 		"slogan": "Frequently Asked Questions",
-		"title": "More About Our Products, Tips, Plan, Offer and more...",
+		"title": "More About Our Products, Tips, Plan, Offer and more...00",
 		"reviews": [
 			{
 				"id": 1,
@@ -395,20 +395,30 @@
 		"widgets": [
 			{
 				"id": 1,
-				"icon": "../../assets/image/maalem/chat.svg",
-				"title": "Facebok",
+				"icon": "../../assets/image/maalem/footer/facebook.svg",
+				"title": "Facebook",
 				"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit ."
 			},
 			{
 				"id": 2,
-				"icon": "../../assets/image/maalem/twitter.svg",
+				"icon": "../../assets/image/maalem/footer/twitter.svg",
 				"title": "Twitter",
 				"description": "Partners can Click here to login and see Sales Dashboard."
 			},
 			{
 				"id": 3,
-				"icon": "../../assets/image/maalem/group.svg",
-				"title": "Customer Support",
+				"icon": "../../assets/image/maalem/footer/instagram.svg",
+				"title": "Instagram",
+				"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit ."
+			},{
+				"id": 4,
+				"icon": "../../assets/image/maalem/footer/linkedin.svg",
+				"title": "Linkedin",
+				"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit ."
+			},{
+				"id": 5,
+				"icon": "../../assets/image/maalem/footer/youtube.svg",
+				"title": "Youtube",
 				"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit ."
 			}
 		],
