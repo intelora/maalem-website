@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 const SectionWrapper = styled.section`
-  padding: 75px 0 100px;
+  padding: 5px 0 100px;
   @media only screen and (max-width: 1440px) {
     padding: 50px 0;
   }
@@ -81,10 +81,10 @@ export const InnerWrapper = styled.div`
 
 export const PricingCard = styled.div`
   // width: calc(100% / 2 - 25px);
-  max-width: 340px;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 6px 50px ${themeGet('colors.shadow', 'rgba(38, 78, 118, 0.1)')};
+  max-width: 650px;
+  padding: 80px;
+  border-radius: 25px;
+  box-shadow: 0 20px 80px ${themeGet('colors.shadow', 'rgba(38, 8, 118, 0.1)')};
   position: relative;
   .openCalcWrapper{
     transform: translateX(0);
@@ -199,7 +199,8 @@ export const PricingCard = styled.div`
       }
     }
     .reusecore__button {
-      border-radius: 5px;
+      border-radius: 95px;
+      width:60%;
       transition: all 0.3s ease;
       &:hover {
         box-shadow: #d1397c 0px 12px 24px -10px;

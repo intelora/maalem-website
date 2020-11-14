@@ -67,21 +67,9 @@ setState({
 active: 'annualy',
 pricingPlan: annualy,
 });
-} else {
-setState({
-...state,
-active: 'monthly',
-pricingPlan: monthly,
-});
-}
-};
-const cmsItems = JSON.parse(window.sessionStorage.getItem('cmsItems'));
-const langIndex = window.sessionStorage.getItem('lang')==='ar' ? 1 : 0;
 
-console.log("6666666666");
 state.pricingPlan[0].title=cmsItems[langIndex].websiteMaalemRow15Col1Title;
 state.pricingPlan[1].title=cmsItems[langIndex].websiteMaalemRow15Col2Title;
-
 state.pricingPlan[0].features[0].text = cmsItems[langIndex].websiteMaalemRow15Col1TitleTextpRow1;
 state.pricingPlan[0].features[1].text = cmsItems[langIndex].websiteMaalemRow15Col1TitleTextpRow2;
 state.pricingPlan[0].features[2].text = cmsItems[langIndex].websiteMaalemRow15Col1TitleTextpRow3;
@@ -91,6 +79,30 @@ state.pricingPlan[1].features[0].text = cmsItems[langIndex].websiteMaalemRow15Co
 state.pricingPlan[1].features[1].text = cmsItems[langIndex].websiteMaalemRow15Col2TitleTextpRow2;
 state.pricingPlan[1].features[2].text = cmsItems[langIndex].websiteMaalemRow15Col2TitleTextpRow3;
 state.pricingPlan[1].features[3].text = cmsItems[langIndex].websiteMaalemRow15Col2TitleTextpRow4;
+
+} else {
+setState({
+...state,
+active: 'monthly',
+pricingPlan: monthly,
+});
+state.pricingPlan[0].title=cmsItems[langIndex].websiteMaalemRow17Col1Title;
+state.pricingPlan[1].title=cmsItems[langIndex].websiteMaalemRow17Col2Title;
+state.pricingPlan[0].features[0].text = cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow1;
+state.pricingPlan[0].features[1].text = cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow2;
+state.pricingPlan[0].features[2].text = cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow3;
+state.pricingPlan[0].features[3].text = cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow4;
+
+state.pricingPlan[1].features[0].text = cmsItems[langIndex].websiteMaalemRow17Col2TitleTextpRow1;
+state.pricingPlan[1].features[1].text = cmsItems[langIndex].websiteMaalemRow17Col2TitleTextpRow2;
+state.pricingPlan[1].features[2].text = cmsItems[langIndex].websiteMaalemRow17Col2TitleTextpRow3;
+state.pricingPlan[1].features[3].text = cmsItems[langIndex].websiteMaalemRow17Col2TitleTextpRow4;
+}
+};
+const cmsItems = JSON.parse(window.sessionStorage.getItem('cmsItems'));
+const langIndex = window.sessionStorage.getItem('lang')==='ar' ? 1 : 0;
+
+
 return (
 <SectionWrapper id="pricing">
 <Container>
@@ -122,7 +134,8 @@ onClick={() => handlePricingPlan('annualy')}
 </button>
 </ButtonGroup>
 </Fade>
-<PricingArea>
+{/* <PricingArea> */}
+<div class='container' style={{ marginLeft:'0%',marginRight:'0%'}}>
 <InnerWrapper style={
 window.sessionStorage.getItem('lang')==='en' ? { direction: "rtl", textAlign: 'right' } : null
 }>
@@ -173,7 +186,8 @@ Reffer A Friend : #AB{item.trail}CD
 </Fade>
 ))}
 </InnerWrapper>
-</PricingArea>
+</div>
+{/* </PricingArea> */}
 </Container>
 </SectionWrapper>
 );

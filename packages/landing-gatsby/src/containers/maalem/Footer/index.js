@@ -5,7 +5,7 @@ import Box from 'common/src/components/Box';
 import Text from 'common/src/components/Text';
 import Image from 'common/src/components/Image';
 import Logo from 'common/src/components/UIElements/Logo';
-import LogoImage from 'common/src/assets/image/maalem/logo.png';
+import LogoImage from 'common/src/assets/image/maalem/logo-white.png';
 import Heading from 'common/src/components/Heading';
 import Container from 'common/src/components/UI/Container';
 import TeamPortfolio from '../../../containers/maalem/TeamPortfoilo';

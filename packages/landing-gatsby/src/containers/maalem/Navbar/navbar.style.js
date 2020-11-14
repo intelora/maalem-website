@@ -15,7 +15,7 @@ const NavbarWrapper = styled.nav`
     transition: all 0.3s ease;
     // font-size: 18px;
     text-decoration: underline;
-    color:white;
+    color:black;
   }
   @media only screen and (max-width: 1366px) {
     padding: 20px 0 21px;

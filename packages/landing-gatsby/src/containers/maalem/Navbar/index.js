@@ -188,7 +188,7 @@ const navMenu = JSON.parse(window.sessionStorage.getItem('menuItems'));
           />
           <Logo
             href="https://maalem.com.sa/en"
-            logoSrc={LogoImage}
+            logoSrc={LogoImageAlt}
             title="Maalem Financing"
             className="logo-alt"
           />
@@ -259,6 +259,7 @@ const navMenu = JSON.parse(window.sessionStorage.getItem('menuItems'));
               ))}
             </Scrollspy>
             <Button title={"Change Language ("+window.sessionStorage.getItem('lang')+") "} onClick={toggleLanguage}></Button>
+            <Button type='primary'> Get App </Button>
           </Container>
         </MobileMenu>
         {/* end of mobile menu */}

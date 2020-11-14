@@ -57,8 +57,9 @@ export const AppWrapper = styled.div`
 
   .sticky-active {
     .navbar {
-      padding: 20px 0 21px;
-      background-color: ${themeGet('colors.primary', '#d1397c')};
+      // padding: 20px 0 21px;
+      background-color: ${themeGet('colors.white', '#fffff')};
+      fobt-size:bold;
       // box-shadow: 0px 3px 8px 0px rgba(43, 83, 135, 0.08);
       @media only screen and (max-width: 1366px) {
         // padding: 15px 0 16px;
@@ -75,30 +76,30 @@ export const AppWrapper = styled.div`
       ul {
         li {
           a {
-            color: ${themeGet('colors.white', '#fffff')};
+            color: ${themeGet('colors.pink', '#d1397c')};
             font-size: 16px;
             font-weight: 400;
             transition: all 0.3s ease;
             &:hover {
-              color: ${themeGet('colors.white', '#fffff')};
+              color: ${themeGet('colors.black', '#00000')};
             }
           }
           &.is-current {
             a {
-              color: ${themeGet('colors.white', '#00000')};
+              color: ${themeGet('colors.black', '#00000')};
             }
           }
         }
       }
       .reusecore__button {
         &.menubar {
-          color: ${themeGet('colors.secondary', '#000')};
+          color: ${themeGet('colors.black', '#00000')};
         }
         &.text {
-          color: ${themeGet('colors.secondary', '#000')};
+          color: ${themeGet('colors.black', '#00000')};
           .btn-icon {
             svg {
-              stroke: ${themeGet('colors.secondary', '#000')};
+              stroke: ${themeGet('colors.black', '#00000')};
             }
           }
           @media only screen and (max-width: 991px) {

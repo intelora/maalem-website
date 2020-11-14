@@ -3,6 +3,7 @@ import { themeGet } from '@styled-system/theme-get';
 
 const FooterArea = styled.footer`
   padding: 96px 0 60px;
+
   background-color: ${themeGet('colors.dark gray', '#595959')};
   @media only screen and (max-width: 1366px) {
     padding-top: 80px;
@@ -46,7 +47,7 @@ export const WidgetArea = styled.div`
     img {
       display: inline-block;
       margin-bottom: 25px;
-      width: 65px;
+      width: 30px;
     }
 
     h3 {

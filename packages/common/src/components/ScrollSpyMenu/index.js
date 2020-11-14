@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Scrollspy from 'react-scrollspy';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Link }  from 'gatsby';
+import Button from 'common/src/components/Button';
+import '../../components/ScrollSpyMenu/scrollspy.style.css'
 
 
 import { DrawerContext } from '../../contexts/DrawerContext';
@@ -63,6 +65,7 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
   console.log("101010101010");
   console.log('kkk',state.menuItems);
   return (
+    <div>
     <Scrollspy
       items={scrollItems}
       className={addAllClasses.join(' ')}
@@ -113,7 +116,12 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
           }
         </a>
       </li>
+     
     </Scrollspy>
+    {/* <li key="1000">
+          <Button type='primary' width='200px' height='20px' style={{ marginLeft:'600px ' }}> <strong>Get App</strong></Button>
+      </li> */}
+    </div>
   );
 };
 
