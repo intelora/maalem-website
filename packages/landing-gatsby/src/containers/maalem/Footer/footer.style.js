@@ -47,7 +47,7 @@ export const WidgetArea = styled.div`
     img {
       display: inline-block;
       margin-bottom: 25px;
-      width: 30px;
+      width: 80px;
     }
 
     h3 {

@@ -2,25 +2,20 @@ import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 const SectionWrapper = styled.section`
-  padding: 5px 0 100px;
-  @media only screen and (max-width: 1440px) {
-    padding: 50px 0;
-  }
-  @media only screen and (max-width: 768px) {
-    padding: 0px 0 50px;
+  padding: 75px 0;
+  @media only screen and (max-width: 1366px) {
+    padding: 60px 0;
   }
   @media only screen and (max-width: 667px) {
     padding: 45px 0;
-  }
-  @media only screen and (max-width: 480px) {
-    padding: 0 0 30px;
   }
 `;
 
 export const ButtonGroup = styled.div`
   display: flex;
   align-items: center;
-  max-width: 320px;
+  //max-width: 320px;
+  width: 450px;
   padding: 6px;
   margin: 0 auto;
   border-radius: 5px;
@@ -28,7 +23,7 @@ export const ButtonGroup = styled.div`
 
   button {
     border: 0;
-    padding: 15px 23px;
+    padding: 15px 26px;
     border-radius: 5px;
     color: rgba(15, 33, 55, 0.5);
     font-size: 16px;
@@ -51,7 +46,7 @@ export const ButtonGroup = styled.div`
 `;
 
 export const PricingArea = styled.div`
-  max-width: 730px;
+  //max-width: 730px;
   width: 100%;
   margin: 0 auto;
   @media only screen and (max-width: 667px) {
@@ -80,15 +75,13 @@ export const InnerWrapper = styled.div`
 `;
 
 export const PricingCard = styled.div`
-  // width: calc(100% / 2 - 25px);
-  max-width: 650px;
-  padding: 80px;
-  border-radius: 25px;
-  box-shadow: 0 20px 80px ${themeGet('colors.shadow', 'rgba(38, 8, 118, 0.1)')};
+  width: calc(100% / 2 - 25px);
+  //max-width: 340px;
+  width: 45%;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 50px ${themeGet('colors.shadow', 'rgba(38, 78, 118, 0.1)')};
   position: relative;
-  .openCalcWrapper{
-    transform: translateX(0);
-  }
   @media only screen and (max-width: 1366px) {
     width: calc(100% / 2 - 20px);
   }
@@ -108,12 +101,7 @@ export const PricingCard = styled.div`
     width: 100%;
     margin-right: 0;
   }
-  .sub-ul{
-    display:inline-flex;
-    li{
-        &:first-child{width: 30px;}
-    }
- }
+
   .tag {
     display: inline-flex;
     align-items: center;
@@ -179,8 +167,7 @@ export const PricingCard = styled.div`
   }
 
   .card-footer {
-    // padding: 17px 30px;
-    padding:20px;
+    padding: 17px 30px;
     border-top: 1px solid #f3f4f5;
     text-align: center;
     @media only screen and (max-width: 480px) {
@@ -194,29 +181,24 @@ export const PricingCard = styled.div`
       margin-bottom: 27px;
       span {
         font-weight: 700;
-        font-size: 36px;
+        font-size: 22px;
         color: ${themeGet('colors.headingColor', '#0F2137')};
       }
     }
     .reusecore__button {
-      border-radius: 95px;
-      width:60%;
-      transition: all 0.3s ease;
-      &:hover {
-        box-shadow: #d1397c 0px 12px 24px -10px;
-      }
+      border-radius: 5px;
       @media only screen and (max-width: 767px) {
         width: 100%;
       }
     }
-    // .trail {
-    //   margin-top: 22px;
-    //   a {
-    //     color: rgba(37, 99, 255, 0.9);
-    //     font-size: 15px;
-    //     font-weight: 500;
-    //   }
-    // }
+    .trail {
+      margin-top: 22px;
+      a {
+        color: rgba(37, 99, 255, 0.9);
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
   }
 `;
 

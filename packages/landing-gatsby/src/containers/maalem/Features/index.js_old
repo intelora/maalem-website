@@ -12,10 +12,10 @@ import Container from 'common/src/components/UI/Container';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import { SectionHeader } from '../maalem.style';
 import SectionWrapper, { FeatureWrapper } from './features.style';
-import ProductImage1 from 'common/src/assets/image/maalem/immediate-financing.png';
-import ProductImage2 from 'common/src/assets/image/maalem/islamic-law-finance.png';
-import ProductImage3 from 'common/src/assets/image/maalem/signing_stamp.png';
-import ProductImage4 from 'common/src/assets/image/maalem/integrated-digital-solutions.png';
+import ProductImage1 from 'common/src/assets/image/maalem/footer/1.png';
+import ProductImage2 from 'common/src/assets/image/maalem/footer/2.png';
+import ProductImage3 from 'common/src/assets/image/maalem/footer/3.png';
+import ProductImage4 from 'common/src/assets/image/maalem/footer/4.png';
 
 const Features = () => {
   const data = {};

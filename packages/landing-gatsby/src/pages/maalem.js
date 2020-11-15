@@ -16,6 +16,8 @@ import TeamPortfolio from '../containers/maalem/TeamPortfoilo';
 import Testimonial from '../containers/maalem/Testimonial';
 import Newsletter from '../containers/maalem/Newsletter';
 import Footer from '../containers/maalem/Footer';
+import FeatureTab from '../containers/maalem/FeatureTab';
+
 import GlobalStyle, {
   AppWrapper,
   ContentWrapper,
@@ -41,8 +43,9 @@ export default function() {
             <Banner />
             <Features />
             <PricingPolicy />
+            <FeatureTab />
             <DesignedAndBuilt />
-            <AppSlider />
+            {/* <AppSlider /> */}
             {/* <ProductSlide /> */}
             <DashboardFeatures />
             {/* <Testimonial />  */}

@@ -395,29 +395,29 @@
 		"widgets": [
 			{
 				"id": 1,
-				"icon": "../../assets/image/maalem/footer/facebook.svg",
+				"icon": "../../assets/image/maalem/footer/facebook1.svg",
 				"title": "Facebook",
 				"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit ."
 			},
 			{
 				"id": 2,
-				"icon": "../../assets/image/maalem/footer/twitter.svg",
+				"icon": "../../assets/image/maalem/footer/twitter2.svg",
 				"title": "Twitter",
 				"description": "Partners can Click here to login and see Sales Dashboard."
 			},
 			{
 				"id": 3,
-				"icon": "../../assets/image/maalem/footer/instagram.svg",
+				"icon": "../../assets/image/maalem/footer/instagram1.svg",
 				"title": "Instagram",
 				"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit ."
 			},{
 				"id": 4,
-				"icon": "../../assets/image/maalem/footer/linkedin.svg",
+				"icon": "../../assets/image/maalem/footer/linkedin2.svg",
 				"title": "Linkedin",
 				"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit ."
 			},{
 				"id": 5,
-				"icon": "../../assets/image/maalem/footer/youtube.svg",
+				"icon": "../../assets/image/maalem/footer/youtube1.svg",
 				"title": "Youtube",
 				"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit ."
 			}

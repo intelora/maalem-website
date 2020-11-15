@@ -9,8 +9,8 @@ import GlideCarousel from 'common/src/components/GlideCarousel';
 import GlideSlide from 'common/src/components/GlideCarousel/glideSlide';
 import SectionWrapper, { CarouseWrapper, TextWrapper } from './appSlider.style';
 import BulletIcon from 'common/src/assets/image/maalem/icon1.svg';
-import ProductImage_ar from 'common/src/assets/image/maalem/product_ar.png';
-import ProductImage_en from 'common/src/assets/image/maalem/product_en.png';
+import ProductImage1_ar from 'common/src/assets/image/maalem/product1_ar.png';
+import ProductImage1_en from 'common/src/assets/image/maalem/product1_en.png';
 import Fade from 'react-reveal/Fade';
 
 const AppSlider = () => {
@@ -72,9 +72,9 @@ const AppSlider = () => {
                 {carousel.map((item) => (
                   <GlideSlide key={`feature-side--key${item.id}`}>
                     {window.sessionStorage.getItem('lang') === 'ar' ? (
-                      <Image src={ProductImage_ar} alt={item.title} />
+                      <Image src={ProductImage1_ar} alt={item.title} />
                     ) : (
-                      <Image src={ProductImage_en} alt={item.title} />
+                      <Image src={ProductImage1_en} alt={item.title} />
                     )}
                     {console.log(item.id, '12345678')}
                   </GlideSlide>
