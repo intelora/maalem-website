@@ -193,7 +193,6 @@ export const designAndBuilt = {
     'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt labore dolore features that Lorem ipsum dolor sit amet consectetur.',
 };
 
-
 /* ------------------------------------ */
 // Product  Slide  section
 /* ------------------------------------ */
@@ -266,7 +265,7 @@ export const pricing = {
         },
         {
           id: 2,
-          text: "Loan Benefit -002",
+          text: 'Loan Benefit -002',
         },
         {
           id: 3,
@@ -293,7 +292,7 @@ export const pricing = {
         },
         {
           id: 2,
-          text: "Loan Benefit -006",
+          text: 'Loan Benefit -006',
         },
         {
           id: 3,
@@ -322,7 +321,7 @@ export const pricing = {
         },
         {
           id: 2,
-          text: "Loan Benefit -009",
+          text: 'Loan Benefit -009',
         },
         {
           id: 3,
@@ -349,7 +348,7 @@ export const pricing = {
         },
         {
           id: 2,
-          text: "Loan Benefit -013",
+          text: 'Loan Benefit -013',
         },
         {
           id: 3,
@@ -414,7 +413,7 @@ export const teamportfolio = {
     {
       id: 7,
       img: member7,
-      text: 'Arthus Doe',
+      text: 'آرثوس دو',
     },
   ],
 };
@@ -475,29 +474,25 @@ export const footer = {
       id: 1,
       icon: chat,
       title: 'Facebok',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     },
     {
       id: 2,
       icon: github,
       title: 'Twitter',
-      description:
-        'Partners can Click here to login and see Sales Dashboard.',
+      description: 'Partners can Click here to login and see Sales Dashboard.',
     },
     {
       id: 3,
       icon: group,
       title: 'Customer Support',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     },
     {
       id: 4,
       icon: group,
       title: 'Customer Support',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     },
   ],
   logo: footerLogo,

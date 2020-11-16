@@ -47,15 +47,21 @@ const AppSlider = () => {
     gap: 0,
     autoplay: 5000,
     perView: 1,
-    animationDuration: 700
+    animationDuration: 700,
   };
   const cmsItems = JSON.parse(window.sessionStorage.getItem('cmsItems'));
+
+  const cmsItems2 = JSON.parse(window.sessionStorage.getItem('cmsItems2'));
+
+  const cmsItemss = cmsItems2[langIndex];
+
+  // console.log('cmsItemss',cmsItemss);
   const langIndex = window.sessionStorage.getItem('lang') === 'ar' ? 1 : 0;
+  console.log('angIndex', langIndex);
   return (
     <SectionWrapper id="HowtoApplay">
-      <Container > 
+      <Container>
         <Heading content={cmsItems[langIndex].websiteMaalemRow18Title} />
-        
       </Container>
 
       <Container>
@@ -84,28 +90,28 @@ const AppSlider = () => {
           </CarouseWrapper>
         </Fade>
         <Fade right>
-        <TextWrapper
-          style={
-            window.sessionStorage.getItem('lang') === 'en'
-              ? { direction: 'rtl', textAlign: 'right' }
-              : null
-          }
-        >
-          {cmsItems[langIndex].websiteMaalemRow1Text
-            .split('#')
-            .map(function (char, index) {
-              console.log('xyz' + index);
-              return (
-                <FeatureBlock
-                  key={`app-feature--key${index}`}
-                  iconPosition="left"
-                  icon={<img src={BulletIcon} alt="ah" />}
-                  title={<Heading as="h3" content={char} />}
-                  // description={<Text content="22" />}
-                />
-              );
-            })}
-        </TextWrapper>
+          <TextWrapper
+            style={
+              window.sessionStorage.getItem('lang') === 'en'
+                ? { direction: 'rtl', textAlign: 'right' }
+                : null
+            }
+          >
+            {cmsItems[langIndex].websiteMaalemRow1Text
+              .split('#')
+              .map(function (char, index) {
+                console.log('xyz' + index);
+                return (
+                  <FeatureBlock
+                    key={`app-feature--key${index}`}
+                    iconPosition="left"
+                    icon={<img src={BulletIcon} alt="ah" />}
+                    title={<Heading as="h3" content={char} />}
+                    // description={<Text content="22" />}
+                  />
+                );
+              })}
+          </TextWrapper>
         </Fade>
       </Container>
     </SectionWrapper>

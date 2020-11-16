@@ -322,37 +322,37 @@
 			{
 				"id": 1,
 				"img": "../../assets/image/maalem/1.png",
-				"text": "Berlin Corleone, CEO"
+				"text": "برلين كورليون ، الرئيس التنفيذي"
 			},
 			{
 				"id": 2,
 				"img": "../../assets/image/maalem/2.png",
-				"text": "Jona White, CFO"
+				"text": "جونا وايت ، المدير المالي"
 			},
 			{
 				"id": 3,
 				"img": "../../assets/image/maalem/3.png",
-				"text": "Michael Price, CIO"
+				"text": "مايكل برايس ، رئيس قسم المعلومات"
 			},
 			{
 				"id": 4,
 				"img": "../../assets/image/maalem/4.png",
-				"text": "Vito Jackson, CTO"
+				"text": "فيتو جاكسون ، رئيس قسم التكنولوجيا"
 			},
 			{
 				"id": 5,
 				"img": "../../assets/image/maalem/5.png",
-				"text": "Miss Clair, COO"
+				"text": "الآنسة كلير ، مدير العمليات"
 			},
 			{
 				"id": 6,
 				"img": "../../assets/image/maalem/6.png",
-				"text": "Kabir Ali, Head"
+				"text": "كبير علي ، الرأس"
 			},
 			{
 				"id": 7,
 				"img": "../../assets/image/maalem/7.png",
-				"text": "Arthus Doe"
+				"text": "آرثوس دو"
 			}
 		]
 	},

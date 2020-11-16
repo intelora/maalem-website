@@ -14,16 +14,15 @@ import FeatureBlock from 'common/src/components/FeatureBlock';
 import { SectionHeader } from '../maalem.style';
 import SectionWrapper, { TabArea } from './featureTab.style';
 
-import appTabIcon1 from 'common/src/assets/image/maalem/appTabIcon1.svg'
-import appTabIcon2 from 'common/src/assets/image/maalem/appTabIcon2.svg'
-import appTabIcon3 from 'common/src/assets/image/maalem/appTabIcon3.svg'
-import appTabIcon4 from 'common/src/assets/image/maalem/appTabIcon4.svg'
+import appTabIcon1 from 'common/src/assets/image/maalem/appTabIcon1.svg';
+import appTabIcon2 from 'common/src/assets/image/maalem/appTabIcon2.svg';
+import appTabIcon3 from 'common/src/assets/image/maalem/appTabIcon3.svg';
+import appTabIcon4 from 'common/src/assets/image/maalem/appTabIcon4.svg';
 
-import productImg1 from 'common/src/assets/image/maalem/product1_en.png'
-import productImg2 from 'common/src/assets/image/maalem/product1_ar.png'
-import productImg3 from 'common/src/assets/image/maalem/product2_en.png'
-import productImg4 from 'common/src/assets/image/maalem/product2_ar.png'
-
+import productImg1 from 'common/src/assets/image/maalem/product1_en.png';
+import productImg2 from 'common/src/assets/image/maalem/product1_ar.png';
+import productImg3 from 'common/src/assets/image/maalem/product2_en.png';
+import productImg4 from 'common/src/assets/image/maalem/product2_ar.png';
 
 const FeatureTab = () => {
   const data = useStaticQuery(graphql`
@@ -51,57 +50,60 @@ const FeatureTab = () => {
   const { slogan, title, tab } = data.appClassicJson.featuresTab;
   const cmsItems = JSON.parse(window.sessionStorage.getItem('cmsItems'));
   const langIndex = window.sessionStorage.getItem('lang') === 'ar' ? 1 : 0;
+  const langIndexx = window.sessionStorage.getItem('lang') === 'ar' ? 0 : 1;
+  const cmsItems2 = JSON.parse(window.sessionStorage.getItem('cmsItems2'));
+  const cmsItemss = cmsItems2[langIndexx];
   const newTab = [
     {
       id: 1,
       color: '#F55767',
       icon: {
-        publicURL: appTabIcon1
+        publicURL: appTabIcon1,
       },
       title: cmsItems[langIndex].websiteMaalemRow1Text.split('#')[0],
-      description: 'Get your proof tests delivered home collect a sample.',
+      description: cmsItemss.howtoapply1,
       image: {
-        publicURL: productImg1
-      }
+        publicURL: productImg1,
+      },
     },
     {
       id: 2,
       color: '#40975F',
       icon: {
-        publicURL: appTabIcon2
+        publicURL: appTabIcon2,
       },
       title: cmsItems[langIndex].websiteMaalemRow1Text.split('#')[1],
-      description: 'Get your proof tests delivered home collect a sample.',
+      description: cmsItemss.howtoapply2,
       image: {
-        publicURL: productImg2
-      }
+        publicURL: productImg2,
+      },
     },
     {
       id: 3,
       color: '#5856D6',
       icon: {
-        publicURL: appTabIcon3
+        publicURL: appTabIcon3,
       },
       title: cmsItems[langIndex].websiteMaalemRow1Text.split('#')[2],
-      description: 'Get your proof tests delivered home collect a sample.',
+      description: cmsItemss.howtoapply3,
       image: {
-        publicURL: productImg3
-      }
+        publicURL: productImg3,
+      },
     },
     {
       id: 4,
       color: '#D6AB00',
       icon: {
-        publicURL: appTabIcon4
+        publicURL: appTabIcon4,
       },
       title: cmsItems[langIndex].websiteMaalemRow1Text.split('#')[3],
-      description: 'Get your proof tests delivered home collect a sample.',
+      description: cmsItemss.howtoapply4,
       image: {
-        publicURL: productImg4
-      }
-    }
+        publicURL: productImg4,
+      },
+    },
   ];
- 
+
   // Custom code
   /* const elementLi = document.querySelectorAll('ul.tab_menu li');
   elementLi.forEach((li) => {
@@ -116,7 +118,7 @@ const FeatureTab = () => {
         <SectionHeader>
           <Fade up>
             <Heading as="h5" content={''} />
-            <Heading content={'How to apply'} />
+            <Heading content={cmsItems[langIndex].websiteMaalemRow18Title} />
           </Fade>
         </SectionHeader>
         <Fade up delay={1000}>

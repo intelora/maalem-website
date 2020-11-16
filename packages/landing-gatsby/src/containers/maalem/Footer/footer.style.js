@@ -170,6 +170,21 @@ export const MenuItem = styled.li`
   }
 `;
 
+export const MenuItemm = styled.li`
+  margin: 0 18px;
+  @media only screen and (max-width: 667px) {
+    margin: 5px 15px;
+  }
+  a {
+    color: ${themeGet('colors.white', '#ffffff')};
+    transition: all 0.3s ease;
+    margin-left: 20px;
+    &:hover {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+`;
+
 export const CopyrightText = styled.p`
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 0;

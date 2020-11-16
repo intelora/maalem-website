@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Fade from 'react-reveal/Fade'; 
+import Fade from 'react-reveal/Fade';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Icon } from 'react-icons-kit';
 import { mediaRecordOutline } from 'react-icons-kit/typicons/mediaRecordOutline';
@@ -20,100 +20,160 @@ import ProductImage4 from 'common/src/assets/image/maalem/integrated-digital-sol
 const Features = () => {
   const data = {};
   const cmsItems = JSON.parse(window.sessionStorage.getItem('cmsItems'));
-  const langIndex = window.sessionStorage.getItem('lang')==='ar' ? 1: 0;
+  const langIndex = window.sessionStorage.getItem('lang') === 'ar' ? 1 : 0;
+
+  const cmsItems2 = JSON.parse(window.sessionStorage.getItem('cmsItems2'));
+
+  const cmsItemss = cmsItems2[langIndex];
+
+  // console.log('cmsItemss',cmsItemss);
+
   return (
     <SectionWrapper id="features">
-      <Container >
-        <SectionHeader  style={
-                  window.sessionStorage.getItem('lang')==='en' ? { direction: "rtl", textAlign: 'right' } : null
-                }>
+      <Container>
+        <SectionHeader
+          style={
+            window.sessionStorage.getItem('lang') === 'en'
+              ? { direction: 'rtl', textAlign: 'right' }
+              : null
+          }
+        >
           <Fade up>
-            <Heading as="h5" content={cmsItems[langIndex].websiteMaalemRow2Text} />
+            <Heading
+              as="h5"
+              content={cmsItems[langIndex].websiteMaalemRow2Text}
+            />
             <Heading content={cmsItems[langIndex].websiteMaalemRow3Text} />
           </Fade>
         </SectionHeader>
-        <FeatureWrapper > 
-
-        {/* if(window.sessionStorage.getItem('lang') === 'ar') {
+        <FeatureWrapper>
+          {/* if(window.sessionStorage.getItem('lang') === 'ar') {
           <FeatureArabicText>
         } */}
-        <Fade up delay={2000} key={`feature-key${1}`}>
-              <FeatureBlock
-                style={
-                  window.sessionStorage.getItem('lang')==='en' ? { direction: "rtl", textAlign: 'right' } : null
-                }
-                icon={
-                  <Fragment>
-                    <Icon className="plus" icon={plus} />
-                    <Icon className="circle" icon={mediaRecordOutline} />
-                    <Image src={ProductImage1} alt="1112" />
-                    <Icon className="star" icon={starOutline} />
-                  </Fragment>
-                }
-                iconPosition="left"
-                title={<Heading as="h3" content={cmsItems[langIndex].websiteMaalemRow9Col1Heading} />}
-                description={<Text content={cmsItems[langIndex].websiteMaalemRow9Col1HeadingText} />}
-              />
-            </Fade>
-        
-            <Fade up delay={2000} key={`feature-key${2}`} >
-              <FeatureBlock
-                style={
-                  window.sessionStorage.getItem('lang')==='en' ? { direction: "rtl", textAlign: 'right' } : null
-                }
-                icon={
-                  <Fragment>
-                    <Icon className="plus" icon={plus} />
-                    <Icon className="circle" icon={mediaRecordOutline} />
-                    <Image src={ProductImage2} alt="1112" />
-                    <Icon className="star" icon={starOutline} />
-                  </Fragment>
-                }
-                iconPosition="left"
-                title={<Heading as="h3" content={cmsItems[langIndex].websiteMaalemRow9Col2Heading} />}
-                description={<Text content={cmsItems[langIndex].websiteMaalemRow9Col2HeadingText} />}
-              />
-            </Fade>
-        
-            <Fade up delay={2000} key={`feature-key${3}`}>
-              <FeatureBlock
-                style={
-                  window.sessionStorage.getItem('lang')==='en' ? { direction: "rtl", textAlign: 'right' } : null
-                }
-                icon={
-                  <Fragment>
-                    <Icon className="plus" icon={plus} />
-                    <Icon className="circle" icon={mediaRecordOutline} />
-                    <Image src={ProductImage3} alt="1112" />
-                    <Icon className="star" icon={starOutline} />
-                  </Fragment>
-                }
-                iconPosition="left"
-                title={<Heading as="h3" content={cmsItems[langIndex].websiteMaalemRow10Col1Heading} />}
-                description={<Text content={cmsItems[langIndex].websiteMaalemRow10Col1HeadingText} />}
-              />
-            </Fade>
-        
-            <Fade up delay={2000} key={`feature-key${4}`}>
-              <FeatureBlock
-                style={
-                  window.sessionStorage.getItem('lang')==='en' ? { direction: "rtl", textAlign: 'right' } : null
-                }
-                icon={
-                  <Fragment>
-                    <Icon className="plus" icon={plus} />
-                    <Icon className="circle" icon={mediaRecordOutline} />
-                    <Image src={ProductImage4} alt="1112" />
-                    <Icon className="star" icon={starOutline} />
-                  </Fragment>
-                }
-                iconPosition="left"
-                title={<Heading as="h3" content={cmsItems[langIndex].websiteMaalemRow19Col2Heading} />}
-                description={<Text content={cmsItems[langIndex].websiteMaalemRow10Col2HeadingText}  />}
-              />
-            </Fade>
+          <Fade up delay={2000} key={`feature-key${1}`}>
+            <FeatureBlock
+              style={
+                window.sessionStorage.getItem('lang') === 'en'
+                  ? { direction: 'rtl', textAlign: 'right' }
+                  : null
+              }
+              icon={
+                <Fragment>
+                  <Icon className="plus" icon={plus} />
+                  <Icon className="circle" icon={mediaRecordOutline} />
+                  <Image src={ProductImage1} alt="1112" />
+                  <Icon className="star" icon={starOutline} />
+                </Fragment>
+              }
+              iconPosition="left"
+              title={
+                <Heading
+                  as="h3"
+                  content={cmsItems[langIndex].websiteMaalemRow9Col1Heading}
+                />
+              }
+              description={
+                <Text
+                  content={cmsItems[langIndex].websiteMaalemRow9Col1HeadingText}
+                />
+              }
+            />
+          </Fade>
+
+          <Fade up delay={2000} key={`feature-key${2}`}>
+            <FeatureBlock
+              style={
+                window.sessionStorage.getItem('lang') === 'en'
+                  ? { direction: 'rtl', textAlign: 'right' }
+                  : null
+              }
+              icon={
+                <Fragment>
+                  <Icon className="plus" icon={plus} />
+                  <Icon className="circle" icon={mediaRecordOutline} />
+                  <Image src={ProductImage2} alt="1112" />
+                  <Icon className="star" icon={starOutline} />
+                </Fragment>
+              }
+              iconPosition="left"
+              title={
+                <Heading
+                  as="h3"
+                  content={cmsItems[langIndex].websiteMaalemRow9Col2Heading}
+                />
+              }
+              description={
+                <Text
+                  content={cmsItems[langIndex].websiteMaalemRow9Col2HeadingText}
+                />
+              }
+            />
+          </Fade>
+
+          <Fade up delay={2000} key={`feature-key${3}`}>
+            <FeatureBlock
+              style={
+                window.sessionStorage.getItem('lang') === 'en'
+                  ? { direction: 'rtl', textAlign: 'right' }
+                  : null
+              }
+              icon={
+                <Fragment>
+                  <Icon className="plus" icon={plus} />
+                  <Icon className="circle" icon={mediaRecordOutline} />
+                  <Image src={ProductImage3} alt="1112" />
+                  <Icon className="star" icon={starOutline} />
+                </Fragment>
+              }
+              iconPosition="left"
+              title={
+                <Heading
+                  as="h3"
+                  content={cmsItems[langIndex].websiteMaalemRow10Col1Heading}
+                />
+              }
+              description={
+                <Text
+                  content={
+                    cmsItems[langIndex].websiteMaalemRow10Col1HeadingText
+                  }
+                />
+              }
+            />
+          </Fade>
+
+          <Fade up delay={2000} key={`feature-key${4}`}>
+            <FeatureBlock
+              style={
+                window.sessionStorage.getItem('lang') === 'en'
+                  ? { direction: 'rtl', textAlign: 'right' }
+                  : null
+              }
+              icon={
+                <Fragment>
+                  <Icon className="plus" icon={plus} />
+                  <Icon className="circle" icon={mediaRecordOutline} />
+                  <Image src={ProductImage4} alt="1112" />
+                  <Icon className="star" icon={starOutline} />
+                </Fragment>
+              }
+              iconPosition="left"
+              title={
+                <Heading
+                  as="h3"
+                  content={cmsItems[langIndex].websiteMaalemRow19Col2Heading}
+                />
+              }
+              description={
+                <Text
+                  content={
+                    cmsItems[langIndex].websiteMaalemRow10Col2HeadingText
+                  }
+                />
+              }
+            />
+          </Fade>
         </FeatureWrapper>
-       
       </Container>
     </SectionWrapper>
   );

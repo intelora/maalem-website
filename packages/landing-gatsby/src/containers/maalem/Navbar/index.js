@@ -16,13 +16,12 @@ import NavbarWrapper, { MenuArea, MobileMenu, Search } from './navbar.style';
 import LogoImage from 'common/src/assets/image/maalem/logo-white.png';
 import LogoImageAlt from 'common/src/assets/image/maalem/logo.png';
 
-
 const Navbar = () => {
-  if(window.sessionStorage.getItem("lang") == null){
-    window.sessionStorage.setItem("lang", "en")
+  if (window.sessionStorage.getItem('lang') == null) {
+    window.sessionStorage.setItem('lang', 'en');
   }
 
-/*  const data = useStaticQuery(graphql`
+  /*  const data = useStaticQuery(graphql`
     query {
       maalemJson {
         navbar {
@@ -48,71 +47,72 @@ const Navbar = () => {
     search: '',
     searchToggle: false,
     mobileMenu: false,
-    navIndex: window.sessionStorage.getItem('lang')==='en' ? 1: 0
+    navIndex: window.sessionStorage.getItem('lang') === 'en' ? 1 : 0,
   });
-function getMenuFromServer  () {
-  if(window.sessionStorage.getItem('menuItems')==null){
-    fetch("http://122.166.172.240:1337/navbars")
-    .then(res => res.json())
-    .then(
-      (result) => {
-        window.sessionStorage.setItem('menuItems', JSON.stringify(result));
-      })
+  function getMenuFromServer() {
+    if (window.sessionStorage.getItem('menuItems') == null) {
+      fetch('http://122.166.172.240:1337/navbars')
+        .then((res) => res.json())
+        .then((result) => {
+          window.sessionStorage.setItem('menuItems', JSON.stringify(result));
+        });
+    }
   }
-}
-getMenuFromServer();
-function  getFaqFromServer () {
-  if(window.sessionStorage.getItem('faqItems')==null){
-    fetch("http://122.166.172.240:1337/faqs")
-      .then(res => res.json())
-      .then(
-        (result) => {
+  getMenuFromServer();
+  function getFaqFromServer() {
+    if (window.sessionStorage.getItem('faqItems') == null) {
+      fetch('http://122.166.172.240:1337/faqs')
+        .then((res) => res.json())
+        .then((result) => {
           window.sessionStorage.setItem('faqItems', JSON.stringify(result));
-        })
+        });
     }
-}
-getFaqFromServer();
-function getCMSFromServer () {
-  if(window.sessionStorage.getItem('cmsItems')==null){
-    fetch("http://122.166.172.240:1337/website-maalem-financings")
-      .then(res => res.json())
-      .then(
-        (result) => {
+  }
+  getFaqFromServer();
+  function getCMSFromServer() {
+    if (window.sessionStorage.getItem('cmsItems') == null) {
+      fetch('http://122.166.172.240:1337/website-maalem-financings')
+        .then((res) => res.json())
+        .then((result) => {
           window.sessionStorage.setItem('cmsItems', JSON.stringify(result));
-        })
+        });
     }
-}
-getCMSFromServer();
+  }
+  getCMSFromServer();
 
-if(window.sessionStorage.getItem('menuItems')== null){
-  
-  var questionGlobal = {
-    
-    "menu": [{
-      "item": "a",
-      "href": "#"
-    }, {
-      "item": "b",
-      "href": "#"
-    }],
-    "menu": [{
-      "item": "c",
-      "href": "#"
-    }, {
-      "item": "d",
-      "href": "#"
-    }]
-  };
-  window.sessionStorage.setItem('menuItems', JSON.stringify(questionGlobal))
-}
+  if (window.sessionStorage.getItem('menuItems') == null) {
+    var questionGlobal = {
+      menu: [
+        {
+          item: 'a',
+          href: '#',
+        },
+        {
+          item: 'b',
+          href: '#',
+        },
+      ],
+      menu: [
+        {
+          item: 'c',
+          href: '#',
+        },
+        {
+          item: 'd',
+          href: '#',
+        },
+      ],
+    };
+    window.sessionStorage.setItem('menuItems', JSON.stringify(questionGlobal));
+  }
 
-const navMenu = JSON.parse(window.sessionStorage.getItem('menuItems'));
+  const navMenu = JSON.parse(window.sessionStorage.getItem('menuItems'));
   const searchRef = useRef(null);
   useOnClickOutside(searchRef, () =>
     setState({ ...state, searchToggle: false })
   );
 
-  const toggleHandler = type => {
+  const toggleHandler = (type) => {
     if (type === 'search') {
       setState({
         ...state,
@@ -130,14 +130,14 @@ const navMenu = JSON.parse(window.sessionStorage.getItem('menuItems'));
     }
   };
 
-  const handleOnChange = event => {
+  const handleOnChange = (event) => {
     setState({
       ...state,
       search: event.target.value,
     });
   };
 
-  const handleSearchForm = event => {
+  const handleSearchForm = (event) => {
     event.preventDefault();
 
     if (state.search !== '') {
@@ -153,119 +153,123 @@ const navMenu = JSON.parse(window.sessionStorage.getItem('menuItems'));
   };
 
   const scrollItems = [];
-  navMenu[state.navIndex].menu.menu.forEach(item => {
+  navMenu[state.navIndex].menu.menu.forEach((item) => {
     scrollItems.push(item.href);
   });
-  
 
-  const handleRemoveMenu = () => {
-    setState({
-      ...state,
-      mobileMenu: false,
-    });
-  };
+  // const handleRemoveMenu = () => {
+  //   setState({
+  //     ...state,
+  //     mobileMenu: false,
+  //   });
+  // };
+
   const toggleLanguage = () => {
-    if(window.sessionStorage.getItem('lang')=='en'){
-      window.sessionStorage.setItem('lang', 'ar')
-      state.setState({navIndex:0})
-    }else{
-      window.sessionStorage.setItem('lang', 'en')
-      state.setState({navIndex:1})
+    if (window.sessionStorage.getItem('lang') == 'en') {
+      window.sessionStorage.setItem('lang', 'ar');
+      state.setState({ navIndex: 0 });
+    } else {
+      window.sessionStorage.setItem('lang', 'en');
+      state.setState({ navIndex: 1 });
     }
   };
 
+  console.log('navMenu=', navMenu);
+  return (
+    <NavbarWrapper className="navbar">
+      <Container>
+        <Logo
+          href="https://maalem.com.sa/en"
+          logoSrc={LogoImage}
+          title="Maalem Financing"
+          className="main-logo"
+        />
+        <Logo
+          href="https://maalem.com.sa/en"
+          logoSrc={LogoImageAlt}
+          title="Maalem Financing"
+          className="logo-alt"
+        />
+        {/* end of logo */}
 
-  console.log("navMenu=",navMenu);
-     return (
-   
-      <NavbarWrapper className="navbar">
-        <Container>
-          <Logo
-            href="https://maalem.com.sa/en"
-            logoSrc={LogoImage}
-            title="Maalem Financing"
-            className="main-logo"
+        <MenuArea className={state.searchToggle ? '' : ''}>
+          <ScrollSpyMenu
+            className="menu navbar"
+            menuItems={navMenu[state.navIndex].menu.menu}
+            offset={-84}
           />
-          <Logo
-            href="https://maalem.com.sa/en"
-            logoSrc={LogoImageAlt}
-            title="Maalem Financing"
-            className="logo-alt"
-          />
-          {/* end of logo */}
-  
-          <MenuArea className={state.searchToggle ? '' : ''}>
-            <ScrollSpyMenu className="menu navbar" menuItems={navMenu[state.navIndex].menu.menu} offset={-84} />
-            {/* end of main menu */}
-  
-            <Search className="search" ref={searchRef}>
-              <form onSubmit={handleSearchForm}>
-                <input
-                  type="text"
-                  value={state.search}
-                  placeholder="Enter your keyword"
-                  onChange={handleOnChange}
-                />
-              </form>
-              <Button
-                className="text"
-                variant="textButton"
-                icon={<Icon icon={state.searchToggle ? x : search} />}
-                onClick={() => toggleHandler('search')}
+          {/* end of main menu */}
+
+          <Search className="search" ref={searchRef}>
+            <form onSubmit={handleSearchForm}>
+              <input
+                type="text"
+                value={state.search}
+                placeholder="Enter your keyword"
+                onChange={handleOnChange}
               />
-            </Search>
-            
-            {/* end of search */}
-  
-            
-  
+            </form>
             <Button
-              className="menubar"
-              icon={
-                state.mobileMenu ? (
-                  <Icon className="bar" icon={x} />
-                ) : (
-                  <Fade>
-                    <Icon className="close" icon={menu} />
-                  </Fade>
-                )
-              }
-              color="#0F2137"
+              className="text"
               variant="textButton"
-              onClick={() => toggleHandler('menu')}
+              icon={<Icon icon={state.searchToggle ? x : search} />}
+              onClick={() => toggleHandler('search')}
             />
-          </MenuArea>
+          </Search>
+
+          {/* end of search */}
+
+          <Button
+            className="menubar"
+            icon={
+              state.mobileMenu ? (
+                <Icon className="bar" icon={x} />
+              ) : (
+                <Fade>
+                  <Icon className="close" icon={menu} />
+                </Fade>
+              )
+            }
+            color="#0F2137"
+            variant="textButton"
+            onClick={() => toggleHandler('menu')}
+          />
+        </MenuArea>
+      </Container>
+
+      {/* start mobile menu */}
+      <MobileMenu className={`mobile-menu ${state.mobileMenu ? 'active' : ''}`}>
+        <Container>
+          <Scrollspy
+            className="menu"
+            items={scrollItems}
+            offset={-84}
+            currentClassName="active"
+          >
+            {navMenu[state.navIndex].menu.menu.map((menu, index) => (
+              <li key={`menu_key${index}`}>
+                <AnchorLink
+                  href={menu.path}
+                  offset={menu.offset}
+                  // onClick={handleRemoveMenu}
+                >
+                  {menu.item}
+                </AnchorLink>
+              </li>
+            ))}
+          </Scrollspy>
+          <Button
+            title={
+              'Change Language (' + window.sessionStorage.getItem('lang') + ') '
+            }
+            onClick={toggleLanguage}
+          ></Button>
+          <Button type="primary"> Get App </Button>
         </Container>
-  
-        {/* start mobile menu */}
-        <MobileMenu className={`mobile-menu ${state.mobileMenu ? 'active' : ''}`}>
-          <Container>
-            <Scrollspy
-              className="menu"
-              items={scrollItems}
-              offset={-84}
-              currentClassName="active"
-            >
-              {navMenu[state.navIndex].menu.menu.map((menu, index) => (
-                <li key={`menu_key${index}`}>
-                  <AnchorLink
-                    href={menu.path}
-                    offset={menu.offset}
-                    onClick={handleRemoveMenu}
-                  >
-                    {menu.item}
-                  </AnchorLink>
-                </li>
-              ))}
-            </Scrollspy>
-            <Button title={"Change Language ("+window.sessionStorage.getItem('lang')+") "} onClick={toggleLanguage}></Button>
-            <Button type='primary'> Get App </Button>
-          </Container>
-        </MobileMenu>
-        {/* end of mobile menu */}
-      </NavbarWrapper>
-    );
- 
+      </MobileMenu>
+      {/* end of mobile menu */}
+    </NavbarWrapper>
+  );
 };
 
 export default Navbar;

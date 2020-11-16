@@ -31,10 +31,20 @@ const TeamPortfoiloSection = () => {
     active: 6, // active item when start
   });
 
+  const langIndexx = window.sessionStorage.getItem('lang') === 'ar' ? 0 : 1;
+  const cmsItems2 = JSON.parse(window.sessionStorage.getItem('cmsItems2'));
+  const cmsItemss = cmsItems2[langIndexx];
+
   return (
     <SectionWrapper id="team">
       <Container>
-        <ContentWrapper>
+        <ContentWrapper
+          style={
+            window.sessionStorage.getItem('lang') === 'ar'
+              ? { direction: 'rtl', textAlign: 'right' }
+              : { direction: 'ltr', textAlign: 'left' }
+          }
+        >
           <div className="image">
             {teammember.map((item, index) => (
               <Fade up key={index}>
@@ -64,10 +74,22 @@ const TeamPortfoiloSection = () => {
               </Fade>
             ))}
           </div>
-          <div className="content">
-            <Heading content={title} />
-            <Text content={description} />
-            <Button title="Learn More" />
+          <div
+            className="content"
+            style={
+              window.sessionStorage.getItem('lang') === 'en'
+                ? { direction: 'rtl', textAlign: 'right' }
+                : { direction: 'ltr', textAlign: 'left' }
+            }
+          >
+            <Text content={cmsItemss.aboutus_heading} />
+            <Text content={cmsItemss.aboutus_description} />
+            <Text content={cmsItemss.aboutus_heading} />
+            <Text content={cmsItemss.aboutus_headingnew} />
+            <Text content={cmsItemss.new_fields_one} />
+            <Text content={cmsItemss.aboutus_messageheading} />
+            <Text content={cmsItemss.new_fields_two} />
+            <Text content={cmsItemss.new_fields_three} />
           </div>
         </ContentWrapper>
       </Container>

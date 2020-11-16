@@ -29,8 +29,6 @@ const Testimonial = () => {
     },
   };
 
-
-  
   return (
     <SectionWrapper id="testimonial">
       <Container>
@@ -61,7 +59,7 @@ const Testimonial = () => {
               }
             >
               <Fragment>
-                {reviews.map(item => (
+                {reviews.map((item) => (
                   <GlideSlide key={`testimonial--key${item.id}`}>
                     <div className="review-card">
                       <Heading as="h3" content={item.title} />

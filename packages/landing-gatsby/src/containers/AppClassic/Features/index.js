@@ -34,6 +34,13 @@ const Features = () => {
     }
   `);
   const { slogan, title, items } = data.appClassicJson.features;
+  const langIndex = window.sessionStorage.getItem('lang') === 'ar' ? 1 : 0;
+
+  const cmsItems2 = JSON.parse(window.sessionStorage.getItem('cmsItems2'));
+
+  const cmsItemss = cmsItems2[langIndex];
+
+  console.log('cmsItemss', cmsItemss);
 
   return (
     <SectionWrapper>
@@ -45,7 +52,7 @@ const Features = () => {
           </Fade>
         </SectionHeader>
         <FeatureWrapper>
-          {items.map(item => (
+          {items.map((item) => (
             <Fade up delay={100 * item.id} key={`feature-key${item.id}`}>
               <FeatureBlock
                 style={{ '--color': `${item.color}` }}

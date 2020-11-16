@@ -25,7 +25,7 @@ const PricingPolicy = () => {
     pricingPlan: monthly,
   });
 
-  const handlePricingPlan = plan => {
+  const handlePricingPlan = (plan) => {
     if (plan === 'annualy') {
       setState({
         ...state,
@@ -68,11 +68,11 @@ const PricingPolicy = () => {
 
         <PricingArea>
           <InnerWrapper>
-            {state.pricingPlan.map(item => (
+            {state.pricingPlan.map((item) => (
               <PricingCard key={`${state.active}-card--key${item.id}`}>
                 {item.suggested && (
                   <span className="tag">
-                    <img src={crown} alt="Crown" /> Suggested
+                    <img src={crown} alt="Crown" />
                   </span>
                 )}
                 <div className="card-header">
@@ -81,7 +81,7 @@ const PricingPolicy = () => {
                 </div>
                 <div className="card-body">
                   <ul className="feature-list">
-                    {item.features.map(item => (
+                    {item.features.map((item) => (
                       <li key={`${state.active}-feature--key${item.id}`}>
                         <Icon icon={checkmarkCircled} /> {item.text}
                       </li>
@@ -93,9 +93,7 @@ const PricingPolicy = () => {
                     <span>SAR {item.price}</span> /{state.active}
                   </strong>
                   <Button
-                    title={
-                      item.price === 0 ? 'Apply Now' : 'Download App'
-                    }
+                    title={item.price === 0 ? 'Apply Now' : 'Download App'}
                   />
                   {item.trail ? (
                     <div className="trail">

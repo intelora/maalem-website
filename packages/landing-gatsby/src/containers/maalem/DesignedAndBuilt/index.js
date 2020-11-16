@@ -25,15 +25,12 @@ const DesignedAndBuilt = () => {
       }
     }
   `);
-  const {
-    image,
-    title,
-    slogan,
-    description,
-  } = data.maalemJson.designAndBuilt;
+  const { image, title, slogan, description } = data.maalemJson.designAndBuilt;
   const cmsItems = JSON.parse(window.sessionStorage.getItem('cmsItems'));
-  const langIndex = window.sessionStorage.getItem('lang')==='ar' ? 1: 0;
-  
+  const langIndex = window.sessionStorage.getItem('lang') === 'ar' ? 1 : 0;
+  const cmsItems2 = JSON.parse(window.sessionStorage.getItem('cmsItems2'));
+  const langIndexx = window.sessionStorage.getItem('lang') === 'ar' ? 1 : 0;
+  const cmsItemss = cmsItems2[langIndexx];
 
   return (
     <SectionWrapper id="loancalculator">
@@ -41,24 +38,28 @@ const DesignedAndBuilt = () => {
         <img src={CalcIcon} alt="calculator" className="calc-icon" onClick={e=>setOpen(!openCalcWrapper)}/>
       </Container> */}
       <Container id="calcWrapper" className="calcWrapper">
-      <button className="close-btn" onClick={()=>{
-                    document.getElementById("loancalculator").style.transform = 'translateX(100%)';
-                  }}>&times;</button>          
-        <ContentWrapper>       
+        <button
+          className="close-btn"
+          onClick={() => {
+            document.getElementById('loancalculator').style.transform =
+              'translateX(100%)';
+          }}
+        >
+          &times;
+        </button>
+        <ContentWrapper>
           <div className="content">
-            <Heading as="h5" content={slogan} />
-            <Heading content={title} />
-            <Text content={description} />
+            <Heading as="h5" content={cmsItemss.loancalculator} />
+            <Heading content={cmsItemss.loancalculatorheading} />
+            <Text content={cmsItemss.loancalculatordescription} />
           </div>
           <div className="image">
             <Image src={image.publicURL} alt="Built Logo" />
           </div>
-        
         </ContentWrapper>
       </Container>
     </SectionWrapper>
   );
 };
-
 
 export default DesignedAndBuilt;

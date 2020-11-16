@@ -63,58 +63,60 @@ const PricingPolicy = () => {
     pricingPlan: monthly,
   });
 
-
-const handlePricingPlan = plan => {
+  const handlePricingPlan = (plan) => {
     if (plan === 'annualy') {
+      state.pricingPlan[0].title =
+        cmsItems[langIndex].websiteMaalemRow15Col1Title;
+      state.pricingPlan[1].title =
+        cmsItems[langIndex].websiteMaalemRow15Col2Title;
 
-        state.pricingPlan[0].title = cmsItems[langIndex].websiteMaalemRow15Col1Title;
-        state.pricingPlan[1].title = cmsItems[langIndex].websiteMaalemRow15Col2Title;
-      
-        state.pricingPlan[0].features[0].text =
-          cmsItems[langIndex].websiteMaalemRow15Col1TitleTextpRow1;
-        state.pricingPlan[0].features[1].text =
-          cmsItems[langIndex].websiteMaalemRow15Col1TitleTextpRow2;
-        state.pricingPlan[0].features[2].text =
-          cmsItems[langIndex].websiteMaalemRow15Col1TitleTextpRow3;
-        state.pricingPlan[0].features[3].text =
-          cmsItems[langIndex].websiteMaalemRow15Col1TitleTextpRow4;
-      
-        state.pricingPlan[1].features[0].text =
-          cmsItems[langIndex].websiteMaalemRow15Col2TitleTextpRow1;
-        state.pricingPlan[1].features[1].text =
-          cmsItems[langIndex].websiteMaalemRow15Col2TitleTextpRow2;
-        state.pricingPlan[1].features[2].text =
-          cmsItems[langIndex].websiteMaalemRow15Col2TitleTextpRow3;
-        state.pricingPlan[1].features[3].text =
-          cmsItems[langIndex].websiteMaalemRow15Col2TitleTextpRow4;
+      state.pricingPlan[0].features[0].text =
+        cmsItems[langIndex].websiteMaalemRow15Col1TitleTextpRow1;
+      state.pricingPlan[0].features[1].text =
+        cmsItems[langIndex].websiteMaalemRow15Col1TitleTextpRow2;
+      state.pricingPlan[0].features[2].text =
+        cmsItems[langIndex].websiteMaalemRow15Col1TitleTextpRow3;
+      state.pricingPlan[0].features[3].text =
+        cmsItems[langIndex].websiteMaalemRow15Col1TitleTextpRow4;
 
-          setState({
+      state.pricingPlan[1].features[0].text =
+        cmsItems[langIndex].websiteMaalemRow15Col2TitleTextpRow1;
+      state.pricingPlan[1].features[1].text =
+        cmsItems[langIndex].websiteMaalemRow15Col2TitleTextpRow2;
+      state.pricingPlan[1].features[2].text =
+        cmsItems[langIndex].websiteMaalemRow15Col2TitleTextpRow3;
+      state.pricingPlan[1].features[3].text =
+        cmsItems[langIndex].websiteMaalemRow15Col2TitleTextpRow4;
+
+      setState({
         ...state,
         active: 'annualy',
         pricingPlan: annualy,
       });
     } else {
-        state.pricingPlan[0].title = cmsItems[langIndex].websiteMaalemRow15Col1Title;
-        state.pricingPlan[1].title = cmsItems[langIndex].websiteMaalemRow15Col2Title;
-      
-        state.pricingPlan[0].features[0].text =
-          cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow1;
-        state.pricingPlan[0].features[1].text =
-          cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow2;
-        state.pricingPlan[0].features[2].text =
-          cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow3;
-        state.pricingPlan[0].features[3].text =
-          cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow4;
-      
-        state.pricingPlan[1].features[0].text =
-          cmsItems[langIndex].websiteMaalemRow17Col2TitleTextpRow1;
-        state.pricingPlan[1].features[1].text =
-          cmsItems[langIndex].websiteMaalemRow17Col2TitleTextpRow2;
-        state.pricingPlan[1].features[2].text =
-          cmsItems[langIndex].websiteMaalemRow17Col2TitleTextpRow3;
-        state.pricingPlan[1].features[3].text =
-          cmsItems[langIndex].websiteMaalemRow17Col2TitleTextpRow4;
-      
+      state.pricingPlan[0].title =
+        cmsItems[langIndex].websiteMaalemRow15Col1Title;
+      state.pricingPlan[1].title =
+        cmsItems[langIndex].websiteMaalemRow15Col2Title;
+
+      state.pricingPlan[0].features[0].text =
+        cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow1;
+      state.pricingPlan[0].features[1].text =
+        cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow2;
+      state.pricingPlan[0].features[2].text =
+        cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow3;
+      state.pricingPlan[0].features[3].text =
+        cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow4;
+
+      state.pricingPlan[1].features[0].text =
+        cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow1;
+      state.pricingPlan[1].features[1].text =
+        cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow2;
+      state.pricingPlan[1].features[2].text =
+        cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow3;
+      state.pricingPlan[1].features[3].text =
+        cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow4;
+
       setState({
         ...state,
         active: 'monthly',
@@ -129,7 +131,10 @@ const handlePricingPlan = plan => {
     <SectionWrapper id="pricing">
       <Container>
         <SectionHeader>
-          <Heading as="h5" content={cmsItems[langIndex].websiteMaalemRow13Text} />
+          <Heading
+            as="h5"
+            content={cmsItems[langIndex].websiteMaalemRow13Text}
+          />
           <Heading content={cmsItems[langIndex].websiteMaalemRow12Text} />
         </SectionHeader>
 
@@ -138,32 +143,40 @@ const handlePricingPlan = plan => {
             className={state.active === 'monthly' ? 'active' : ''}
             type="button"
             onClick={() => handlePricingPlan('monthly')}
-          > {cmsItems[langIndex].websiteMaalemRow14Col1Text}
+          >
+            {' '}
+            {cmsItems[langIndex].websiteMaalemRow14Col1Text}
           </button>
           <button
             className={state.active === 'annualy' ? 'active' : ''}
             type="button"
             onClick={() => handlePricingPlan('annualy')}
-          > {cmsItems[langIndex].websiteMaalemRow14Col2Text}
+          >
+            {' '}
+            {cmsItems[langIndex].websiteMaalemRow14Col2Text}
           </button>
         </ButtonGroup>
 
         <PricingArea>
           <InnerWrapper>
-            {state.pricingPlan.map(item => (
+            {state.pricingPlan.map((item) => (
               <PricingCard key={`${state.active}-card--key${item.id}`}>
                 {item.suggested && (
                   <span className="tag">
-                    <img src={crown} alt="Crown" /> Suggested
+                    <img src={crown} alt="Crown" />
                   </span>
                 )}
                 <div className="card-header">
                   <Heading as="h3" content={item.title} />
-                  <Text content={cmsItems[langIndex].websiteMaalemRow15Col1TitleText} />
+                  <Text
+                    content={
+                      cmsItems[langIndex].websiteMaalemRow15Col1TitleText
+                    }
+                  />
                 </div>
                 <div className="card-body">
                   <ul className="feature-list">
-                    {item.features.map(item => (
+                    {item.features.map((item) => (
                       <li key={`${state.active}-feature--key${item.id}`}>
                         <Icon icon={checkmarkCircled} /> {item.text}
                       </li>
@@ -172,17 +185,17 @@ const handlePricingPlan = plan => {
                 </div>
                 <div className="card-footer">
                   <strong>
-                    <span>SA {item.price}</span> /{state.active}
+                    {/* <span>SA {item.price}</span> /{state.active} */}
                   </strong>
-                    <Button
-                      onClick={() => {
-                        window.sessionStorage.getItem('showCalculator', true);
-                        document.getElementById(
-                          'loancalculator'
-                        ).style.transform = 'translateX(0)';
-                      }}
-                      title={cmsItems[langIndex].websiteMaalemRow28Icon}
-                    />
+                  <Button
+                    onClick={() => {
+                      window.sessionStorage.getItem('showCalculator', true);
+                      document.getElementById(
+                        'loancalculator'
+                      ).style.transform = 'translateX(0)';
+                    }}
+                    title={cmsItems[langIndex].websiteMaalemRow28Icon}
+                  />
 
                   {item.trail ? (
                     <div className="trail">
