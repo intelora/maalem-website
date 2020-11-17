@@ -63,8 +63,29 @@ const PricingPolicy = () => {
     pricingPlan: monthly,
   });
 
+  const [gplan, gPlan] = useState('monthly');
+
   const handlePricingPlan = (plan) => {
     if (plan === 'annualy') {
+      setState({
+        ...state,
+        active: 'annualy',
+        pricingPlan: annualy,
+      });
+      setState({ gPlan: 'monthly' });
+    } else {
+      setState({
+        ...state,
+        active: 'monthly',
+        pricingPlan: monthly,
+      });
+      setState({ gPlan: 'annualy' });
+    }
+    shoawMydataToggle();
+  };
+
+  const shoawMydataToggle = () => {
+    if (gPlan == 'monthly') {
       state.pricingPlan[0].title =
         cmsItems[langIndex].websiteMaalemRow15Col1Title;
       state.pricingPlan[1].title =
@@ -87,12 +108,6 @@ const PricingPolicy = () => {
         cmsItems[langIndex].websiteMaalemRow15Col2TitleTextpRow3;
       state.pricingPlan[1].features[3].text =
         cmsItems[langIndex].websiteMaalemRow15Col2TitleTextpRow4;
-
-      setState({
-        ...state,
-        active: 'annualy',
-        pricingPlan: annualy,
-      });
     } else {
       state.pricingPlan[0].title =
         cmsItems[langIndex].websiteMaalemRow17Col1Title;
@@ -116,24 +131,7 @@ const PricingPolicy = () => {
         cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow3;
       state.pricingPlan[1].features[3].text =
         cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow4;
-
-      setState({
-        ...state,
-        active: 'monthly',
-        pricingPlan: monthly,
-      });
     }
-  };
-
-  // useEffect({
-  //   shoawMydata
-  // });
-  // //handlePricingPlan('monthly');
-  const shoawMydataone = () => {
-    console.log('lang 1==');
-  };
-  const shoawMydatatwo = () => {
-    console.log('lang 2==');
   };
 
   return (
@@ -156,7 +154,7 @@ const PricingPolicy = () => {
             {' '}
             {cmsItems[langIndex].websiteMaalemRow14Col1Text}
           </button>
-          {langIndex ? console.log('aa') : console.log('bb')}
+          {langIndex == 0 ? shoawMydataToggle() : shoawMydataToggle()}
           <button
             className={state.active === 'annualy' ? 'active' : ''}
             type="button"
