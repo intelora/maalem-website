@@ -63,8 +63,29 @@ const PricingPolicy = () => {
     pricingPlan: monthly,
   });
 
+  const [gplan, gPlan] = useState('monthly');
+
   const handlePricingPlan = (plan) => {
     if (plan === 'annualy') {
+      setState({
+        ...state,
+        active: 'annualy',
+        pricingPlan: annualy,
+      });
+      setState({ gPlan: 'monthly' });
+    } else {
+      setState({
+        ...state,
+        active: 'monthly',
+        pricingPlan: monthly,
+      });
+      setState({ gPlan: 'annualy' });
+    }
+    shoawMydataToggle();
+  };
+
+  const shoawMydataToggle = () => {
+    if (gPlan == 'monthly') {
       state.pricingPlan[0].title =
         cmsItems[langIndex].websiteMaalemRow15Col1Title;
       state.pricingPlan[1].title =
@@ -87,17 +108,11 @@ const PricingPolicy = () => {
         cmsItems[langIndex].websiteMaalemRow15Col2TitleTextpRow3;
       state.pricingPlan[1].features[3].text =
         cmsItems[langIndex].websiteMaalemRow15Col2TitleTextpRow4;
-
-      setState({
-        ...state,
-        active: 'annualy',
-        pricingPlan: annualy,
-      });
     } else {
       state.pricingPlan[0].title =
-        cmsItems[langIndex].websiteMaalemRow15Col1Title;
+        cmsItems[langIndex].websiteMaalemRow17Col1Title;
       state.pricingPlan[1].title =
-        cmsItems[langIndex].websiteMaalemRow15Col2Title;
+        cmsItems[langIndex].websiteMaalemRow17Col1Title;
 
       state.pricingPlan[0].features[0].text =
         cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow1;
@@ -116,16 +131,8 @@ const PricingPolicy = () => {
         cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow3;
       state.pricingPlan[1].features[3].text =
         cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow4;
-
-      setState({
-        ...state,
-        active: 'monthly',
-        pricingPlan: monthly,
-      });
     }
   };
-
-  //handlePricingPlan('monthly');
 
   return (
     <SectionWrapper id="pricing">
@@ -147,6 +154,7 @@ const PricingPolicy = () => {
             {' '}
             {cmsItems[langIndex].websiteMaalemRow14Col1Text}
           </button>
+          {langIndex == 0 ? shoawMydataToggle() : shoawMydataToggle()}
           <button
             className={state.active === 'annualy' ? 'active' : ''}
             type="button"

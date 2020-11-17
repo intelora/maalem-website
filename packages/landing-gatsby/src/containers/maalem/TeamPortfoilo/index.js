@@ -82,12 +82,13 @@ const TeamPortfoiloSection = () => {
                 : { direction: 'ltr', textAlign: 'left' }
             }
           >
+            <Heading as="h3" content={cmsItemss.new_fields_four} />
             <Text content={cmsItemss.aboutus_heading} />
             <Text content={cmsItemss.aboutus_description} />
             <Text content={cmsItemss.aboutus_heading} />
-            <Text content={cmsItemss.aboutus_headingnew} />
+            <Heading as="h3" content={cmsItemss.aboutus_headingnew} />
             <Text content={cmsItemss.new_fields_one} />
-            <Text content={cmsItemss.aboutus_messageheading} />
+            <Heading as="h3" content={cmsItemss.aboutus_messageheading} />
             <Text content={cmsItemss.new_fields_two} />
             <Text content={cmsItemss.new_fields_three} />
           </div>

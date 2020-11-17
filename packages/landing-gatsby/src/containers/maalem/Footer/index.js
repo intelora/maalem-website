@@ -158,13 +158,7 @@ const Footer = () => {
     }
   }
   return (
-    <ContentWrapper
-      style={
-        window.sessionStorage.getItem('lang') === 'ar'
-          ? { direction: 'rtl', textAlign: 'right' }
-          : { direction: 'ltr', textAlign: 'left' }
-      }
-    >
+    <ContentWrapper>
       <div className={testimoniall}>
         <Testimonial />
       </div>

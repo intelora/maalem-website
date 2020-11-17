@@ -264,7 +264,6 @@ const Navbar = () => {
             }
             onClick={toggleLanguage}
           ></Button>
-          <Button type="primary"> Get App </Button>
         </Container>
       </MobileMenu>
       {/* end of mobile menu */}

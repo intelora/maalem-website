@@ -26,9 +26,21 @@ import '@redq/reuse-modal/es/index.css';
 
 import SEO from '../components/seo';
 
-export default function() {
+const langIndexx = window.sessionStorage.getItem('lang') === 'ar' ? 0 : 1;
+const cmsItems = JSON.parse(window.sessionStorage.getItem('cmsItems'));
+
+const cmsItems2 = JSON.parse(window.sessionStorage.getItem('cmsItems2'));
+
+export default function () {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider
+      theme={theme}
+      style={
+        window.sessionStorage.getItem('lang') === 'ar'
+          ? { direction: 'rtl', textAlign: 'right' }
+          : { direction: 'ltr', textAlign: 'left' }
+      }
+    >
       <>
         <SEO title="Maalem Financing" />
         <Modal />
