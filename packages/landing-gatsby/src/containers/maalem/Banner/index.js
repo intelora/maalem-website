@@ -12,8 +12,8 @@ import Heading from 'common/src/components/Heading';
 import Rating from 'common/src/components/Rating';
 import Container from 'common/src/components/UI/Container';
 import styled from 'styled-components';
-import Appstore from 'common/src/assets/image/maalem/Appstore.png'
-import GooglePlay from 'common/src/assets/image/maalem/GooglePlay.png'
+import Appstore from 'common/src/assets/image/maalem/Appstore.png';
+import GooglePlay from 'common/src/assets/image/maalem/GooglePlay.png';
 import BannerWrapper, {
   BannerContent,
   RatingInfo,
@@ -104,88 +104,80 @@ const Banner = () => {
     });
   };
   const cmsItems = JSON.parse(window.sessionStorage.getItem('cmsItems'));
-  const langIndex = window.sessionStorage.getItem('lang')==='ar' ? 1 : 0;
-  console.log("cms items ==== ===");
+  const langIndex = window.sessionStorage.getItem('lang') === 'ar' ? 1 : 0;
+  console.log('cms items ==== ===');
   return (
     <BannerWrapper id="home">
       <Container>
         <Fade up delay={300}>
-            <ButtonGroup href="https://play.google.com/store/apps/details?id=com.maalem">
-            <a href='https://play.google.com/store/apps/details?id=com.maalem'>
-            <Image width="70%" height="70%"  type="button" src={Appstore} />
+          <ButtonGroup href="https://play.google.com/store/apps/details?id=com.maalem">
+            <a href="https://play.google.com/store/apps/details?id=com.maalem">
+              <Image width="70%" height="70%" type="button" src={Appstore} />
             </a>
-            <a href='https://play.google.com/store/apps/details?id=com.maalem'>
-                <Image width="70%" height="70%" type="button"style={{marginTop:'30px'}} src={GooglePlay}/>
+            <a href="https://play.google.com/store/apps/details?id=com.maalem">
+              <Image
+                width="70%"
+                height="70%"
+                type="button"
+                style={{ marginTop: '30px' }}
+                src={GooglePlay}
+              />
             </a>
-            <a href='https://play.google.com/store/apps/details?id=com.maalem'>
-              <Button className="primary" title={cmsItems[langIndex].websiteMaalemRow42Text} />
-              </a>
-            </ButtonGroup>
-          </Fade>
+            <a href="https://play.google.com/store/apps/details?id=com.maalem">
+              <Button
+                className="primary"
+                title={cmsItems[langIndex].websiteMaalemRow42Text}
+              />
+            </a>
+          </ButtonGroup>
+        </Fade>
         <BannerContent>
-          
-        {/* <HeadingWrapper >Download Mobile App</HeadingWrapper> */}
-           {/* <Fade up>
-            <RatingInfo>
-              <Rating rating={5} />
-              Maalem - The Loan Facilitation
-            </RatingInfo>
-          </Fade> */}
           <Fade up delay={100}>
-            
             <Heading
-             style={
-              window.sessionStorage.getItem('lang')==='en' ? { direction: "rtl", textAlign: 'right' } : null
-            }
+              style={
+                window.sessionStorage.getItem('lang') === 'en'
+                  ? { direction: 'rtl', textAlign: 'right' }
+                  : null
+              }
               as="h1"
               content={cmsItems[langIndex].websiteMaalemRow5Text}
             />
           </Fade>
           <Fade up delay={200}>
             <Text
-             style={
-              window.sessionStorage.getItem('lang')==='en' ? { direction: "rtl", textAlign: 'right' } : null
-            }
+              style={
+                window.sessionStorage.getItem('lang') === 'en'
+                  ? { direction: 'rtl', textAlign: 'right' }
+                  : null
+              }
               content={cmsItems[langIndex].websiteMaalemRow6Text}
             />
-            <Text  style={
-                  window.sessionStorage.getItem('lang')==='en' ? { direction: "rtl", textAlign: 'right' } : null
-                }
+            <Text
+              style={
+                window.sessionStorage.getItem('lang') === 'en'
+                  ? { direction: 'rtl', textAlign: 'right' }
+                  : null
+              }
               content={cmsItems[langIndex].websiteMaalemRow7Text}
             />
-            <Text  style={
-                  window.sessionStorage.getItem('lang')==='en' ? { direction: "rtl", textAlign: 'right' } : null
-                }
+            <Text
+              style={
+                window.sessionStorage.getItem('lang') === 'en'
+                  ? { direction: 'rtl', textAlign: 'right' }
+                  : null
+              }
               content={cmsItems[langIndex].websiteMaalemRow8Text}
             />
           </Fade>
-          
-          
-          {/*<VideoGroup>
-            <img
-              src={videoBanner1}
-              onClick={handleVideoModal}
-              alt="Microsoft-0"
-            />
-          </VideoGroup> */}
         </BannerContent>
         <BannerImage>
           <Fade up delay={100}>
-            <Image src={bannerImg} alt="Banner"/>
+            <Image src={bannerImg} alt="Banner" />
           </Fade>
         </BannerImage>
       </Container>
       <CustomerWrapper>
         <Text content="&nbsp; &nbsp; &nbsp; &nbsp; " />
-        {/* <ImageWrapper>
-          {client.map((item) => (
-            <Image
-              key={`client-key${item.id}`}
-              src={item.image.publicURL}
-              alt={item.title}
-            />
-          ))}
-        </ImageWrapper> */}
       </CustomerWrapper>
       <img
         className="bannerBottomShape"
