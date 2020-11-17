@@ -24,7 +24,7 @@ export const TabArea = styled.div`
   width: 70%;
   margin: 170px auto 70px;
   @media only screen and (max-width: 1366px) {
-    margin: 130px 0 50px;
+    //margin: 130px 0 50px;
   }
   @media only screen and (max-width: 991px) {
     margin: 0;

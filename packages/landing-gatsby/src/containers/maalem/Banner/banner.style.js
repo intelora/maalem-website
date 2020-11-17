@@ -49,6 +49,7 @@ const BannerWrapper = styled.div`
     }
   }
   .bannerBottomShape {
+    width: 20%;
     position: absolute;
     right: 0;
     bottom: -2px;
@@ -62,9 +63,9 @@ export const BannerContent = styled.div`
   width: 40%;
   flex-shrink: 0;
   @media only screen and (max-width: 1199px) {
-    flex-shrink: 0;
-    width: 100%;
-    margin-top: 25px;
+    //flex-shrink: 0;
+    //width: 100%;
+    //margin-top: 25px;
   }
 
   h1 {
@@ -130,18 +131,18 @@ export const ButtonGroup = styled.div`
     text-transform: inherit;
     border-radius: 25px;
     // margin-bottom:254px;
-    width:200px;
-    height:10px;
-    margin-right:100px;
-    margin-top:13%;
-    margin-left:0px !important;
+    width: 200px;
+    height: 10px;
+    margin-right: 100px;
+    margin-top: 13%;
+    margin-left: 0px !important;
 
     &.primary {
       position: relative;
-     
+
       // left:50px;
       background-color: ${themeGet('colors.white', '#ffffff')};
-      color: ${themeGet('colors.black','#00000')};
+      color: ${themeGet('colors.black', '#00000')};
       font-size: 19px;
       font-family: Arial, Helvetica, sans-serif;
       letter-spacing: -0.1px;
@@ -159,8 +160,8 @@ export const ButtonGroup = styled.div`
       font-family: Arial, Helvetica, sans-serif;
       // top:300px;
       font-size: 16px;
-      color: ${themeGet('colors.black','#00000')};
-     
+      color: ${themeGet('colors.black', '#00000')};
+
       font-weight: bold;
       .btn-icon {
         i {
@@ -223,7 +224,7 @@ export const CustomerWrapper = styled.div`
     padding: 0px 0 55px;
   }
   @media only screen and (max-width: 1099px) {
-    padding: 55px 0 55px;
+    //padding: 55px 0 55px;
     max-width: 920px;
   }
   @media only screen and (max-width: 991px) {
@@ -245,16 +246,14 @@ export const CustomerWrapper = styled.div`
 export const ImageWrapper = styled.div`
   display: flex;
   align-items: center;
-  max-width: 55%
-
-  @media only screen and (max-width: 991px) {
+  max-width: 55% @media only screen and (max-width: 991px) {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
   }
   img {
     margin: 0 12px;
-    margin-right:400px; 
+    margin-right: 400px;
     @media only screen and (max-width: 667px) {
       margin: 5px 10px;
     }
