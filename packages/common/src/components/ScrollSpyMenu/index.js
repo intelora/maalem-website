@@ -2,33 +2,35 @@ import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import Scrollspy from 'react-scrollspy';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { Link }  from 'gatsby';
+import { Link } from 'gatsby';
 import Button from 'common/src/components/Button';
-import '../../components/ScrollSpyMenu/scrollspy.style.css'
-
+import '../../components/ScrollSpyMenu/scrollspy.style.css';
 
 import { DrawerContext } from '../../contexts/DrawerContext';
 
 const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
-  
   const { dispatch } = useContext(DrawerContext);
   // empty array for scrollspy items
   const scrollItems = [];
 
   const [state, setState] = useState({
-    menuItems: menuItems
+    menuItems: menuItems,
   });
-  
+
   // toggle language in menu
   const toggleLanguage = () => {
-    
-    if(window.sessionStorage.getItem('lang')==='en'){
+    if (window.sessionStorage.getItem('lang') === 'en') {
       window.sessionStorage.setItem('lang', 'ar');
-      setState({menuItems:JSON.parse(window.sessionStorage.getItem('menuItems'))[0].menu.menu})
-    
-    }else{
+      setState({
+        menuItems: JSON.parse(window.sessionStorage.getItem('menuItems'))[0]
+          .menu.menu,
+      });
+    } else {
       window.sessionStorage.setItem('lang', 'en');
-      setState({menuItems:JSON.parse(window.sessionStorage.getItem('menuItems'))[1].menu.menu})
+      setState({
+        menuItems: JSON.parse(window.sessionStorage.getItem('menuItems'))[1]
+          .menu.menu,
+      });
     }
   };
   // window.onscroll = function() {scrollFunction()};
@@ -40,13 +42,13 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
   //   }
   //   else{
   //     // document.getElementById("loginDropdown").classList.add("bgGradient")
-  //     document.getElementById("loginDropdown").style.backgroundImage = "-webkit-linear-gradient(  rgb(100,43,115) 0%, rgb(198,66,110) 100% )";   
+  //     document.getElementById("loginDropdown").style.backgroundImage = "-webkit-linear-gradient(  rgb(100,43,115) 0%, rgb(198,66,110) 100% )";
   //   }
   // }
   // convert menu path to scrollspy items
-  state.menuItems.forEach(item => {
+  state.menuItems.forEach((item) => {
     scrollItems.push(item.href);
-  });    
+  });
 
   // Add all classs to an array
   const addAllClasses = ['scrollspy__menu'];
@@ -62,63 +64,50 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
       type: 'TOGGLE',
     });
   };
-  console.log("101010101010");
-  console.log('kkk',state.menuItems);
+  // console.log("101010101010");
+  // console.log('kkk',state.menuItems);
   return (
     <div>
-    <Scrollspy
-      items={scrollItems}
-      className={addAllClasses.join(' ')}
-      drawerClose={drawerClose}
-      {...props}
-    >
-
-
-      {state.menuItems.map((menu) => (
-        
-        <li className="dropdown" key={`1111`}>
-          {menu.staticLink ? (
-            <a href={menu.path}>{menu.label}</a>
-          ) : (
-            <>
-              {drawerClose ? (
-                <AnchorLink
-                  href={menu.href}
-                  onClick={toggleDrawer}
-                >
-                  {menu.item}
-                </AnchorLink>
-              ) : (
-                <Link to={menu.href}  >
-                  {menu.item}
-                </Link>
-                
-              )}
+      <Scrollspy
+        items={scrollItems}
+        className={addAllClasses.join(' ')}
+        drawerClose={drawerClose}
+        {...props}
+      >
+        {state.menuItems.map((menu) => (
+          <li className="dropdown" key={`1111`}>
+            {menu.staticLink ? (
+              <a href={menu.path}>{menu.label}</a>
+            ) : (
+              <>
+                {drawerClose ? (
+                  <AnchorLink href={menu.href} onClick={toggleDrawer}>
+                    {menu.item}
+                  </AnchorLink>
+                ) : (
+                  <Link to={menu.href}>{menu.item}</Link>
+                )}
               </>
-          )}
+            )}
 
-
-        {/* {menu.item=='Login' || menu.item=="قدم الآن"? 
+            {/* {menu.item=='Login' || menu.item=="قدم الآن"? 
         <div className="dropdown-content" id="loginDropdown">
         <a>{menu.submenu[0].item}</a>
         <a>{menu.submenu[1].item}</a>
         <a>{menu.submenu[2].item}</a>
       </div>
       : ""} */}
-        </li>  
-      ))}
-      <li key="999">
-        <a href="#" onClick={toggleLanguage} offset="20">
-        
-
-          {
-              window.sessionStorage.getItem('lang') === 'ar' ? "عربى" : "ENGLISH"
-          }
-        </a>
-      </li>
-     
-    </Scrollspy>
-    {/* <li key="1000">
+          </li>
+        ))}
+        <li key="999">
+          <a href="#" onClick={toggleLanguage} offset="20">
+            {window.sessionStorage.getItem('lang') === 'ar'
+              ? 'عربى'
+              : 'ENGLISH'}
+          </a>
+        </li>
+      </Scrollspy>
+      {/* <li key="1000">
           <Button type='primary' width='200px' height='20px' style={{ marginLeft:'600px ' }}> <strong>Get App</strong></Button>
       </li> */}
     </div>

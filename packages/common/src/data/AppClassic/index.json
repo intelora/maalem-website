@@ -237,6 +237,60 @@
     "monthly": [
       {
         "id": 1,
+        "title": "قرض المستهلك 1",
+        "description": "For Small teams or office",
+        "suggested": false,
+        "price": 0,
+        "features": [
+          {
+            "id": 1,
+            "text": "السحب والإفلات منشئ"
+          },
+          {
+            "id": 2,
+            "text": "1000 من القوالب"
+          },
+          {
+            "id": 3,
+            "text": "أدوات دعم المدونة"
+          },
+          {
+            "id": 4,
+            "text": "متجر التجارة الإلكترونية"
+          } 
+        ]
+      },
+      {
+        "id": 2,
+        "title": "قرض المستهلك 2",
+        "description": "For Best opportunities",
+        "suggested": true,
+        "price": 99,
+        "trail": 14,
+        "trailLink": "#",
+        "features": [
+          {
+            "id": 1,
+            "text": "السحب والإفلات منشئ"
+          },
+          {
+            "id": 2,
+            "text": "1000 من القوالب"
+          },
+          {
+            "id": 3,
+            "text": "أدوات دعم المدونة"
+          },
+          {
+            "id": 4,
+            "text": "متجر التجارة الإلكترونية"
+          }
+        ]
+      }
+    ],
+    "monthly_en": [
+      {
+        "id": 1,
         "title": "Consumer Loan1",
         "description": "For Small teams or office",
         "suggested": false,
@@ -289,6 +343,62 @@
       }
     ],
     "annualy": [
+      {
+        "id": 1,
+        "title": "قرض الأعمال 1",
+        "description": "For Small teams or office",
+        "suggested": true,
+        "price": 999,
+        "trail": 14,
+        "trailLink": "#",
+        "features": [
+          {
+            "id": 1,
+            "text": "السحب والإفلات منشئ"
+          },
+          {
+            "id": 2,
+            "text": "1000 من القوالب"
+          },
+          {
+            "id": 3,
+            "text": "أدوات دعم المدونة"
+          },
+          {
+            "id": 4,
+            "text": "متجر التجارة الإلكترونية"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "قرض الأعمال 2",
+        "description": "For Best opportunities",
+        "suggested": false,
+        "price": 1299,
+        "trail": 30,
+        "trailLink": "#",
+        "features": [
+          {
+            "id": 1,
+            "text": "السحب والإفلات منشئ"
+          },
+          {
+            "id": 2,
+            "text": "1000 من القوالب"
+          },
+          {
+            "id": 3,
+            "text": "أدوات دعم المدونة"
+          },
+          {
+            "id": 4,
+            "text": "متجر التجارة الإلكترونية"
+          }
+        ]
+      }
+    ],
+    "annualy_en": [
       {
         "id": 1,
         "title": "Business Loan1",
@@ -345,6 +455,8 @@
       }
     ]
   },
+  
+  
   "testimonial": {
     "slogan": "Frequently Asked Questions",
     "title": "More About Our Products, Tips, Plan, Offer and more...",
