@@ -24,6 +24,8 @@ import productImg2 from 'common/src/assets/image/maalem/product1_ar.png';
 import productImg3 from 'common/src/assets/image/maalem/product2_en.png';
 import productImg4 from 'common/src/assets/image/maalem/product2_ar.png';
 
+import mobileFrame from 'common/src/assets/image/maalem/screen.png';
+
 const FeatureTab = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -155,7 +157,17 @@ const FeatureTab = () => {
                   key={`app-tab--key${item.id}`}
                 >
                   <Fade>
-                    <Image src={item.image.publicURL} alt={item.title} />
+                    <Image
+                      src={item.image.publicURL}
+                      alt={item.title}
+                      style={{
+                        width: '70%',
+                        border: '1px solid #ccc',
+                        padding: '10px',
+                        borderRadius: '10px',
+                      }}
+                    />
+                    {/* <Image src={mobileFrame} /> */}
                   </Fade>
                 </Panel>
               ))}

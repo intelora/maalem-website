@@ -99,26 +99,31 @@ const DashboardObject = styled.div`
   position: absolute;
   width: 50%;
   height: 100%;
-  flex:right;
+  flex: right;
   top: 0px;
-  
-  
-  padding-bottom:20px;
+
+  padding-bottom: 20px;
   right: 0;
   display: flex;
   align-items: center;
   @media (max-width: 990px) {
     top: 50px;
+    .pVuM {
+      width: 55%;
+    }
   }
   @media (max-width: 767px) {
     display: none;
   }
-  .dashboardWrapper {
-    // height: 50%
+  /* .dashboardWrapper {
+    height: 50%
     width:50%;
     padding:30px;
     margin:20px;
-  }
+    imp{
+      width: 75%;
+    }
+  } */
 `;
 
 export { DashboardObject };

@@ -28,19 +28,28 @@ const DashboardSection = ({
     </Fragment>
   );
   const cmsItems = JSON.parse(window.sessionStorage.getItem('cmsItems'));
-  const langIndex = window.sessionStorage.getItem('lang')==='ar' ? 1 : 0;
+  const langIndex = window.sessionStorage.getItem('lang') === 'ar' ? 1 : 0;
 
   return (
     <DashboardWrapper id="banner_section">
       <Particles />
-      <Container  >
+      <Container>
         <Box className="row" {...row}>
-          <Box style={
-              window.sessionStorage.getItem('lang')==='en' ? { direction: "rtl", textAlign: 'right' } : null
-            } 
-            className="col" {...col}>
-            <Heading  className="subtitle" as="h5" content={cmsItems[langIndex].websiteMaalemRow24} />
-            <FeatureBlock 
+          <Box
+            style={
+              window.sessionStorage.getItem('lang') === 'en'
+                ? { direction: 'rtl', textAlign: 'right' }
+                : null
+            }
+            className="col"
+            {...col}
+          >
+            <Heading
+              className="subtitle"
+              as="h5"
+              content={cmsItems[langIndex].websiteMaalemRow24}
+            />
+            <FeatureBlock
               title={
                 <Heading
                   content={cmsItems[langIndex].websiteMaalemRow25}
@@ -59,15 +68,18 @@ const DashboardSection = ({
                   {...description}
                 />
               }
-              
-              // button={<ButtonGroup />}
+              //button={<ButtonGroup />}
             />
           </Box>
         </Box>
       </Container>
       <DashboardObject>
         <div className="dashboardWrapper">
-          <Image src={DashboardObject1} alt="DashboardObject1" />
+          <Image
+            src={DashboardObject1}
+            alt="DashboardObject1"
+            style={{ width: '70%', marginLeft: '20%' }}
+          />
         </div>
       </DashboardObject>
     </DashboardWrapper>

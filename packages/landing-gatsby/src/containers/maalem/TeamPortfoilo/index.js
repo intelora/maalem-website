@@ -85,9 +85,10 @@ const TeamPortfoiloSection = () => {
             <Heading as="h3" content={cmsItemss.new_fields_four} />
             <Text content={cmsItemss.aboutus_heading} />
             <Text content={cmsItemss.aboutus_description} />
-            <Text content={cmsItemss.aboutus_heading} />
+
             <Heading as="h3" content={cmsItemss.aboutus_headingnew} />
             <Text content={cmsItemss.new_fields_one} />
+
             <Heading as="h3" content={cmsItemss.aboutus_messageheading} />
             <Text content={cmsItemss.new_fields_two} />
             <Text content={cmsItemss.new_fields_three} />

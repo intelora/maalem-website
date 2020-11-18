@@ -25,6 +25,7 @@ import GlobalStyle, {
 import '@redq/reuse-modal/es/index.css';
 
 import SEO from '../components/seo';
+import FeatureSlider from '../containers/maalem/FeatureSlider';
 
 const langIndexx = window.sessionStorage.getItem('lang') === 'ar' ? 0 : 1;
 const cmsItems = JSON.parse(window.sessionStorage.getItem('cmsItems'));
@@ -55,7 +56,8 @@ export default function () {
             <Banner />
             <Features />
             <PricingPolicy />
-            <FeatureTab />
+            {/* <FeatureTab /> */}
+            <FeatureSlider />
             <DesignedAndBuilt />
             {/* <AppSlider /> */}
             {/* <ProductSlide /> */}
