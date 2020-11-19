@@ -32,12 +32,12 @@ const Testimonial = () => {
       }
     }
   `);
-  const { slogan, title, reviews,isVisible } = data.maalemJson.testimonial;
+  const { slogan, title, reviews, isVisible } = data.maalemJson.testimonial;
 
   const glideOptions = {
     type: 'carousel',
     gap: 0,
-    isVisible:false,
+    isVisible: false,
     autoplay: 5000,
     perView: 2,
     animationDuration: 700,
@@ -48,13 +48,17 @@ const Testimonial = () => {
     },
   };
   const faqItems = JSON.parse(window.sessionStorage.getItem('faqItems'));
-  const langIndex = window.sessionStorage.getItem('lang')==='ar' ? 0: 1;
+  const langIndex = window.sessionStorage.getItem('lang') === 'ar' ? 0 : 1;
   return (
     <SectionWrapper id="testimonial">
       <Container>
-        <SectionHeader  style={
-                  window.sessionStorage.getItem('lang')==='en' ? { direction: "rtl", textAlign: 'right' } : null
-                }>
+        <SectionHeader
+          style={
+            window.sessionStorage.getItem('lang') === 'en'
+              ? { direction: 'rtl', textAlign: 'right' }
+              : null
+          }
+        >
           <Fade up>
             <Heading as="h5" content={faqItems[langIndex].title} />
             <Heading content={faqItems[langIndex].detail} />
@@ -81,8 +85,8 @@ const Testimonial = () => {
               }
             >
               <Fragment>
-                {faqItems[langIndex].faqs.item.map(item => (
-                  <GlideSlide key={`testimonial--key${1}`}>
+                {faqItems[langIndex].faqs.item.map((item, index) => (
+                  <GlideSlide key={`testimonial--key${index}`}>
                     <div className="review-card">
                       <Heading as="h3" content={item.q} />
                       <Text content={item.a} />

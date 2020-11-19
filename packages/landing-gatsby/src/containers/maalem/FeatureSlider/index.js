@@ -23,11 +23,15 @@ import Image5 from 'common/src/assets/image/app/howtoapply/Create account 1-3 En
 
 // import DomainSection from '../container/Hosting/Domain';
 const cmsItems = JSON.parse(window.sessionStorage.getItem('cmsItems'));
-const langIndex = window.sessionStorage.getItem('lang') === 'ar' ? 1 : 0;
-//const langIndexx = window.sessionStorage.getItem('lang') === 'ar' ? 0 : 1;
-//const cmsItems2 = JSON.parse(window.sessionStorage.getItem('cmsItems2'));
-//const cmsItemss = cmsItems2[langIndexx];
-const title = cmsItems[langIndex].websiteMaalemRow1Text.split('#');
+const langIndex = window.sessionStorage.getItem('lang') === 'en' ? 1 : 0;
+const cmsData = [
+  'أدخل المعرف # اختر منتج # تطبيق # احصل على موافقة فورية',
+  'Enter Your Id # Choose A Product # Apply # Get Instant Approval',
+];
+const title = cmsData[langIndex].split('#'); // cmsItems[langIndex].websiteMaalemRow1Text.split('#');
+const applyNowHeading = langIndex != 1 ? 'Apply Now' : 'تطبيق الآن';
+console.log('abcd from view 1');
+
 const images = [
   {
     original: `${Image1}`,
@@ -137,7 +141,7 @@ FeatureSlider.defaultProps = {
     //fontSize: ['20px', '24px', '24px', '24px', '30px'],
     //fontWeight: '400',
     textAlign: 'center',
-    content: 'Apply Now',
+    content: applyNowHeading,
     fontSize: ['20px', '28px', '28px', '28px', '30px'],
     fontWeight: 'bold',
     color: '#0f2137',

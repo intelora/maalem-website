@@ -27,7 +27,7 @@ const Features = () => {
   const cmsItemss = cmsItems2[langIndex];
 
   // console.log('cmsItemss',cmsItemss);
-
+  console.log('abcd from view 2');
   return (
     <SectionWrapper id="features">
       <Container>

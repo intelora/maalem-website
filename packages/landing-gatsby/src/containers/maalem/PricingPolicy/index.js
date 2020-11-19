@@ -63,7 +63,7 @@ const PricingPolicy = () => {
     pricingPlan: monthly,
   });
 
-  const [gplan, gPlan] = useState('monthly');
+  const [gplan, setGplan] = useState('monthly');
 
   const handlePricingPlan = (plan) => {
     if (plan === 'annualy') {
@@ -89,7 +89,7 @@ const PricingPolicy = () => {
         cmsItems[langIndex].websiteMaalemRow15Col2TitleTextpRow3;
       state.pricingPlan[1].features[3].text =
         cmsItems[langIndex].websiteMaalemRow15Col2TitleTextpRow4;
-
+      setGplan('annualy');
       setState({
         ...state,
         active: 'annualy',
@@ -119,7 +119,7 @@ const PricingPolicy = () => {
         cmsItems[langIndex].websiteMaalemRow17Col2TitleTextpRow3;
       state.pricingPlan[1].features[3].text =
         cmsItems[langIndex].websiteMaalemRow17Col2TitleTextpRow4;
-
+      setGplan('monthly');
       setState({
         ...state,
         active: 'monthly',
@@ -131,7 +131,8 @@ const PricingPolicy = () => {
   };
 
   const shoawMydataToggle = () => {
-    if (gPlan == 'monthly') {
+    console.log('::gplan:: ', gplan);
+    if (gplan == 'monthly') {
       state.pricingPlan[0].title =
         cmsItems[langIndex].websiteMaalemRow15Col1Title;
       state.pricingPlan[1].title =
@@ -170,13 +171,13 @@ const PricingPolicy = () => {
         cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow4;
 
       state.pricingPlan[1].features[0].text =
-        cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow1;
+        cmsItems[langIndex].websiteMaalemRow17Col2TitleTextpRow1;
       state.pricingPlan[1].features[1].text =
-        cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow2;
+        cmsItems[langIndex].websiteMaalemRow17Col2TitleTextpRow2;
       state.pricingPlan[1].features[2].text =
-        cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow3;
+        cmsItems[langIndex].websiteMaalemRow17Col2TitleTextpRow3;
       state.pricingPlan[1].features[3].text =
-        cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow4;
+        cmsItems[langIndex].websiteMaalemRow17Col2TitleTextpRow4;
     }
   };
 
