@@ -133,32 +133,24 @@ const Footer = () => {
   // const i4 =  data.maalemJson.footer.menulocal[4]['text']='Privacy';
 
   function toggelFAQ() {
-    if (
-      document.getElementById('testimonial').style.display === 'none' ||
-      document.getElementById('testimonial').style.display == 'none'
-    ) {
+    if ((document.getElementById('testimonial').style.display = 'none')) {
+      window.location.href = '#footer';
       document.getElementById('testimonial').style.display = 'block';
-
-      window.location.href = '#';
     } else {
       document.getElementById('testimonial').style.display = 'none';
     }
   }
 
   function toggelAboutUs() {
-    if (
-      document.getElementById('team').style.display === 'none' ||
-      document.getElementById('team').style.display == 'none'
-    ) {
-      document.getElementById('team').style.display = 'block';
-
+    if ((document.getElementById('team').style.display = 'none')) {
       window.location.href = '#banner_section';
+      document.getElementById('team').style.display = 'block';
     } else {
       document.getElementById('team').style.display = 'none';
     }
   }
   return (
-    <ContentWrapper>
+    <ContentWrapper id="footer">
       <div className={testimoniall}>
         <Testimonial />
       </div>

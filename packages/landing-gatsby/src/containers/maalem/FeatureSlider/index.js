@@ -20,18 +20,19 @@ import Image2 from 'common/src/assets/image/maalem/product1_ar.png';
 import Image3 from 'common/src/assets/image/maalem/product2_en.png';
 import Image4 from 'common/src/assets/image/maalem/product2_ar.png';
 import Image5 from 'common/src/assets/image/app/howtoapply/Create account 1-3 Eng.png';
+import { colorStyle } from 'styled-system';
 
 // import DomainSection from '../container/Hosting/Domain';
 const cmsItems = JSON.parse(window.sessionStorage.getItem('cmsItems'));
-const langIndex = window.sessionStorage.getItem('lang') === 'en' ? 1 : 0;
+const langIndex = window.sessionStorage.getItem('lang') === 'ar' ? 1 : 0;
 const cmsData = [
-  'أدخل المعرف # اختر منتج # تطبيق # احصل على موافقة فورية',
+  'أدخل المعرف # اختر منتج #   # احصل على موافقة فورية',
   'Enter Your Id # Choose A Product # Apply # Get Instant Approval',
 ];
-const title = cmsData[langIndex].split('#'); // cmsItems[langIndex].websiteMaalemRow1Text.split('#');
-const applyNowHeading = langIndex != 1 ? 'Apply Now' : 'تطبيق الآن';
-console.log('abcd from view 1');
-
+const title = cmsItems[langIndex].websiteMaalemRow1Text.split('#'); // cmsItems[langIndex].websiteMaalemRow1Text.split('#');
+const applyNowHeading = langIndex != 0 ? 'Apply Now' : 'تطبيق الآن';
+// console.log('abcd from view 1');
+console.log('eeeeeeeeeeeeeeeeeeeeeee', title);
 const images = [
   {
     original: `${Image1}`,

@@ -70,11 +70,11 @@ const PricingPolicy = () => {
           <InnerWrapper>
             {state.pricingPlan.map((item) => (
               <PricingCard key={`${state.active}-card--key${item.id}`}>
-                {item.suggested && (
+                {/* {item.suggested && (
                   <span className="tag">
                     <img src={crown} alt="Crown" />
                   </span>
-                )}
+                )} */}
                 <div className="card-header">
                   <Heading as="h3" content={item.title} />
                   <Text content={item.description} />

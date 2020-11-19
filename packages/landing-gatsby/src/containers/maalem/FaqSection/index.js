@@ -40,6 +40,7 @@ const FaqSection = ({
   `); */
   const langIndexx = window.sessionStorage.getItem('lang') === 'ar' ? 0 : 1;
   const cmsItems2 = JSON.parse(window.sessionStorage.getItem('cmsItems2'));
+  const teameading = langIndexx != 1 ? 'About Us' : 'معلومات عنا';
   const cmsItemss = cmsItems2[langIndexx];
   const AboutUsData = {
     agencyJson: {
@@ -70,7 +71,7 @@ const FaqSection = ({
       <Container>
         <Box {...sectionHeader}>
           {/* <Text content="FAQ" {...sectionSubTitle} /> */}
-          <Heading content="About Us" {...sectionTitle} />
+          <Heading content={teameading} {...sectionTitle} />
         </Box>
         <Box className="row">
           <Accordion>

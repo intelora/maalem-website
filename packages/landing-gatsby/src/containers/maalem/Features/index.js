@@ -32,11 +32,11 @@ const Features = () => {
     <SectionWrapper id="features">
       <Container>
         <SectionHeader
-          style={
-            window.sessionStorage.getItem('lang') === 'en'
-              ? { direction: 'rtl', textAlign: 'right' }
-              : null
-          }
+        // style={
+        //   window.sessionStorage.getItem('lang') === 'en'
+        //     ? { direction: 'rtl', textAlign: 'right' }
+        //     : null
+        // }
         >
           <Fade up>
             <Heading

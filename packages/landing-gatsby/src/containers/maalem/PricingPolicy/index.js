@@ -171,13 +171,13 @@ const PricingPolicy = () => {
         cmsItems[langIndex].websiteMaalemRow17Col1TitleTextpRow4;
 
       state.pricingPlan[1].features[0].text =
-        cmsItems[langIndex].websiteMaalemRow17Col2TitleTextpRow1;
+        cmsItems[langIndex].websiteMaalemRow17Col2Row1;
       state.pricingPlan[1].features[1].text =
-        cmsItems[langIndex].websiteMaalemRow17Col2TitleTextpRow2;
+        cmsItems[langIndex].websiteMaalemRow17Col2Row2;
       state.pricingPlan[1].features[2].text =
-        cmsItems[langIndex].websiteMaalemRow17Col2TitleTextpRow3;
+        cmsItems[langIndex].websiteMaalemRow17Col2Row3;
       state.pricingPlan[1].features[3].text =
-        cmsItems[langIndex].websiteMaalemRow17Col2TitleTextpRow4;
+        cmsItems[langIndex].websiteMaalemRow17Col2Row4;
     }
   };
 
@@ -216,11 +216,11 @@ const PricingPolicy = () => {
           <InnerWrapper>
             {state.pricingPlan.map((item) => (
               <PricingCard key={`${state.active}-card--key${item.id}`}>
-                {item.suggested && (
+                {/* {item.suggested && (
                   <span className="tag">
                     <img src={crown} alt="Crown" />
                   </span>
-                )}
+                )} */}
                 <div className="card-header">
                   <Heading as="h3" content={item.title} />
                   <Text
