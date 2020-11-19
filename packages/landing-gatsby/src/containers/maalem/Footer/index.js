@@ -92,17 +92,17 @@ const Footer = () => {
 
   function openSocialMediaPage(index) {
     if (index == 0) {
-      window.location.href =
-        'https://www.facebook.com/pages/category/Financial-Service/Maalem-Financing-104818407547676/';
+      window.open(
+        'https://www.facebook.com/pages/category/Financial-Service/Maalem-Financing-104818407547676/'
+      );
     } else if (index == 1) {
-      window.location.href = 'https://twitter.com/maalemfinancing?lang=en';
+      window.open('https://twitter.com/maalemfinancing?lang=en');
     } else if (index == 2) {
-      window.location.href = 'https://www.instagram.com/maalemfinancing/';
+      window.open('https://www.instagram.com/maalemfinancing/');
     } else if (index == 3) {
-      window.location.href =
-        'https://www.linkedin.com/company/maalem-financing-company';
+      window.open('https://www.linkedin.com/company/maalem-financing-company');
     } else if (index == 4) {
-      window.location.href = '#';
+      window.open('https://www.linkedin.com/company/maalem-financing-company');
     }
   }
 

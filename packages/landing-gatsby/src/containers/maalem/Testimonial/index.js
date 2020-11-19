@@ -52,13 +52,7 @@ const Testimonial = () => {
   return (
     <SectionWrapper id="testimonial">
       <Container>
-        <SectionHeader
-          style={
-            window.sessionStorage.getItem('lang') === 'en'
-              ? { direction: 'rtl', textAlign: 'right' }
-              : null
-          }
-        >
+        <SectionHeader>
           <Fade up>
             <Heading as="h5" content={faqItems[langIndex].title} />
             <Heading content={faqItems[langIndex].detail} />
