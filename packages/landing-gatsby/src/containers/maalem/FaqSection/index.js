@@ -68,10 +68,10 @@ const FaqSection = ({
   return (
     <FaqSectionWrapper id="faqSection">
       <Container>
-        {/* <Box {...sectionHeader}>
-          <Text content="FAQ" {...sectionSubTitle} />
-          <Heading content="Frequently Ask Question" {...sectionTitle} />
-        </Box> */}
+        <Box {...sectionHeader}>
+          {/* <Text content="FAQ" {...sectionSubTitle} /> */}
+          <Heading content="About Us" {...sectionTitle} />
+        </Box>
         <Box className="row">
           <Accordion>
             <Fragment>
