@@ -42,14 +42,9 @@ const TeamPortfoiloSection = () => {
         <ContentWrapper
           className="team-bubble-icon"
           style={
-            ({
-              display: flex,
-              flexDirection: 'row',
-              justifyContent: 'spaceAround',
-            },
             window.sessionStorage.getItem('lang') === 'ar'
               ? { direction: 'rtl', textAlign: 'right' }
-              : { direction: 'ltr', textAlign: 'left' })
+              : { direction: 'ltr', textAlign: 'left' }
           }
         >
           <div className="image">
