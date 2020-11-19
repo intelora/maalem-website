@@ -7,6 +7,7 @@ import Button from 'common/src/components/Button';
 import Image from 'common/src/components/Image';
 import Container from 'common/src/components/UI/Container';
 import SectionWrapper, { ContentWrapper } from './teamPortfolio.style';
+import FaqSection from '../../../containers/maalem/FaqSection';
 
 const TeamPortfoiloSection = () => {
   const data = useStaticQuery(graphql`
@@ -39,6 +40,7 @@ const TeamPortfoiloSection = () => {
     <SectionWrapper id="team">
       <Container>
         <ContentWrapper
+          className="team-bubble-icon"
           style={
             window.sessionStorage.getItem('lang') === 'ar'
               ? { direction: 'rtl', textAlign: 'right' }
@@ -82,7 +84,8 @@ const TeamPortfoiloSection = () => {
                 : { direction: 'ltr', textAlign: 'left' }
             }
           >
-            <Heading as="h3" content={cmsItemss.new_fields_four} />
+            <FaqSection />
+            {/* <Heading as="h3" content={cmsItemss.new_fields_four} />
             <Text content={cmsItemss.aboutus_heading} />
             <Text content={cmsItemss.aboutus_description} />
 
@@ -91,7 +94,7 @@ const TeamPortfoiloSection = () => {
 
             <Heading as="h3" content={cmsItemss.aboutus_messageheading} />
             <Text content={cmsItemss.new_fields_two} />
-            <Text content={cmsItemss.new_fields_three} />
+            <Text content={cmsItemss.new_fields_three} /> */}
           </div>
         </ContentWrapper>
       </Container>

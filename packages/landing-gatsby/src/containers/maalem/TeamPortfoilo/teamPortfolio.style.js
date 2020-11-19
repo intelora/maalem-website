@@ -26,7 +26,13 @@ export const ContentWrapper = styled.div`
   @media only screen and (max-width: 1099px) {
     flex-direction: column;
     justify-content: center;
+    .team-bubble-icon {
+      justify-content: space-around;
+      display: flex;
+      flex-direction: row;
+    }
   }
+
   .image {
     width: calc(100% - 493px);
     display: flex;
@@ -35,11 +41,13 @@ export const ContentWrapper = styled.div`
     padding-bottom: 100px;
     margin-right: 100px;
     @media only screen and (max-width: 1099px) {
-      width: 100%;
+      //width: 100%;
+      width: 40%;
       justify-content: space-around;
       margin-right: 0;
       padding-bottom: 70px;
-      left: 10%;
+      //left: 10%;
+      left: 0;
     }
     @media only screen and (max-width: 768px) {
       width: 100%;
@@ -58,12 +66,15 @@ export const ContentWrapper = styled.div`
       @media only screen and (max-width: 1099px) {
         position: relative;
         width: 33%;
-        height: 200px;
+        //height: 200px;
+        height: 130;
       }
       @media only screen and (max-width: 480px) {
         width: 40%;
       }
       img {
+        border-radius: 100px;
+        width: 100px;
         &:hover {
           box-shadow: 0px 20px 57px 0px rgba(57, 81, 111, 0.28);
           @media only screen and (max-width: 1099px) {
@@ -130,8 +141,10 @@ export const ContentWrapper = styled.div`
       .author_name {
         position: absolute;
         padding: 20px;
-        top: -59px;
-        left: 34px;
+        /* top: -59px;
+        left: 34px; */
+        top: -116px;
+        left: 94px;
         background-color: rgb(209, 57, 124);
         box-shadow: 0px 16px 57px 0px rgba(57, 81, 111, 0.1);
         border-radius: 28px 28px 28px 0;
@@ -191,7 +204,7 @@ export const ContentWrapper = styled.div`
   .content {
     width: 393px;
     @media only screen and (max-width: 1099px) {
-      width: 100%;
+      //width: 100%;
     }
     @media only screen and (max-width: 991px) {
       width: 100%;
