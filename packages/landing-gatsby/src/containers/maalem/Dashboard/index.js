@@ -12,6 +12,9 @@ import DashboardWrapper, { DashboardObject } from './dashboard.style';
 
 import DashboardObject1 from 'common/src/assets/image/maalem/d.png';
 
+
+
+  
 const DashboardSection = ({
   row,
   col,
