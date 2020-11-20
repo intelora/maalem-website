@@ -3,10 +3,10 @@ import Mockup from 'common/src/assets/image/app/iphone-mockup.png';
 
 const FeatureSliderWrapper = styled.div`
   position: relative;
-  // padding-top: 200px;
+  padding-top: 75px;
   @media (max-width: 1440px) {
     //padding-top: 140px;
-    // padding-top: 100px;
+    padding-top: 100px;
     padding-bottom: 100px;
   }
   /* .FeatureSliderInner {
@@ -153,7 +153,7 @@ const FeatureSliderWrapper = styled.div`
           }
           img {
             transition: all 0.35s ease;
-            width: 100px;
+            width: 30px;
           }
 
           &:nth-child(1) {
@@ -197,7 +197,7 @@ const FeatureSliderWrapper = styled.div`
             line-height: 24px;
             letter-spacing: -0.01em;
             color: #0f2137;
-            font-family: 'Open sans';
+            font-family: ''Heebo',sans-serif';
             top: 0;
             text-shadow: none;
             transform: none;

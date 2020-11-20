@@ -8,12 +8,12 @@ import 'react-image-gallery/styles/css/image-gallery.css';
 import Container from 'common/src/components/UI/Container';
 import FeatureSliderWrapper from './featureSlider.style';
 
-import Thumb1 from 'common/src/assets/image/app/6.svg';
-import Thumb2 from 'common/src/assets/image/app/1.svg';
-import Thumb3 from 'common/src/assets/image/app/2.svg';
+import Thumb2 from 'common/src/assets/image/app/eyd.png';
+import Thumb1 from 'common/src/assets/image/app/capp.png';
+import Thumb3 from 'common/src/assets/image/app/an.png';
 import Thumb4 from 'common/src/assets/image/app/3.svg';
-import Thumb5 from 'common/src/assets/image/app/4.svg';
-import Thumb6 from 'common/src/assets/image/app/5.svg';
+import Thumb5 from 'common/src/assets/image/app/an.png';
+import Thumb6 from 'common/src/assets/image/app/a.png';
 
 import Image1 from 'common/src/assets/image/maalem/product1_en.png';
 import Image2 from 'common/src/assets/image/maalem/product1_ar.png';
@@ -25,11 +25,13 @@ import Image4 from 'common/src/assets/image/maalem/product2_ar.png';
 
 const FeatureSlider = ({ sectionSubTitle, sectionTitle, sectionHeader }) => {
   const cmsItems = JSON.parse(window.sessionStorage.getItem('cmsItems'));
-  const langIndex = window.sessionStorage.getItem('lang') === 'en' ? 1 : 0;
+  const langIndex = window.sessionStorage.getItem('lang') === 'ar' ? 1 : 0;
   const cmsData = [
-    'أدخل المعرف # اختر منتج # تطبيق # احصل على موافقة فورية',
-    'Enter Your Id # Choose A Product # Apply # Get Instant Approval'
+    'اختر منتج#تطبيق#أدخل المعرف# احصل على موافقة فورية ',
+    'Choose A Product #Apply #Enter Your Id  #  Get Instant Approval'
   ];
+  
+
   const title = [cmsData[0].split('#'), cmsData[1].split('#')]; // cmsItems[langIndex].websiteMaalemRow1Text.split('#');
   const applyNowHeading = langIndex != 1 ? 'Apply Now' : 'تطبيق الآن';
   console.log('abcd from view 1');
@@ -42,6 +44,7 @@ const FeatureSlider = ({ sectionSubTitle, sectionTitle, sectionHeader }) => {
         thumbnailLabel: title[0][0],
         originalAlt: 'slide one',
         thumbnailAlt: 'thumb one'
+  
       },
       {
         original: `${Image2}`,
@@ -50,6 +53,7 @@ const FeatureSlider = ({ sectionSubTitle, sectionTitle, sectionHeader }) => {
         originalAlt: 'slide two',
         thumbnailAlt: 'thumb two'
       },
+     
       {
         original: `${Image4}`,
         thumbnail: `${Thumb5}`,

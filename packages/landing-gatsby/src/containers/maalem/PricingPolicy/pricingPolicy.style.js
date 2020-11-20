@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 const SectionWrapper = styled.section`
-  padding: 75px 0;
+  // padding: 35px 0;
   @media only screen and (max-width: 1366px) {
     padding: 60px 0;
   }
@@ -76,8 +76,9 @@ export const InnerWrapper = styled.div`
 
 export const PricingCard = styled.div`
   width: calc(100% / 2 - 25px);
-  //max-width: 340px;
+  // max-width: 340px;
   width: 45%;
+  margin-left:20px;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 6px 50px ${themeGet('colors.shadow', 'rgba(38, 78, 118, 0.1)')};
@@ -186,7 +187,7 @@ export const PricingCard = styled.div`
       }
     }
     .reusecore__button {
-      border-radius: 5px;
+      border-radius: 25px;
       @media only screen and (max-width: 767px) {
         width: 100%;
       }

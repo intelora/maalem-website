@@ -117,8 +117,9 @@ export const ContentWrapper = styled.div`
 `;
 
 export const SectionHeader = styled.header`
-  max-width: 352px;
+  // max-width: 352px;
   width: 100%;
+  ,argin-top:10px;
   margin: 0 auto 58px;
   text-align: center;
   @media only screen and (max-width: 991px) {
