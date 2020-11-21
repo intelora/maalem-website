@@ -4,7 +4,7 @@ import { themeGet } from '@styled-system/theme-get';
 const FooterArea = styled.footer`
   padding: 15px 0 40px;
 
-  background-color: ${themeGet('colors.dark gray', '#a6a6a6')};
+  background-color: ${themeGet('colors.dark gray', '#616161')};
   @media only screen and (max-width: 1366px) {
     padding-top: 80px;
   }

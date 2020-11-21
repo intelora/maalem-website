@@ -20,7 +20,7 @@ import Image2 from 'common/src/assets/image/maalem/product1_ar.png';
 import Image3 from 'common/src/assets/image/maalem/product2_en.png';
 import Image4 from 'common/src/assets/image/maalem/product2_ar.png';
 import Image5 from 'common/src/assets/image/maalem/product2_ar.png';
-
+import Fade from 'react-reveal/Fade';
 // import DomainSection from '../container/Hosting/Domain';
 
 const FeatureSlider = ({ sectionSubTitle, sectionTitle, sectionHeader }) => {
@@ -109,6 +109,7 @@ const FeatureSlider = ({ sectionSubTitle, sectionTitle, sectionHeader }) => {
        
 
       <Container>
+        <Fade left>
           <Box {...sectionHeader}>
             {/* <Text {...sectionSubTitle} /> */}
             <Heading {...sectionTitle} />
@@ -124,6 +125,7 @@ const FeatureSlider = ({ sectionSubTitle, sectionTitle, sectionHeader }) => {
               autoPlay={true}
             />
           </Box>
+          </Fade>
           </Container>
       </FeatureSliderWrapper>
     </>

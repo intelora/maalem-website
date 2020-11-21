@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Fade from 'react-reveal/Fade';
+  import Fade from 'react-reveal/Fade';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Icon } from 'react-icons-kit';
 import { mediaRecordOutline } from 'react-icons-kit/typicons/mediaRecordOutline';
@@ -89,13 +89,16 @@ const Features = () => {
                 />
               }
               button={
+                <a  href='https://play.google.com/store/apps/details?id=com.maalem'>
                 <Button
                 style={{ marginLeft:'15%',
-                marginTop: '8%',borderRadius: '25px'
+                marginTop: '8%',borderRadius: '25px',marginTop:'43.4%'
                }}
                 className="blue"
+               
                 title={cmsItems[langIndex].websiteMaalemRow42Text}
               />
+              </a>
               }
             />
           </Fade>
@@ -138,8 +141,8 @@ const Features = () => {
               }
               button={
                 <Button
-                style={{ marginLeft:'15%',
-                marginTop: '8%',borderRadius: '25px'
+                style={{ marginLeft:'16%',
+                marginTop: '8%',borderRadius: '25px',marginTop:'27%'
                }}
                 className="blue"
                 title={cmsItems[langIndex].websiteMaalemRow42Text}
@@ -191,7 +194,7 @@ const Features = () => {
               button={
                 <Button
                 style={{ marginLeft:'15%',
-                marginTop: '8%',borderRadius: '25px'
+                marginTop: '8%',borderRadius: '25px',marginTop:'67%'
                }}
                 className="blue"
                 title={cmsItems[langIndex].websiteMaalemRow42Text}
@@ -242,7 +245,7 @@ const Features = () => {
               button={
                 <Button
                 style={{ marginLeft:'15%',
-                marginTop: '8%',borderRadius: '25px'
+                marginTop: '5.5%',borderRadius: '25px'
                }}
                 className="blue"
                 title={cmsItems[langIndex].websiteMaalemRow42Text}
