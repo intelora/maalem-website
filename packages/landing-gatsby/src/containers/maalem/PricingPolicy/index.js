@@ -285,14 +285,14 @@ const PricingPolicy = () => {
                     <span>SAR {item.price}</span> /{state.active}
                   </strong> */}
                   <Button style={{ borderRadius:'25px'}}
-                    //  onClick={() => {
-                    //   window.sessionStorage.getItem('showCalculator', true);
-                    //   document.getElementById(
-                    //     'loancalculator'
-                    //   ).style.transform = 'translateX(0)';
-                    // }
+                     onClick={() => {
+                      window.sessionStorage.getItem('showCalculator', true);
+                      document.getElementById(
+                        'loancalculator'
+                      ).style.transform = 'translateX(0)';
+                    }
                   
-                  // }
+                  }
                     // title={item.price === 0 ? 'Apply Now' : 'Download App'}
                     title= { window.sessionStorage.getItem('lang')== 'ar' ? 'Know More':'تعرف أكثر'}
                     href="#"

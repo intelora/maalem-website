@@ -14,9 +14,9 @@ const FooterArea = styled.footer`
   }
   .logo {
     img {
-      width: 200px;
+      width: 240px;
       // max-height: 20px;
-      margin-left:330%;
+      margin-left:260%;
     }
     @media only screen and (max-width: 1366px) {
       margin-left:-250px;

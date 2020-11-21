@@ -11,7 +11,7 @@ import Particles from '../Particle';
 import DashboardWrapper, { DashboardObject } from './dashboard.style';
 import Fade from 'react-reveal/Fade';
 import DashboardObject1 from 'common/src/assets/image/maalem/dashbord.png';
-import DashboardObject2 from 'common/src/assets/image/maalem/dashboard2.jpg';
+import DashboardObject2 from 'common/src/assets/image/maalem/dashboard1.png';
  import DashboardObject3 from 'common/src/assets/image/maalem/dashboard3.gif';
 
 
@@ -87,10 +87,15 @@ const DashboardSection = ({
         <div className="dashboardWrapper" style={{ display:'flex'}}>
         <Fade up>
         <Image
+            src={DashboardObject2}
+            alt="DashboardObject2"
+            style={{ width: '60%'}}
+          />
+        {/* <Image
             src={DashboardObject3}
             alt="DashboardObject3"
             style={{ width: '80%'}}
-          />
+          /> */}
           {/* <Image
             src={DashboardObject1}
             alt="DashboardObject1"
@@ -102,13 +107,9 @@ const DashboardSection = ({
             alt="DashboardObject3"
             style={{ width: '80%'}}
           /> */}
-          {/* <Fade right>
-           <Image
-            src={DashboardObject2}
-            alt="DashboardObject2"
-            // style={{ width: '60%'}}
-          />
-          </Fade> */}
+          <Fade right>
+           
+          </Fade> 
         </div>
       </DashboardObject>
     </DashboardWrapper>

@@ -92,136 +92,20 @@ const DesignedAndBuilt = (props) => {
           <div class="row" style={{ display: 'flex' }}>
             <div className="col">
               <div className="content">
-              <Heading as="h3" style={{ color:'#18750c  '}} content={cmsItemss.loancalculator} />
-                <Heading content={cmsItemss.loancalculatorheading} />
+              <Heading as="h5" content={cmsItemss.loancalculatorheading} />
+              <Heading as="h3" style={{ color:'#rgb(24,117,12)'}} content={cmsItemss.loancalculator} />
+         
+                <Text content={cmsItemss.loancalculatordescription} />
+                <Text content={cmsItemss.loancalculatordescription} />
+                <Text content={cmsItemss.loancalculatordescription} />
                 <Text content={cmsItemss.loancalculatordescription} />
               </div>
             </div>
+        
+          
+          
+       
 
-          <div className="content">
-            <div className="col"> 
-              <div className="col-md-3 dfs-loanamtstyle">
-                {/* <div className="card">
-                  <div className="card-body"> */}
-                    <div className="emidetails">
-                    {props.lang != 'EN'
-                  ? 'Calculate Home Loan EMI'
-                  : 'ہوم لون EMI کا حساب لگائیں'}
-                    </div>
-
-                    <div className="loanemi">
-                      <div className="emicalfontstyle">
-                      {props.lang != 'EN' ? 'Loan Amount:' : 'قرضے کی رقم:'}
-                      </div>
-                      <br></br>
-                   
-                      <span className="input-group-addon">$</span>
-                    
-                      <input class="form-control"
-                       value= {pAmount} className="loanamount" />
-                      <br></br>
-                      <div class="slidecontainer">
-                   
-                      <input
-                      class="form-control"
-                        type="range"
-                        value={pAmount}
-                        onChange={(event) => {
-                          SetpAmount(event.target.value);
-                        }}
-                        defaultvalue={pAmount}
-                        max={maxValue}
-                      />
-                      
-                    </div>
-                    </div>
-
-                    <div className="loanemi">
-                      <div className="emicalfontstyle">
-                      {props.lang != 'EN' ? 'Interest Rate:' : 'سود کی شرح:'}
-                      </div>
-                      <br></br>
-                      <span className="input-group-addon">%</span>
-                      <input  class="form-control" value= {interest} className="loanamount" />
-                      <div class="slidecontainer">
-                      <input
-                       class="form-control"
-                        type="range"
-                        value={interest}
-                        onChange={(event) => {
-                          Setinterset(event.target.value);
-                        }}
-                        defaultvalue={interest}
-                        max={intMAx}
-                      />
-                    </div>
-                    </div>
-
-                    <div className="loanemi">
-                      <div className="emicalfontstyle">
-                      {props.lang != 'EN' ? 'Loan Tenure:' : 'قرض کی مدت:'}
-                      </div>
-                      <br></br> 
-                      {props.lang != 'EN' ? 'month' : 'مہینہ'}
-                      <input  class="form-control" value= {duration} className="loanamount" />
-                      <div class="slidecontainer">
-                      <input
-                        type="range"
-                        class="form-control"
-                        value={duration}
-                        onChange={(event) => {
-                          Setduration(event.target.value);
-                        }}
-                        defaultvalue={duration}
-                        max={maxDuration}
-                        min="1"
-                      />
-                    </div>
-                    </div>
-                  {/* </div>
-                </div> */}
-              </div>
-            </div>
-          </div>
-          <div className="content">
-            <div className="col">
-              <div className="col-md-3 dfs-loanamtstyle">
-                <div className="card">
-                  <div className="card-body">
-                    <div className="emidetails">
-                      {props.lang != 'EN'
-                        ? 'Your EMI Details'
-                        : 'آپ کی EMI کی تفصیلات'}
-                    </div>
-
-                    <div className="loanemi">
-                      <div className="emicalfontstyle">
-                        {props.lang != 'EN' ? 'Loan EMI' : 'لون EMI'}
-                      </div>
-                      <br></br>
-                      <div className="loanamount">${emi}</div>
-                    </div>
-
-                    <div className="loanemi">
-                      <div className="emicalfontstyle">
-                        {props.lang != 'EN'
-                          ? 'Total Interest Payable'
-                          : 'قابل ادائیگی کل سود'}
-                      </div>
-                      <div className="loanamount">${TotalAmountofInterest}</div>
-                    </div>
-
-                    <div className="loanemi">
-                      <div className="emicalfontstyle">
-                        {props.lang != 'EN' ? ' Total Payment' : 'کل ادائیگی'}
-                      </div>
-                      <div className="loanamount">${totalAmt}</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         </ContentWrapper>
       </Container>
