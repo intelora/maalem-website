@@ -63,7 +63,7 @@ const FeatureSliderWrapper = styled.div`
   .FeatureSlider {
     //padding-top: 200px;
     padding-top: 120px;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
     position: relative;
 
     .image-gallery {

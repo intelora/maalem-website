@@ -31,13 +31,15 @@ export default function () {
     <ThemeProvider
       theme={theme}
       style={
-        window.sessionStorage.getItem('lang') === 'ar'
+        window.sessionStorage.getItem('lang') == 'ar'
           ? { direction: 'rtl', textAlign: 'right' }
           : { direction: 'ltr', textAlign: 'left' }
       }
     >
+      
+
       <>
-        <SEO title="Maalem Financing" />
+        <SEO title="Maalem Financing"  />
         <Modal />
         <ResetCSS />
         <GlobalStyle />

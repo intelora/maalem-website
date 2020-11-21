@@ -33,7 +33,7 @@ const FeatureSlider = ({ sectionSubTitle, sectionTitle, sectionHeader }) => {
   
 
   const title = [cmsData[0].split('#'), cmsData[1].split('#')]; // cmsItems[langIndex].websiteMaalemRow1Text.split('#');
-  const applyNowHeading = langIndex != 1 ? 'Apply Now' : 'تطبيق الآن';
+ const a =window.sessionStorage.getItem('lang')== 'ar' ? 'Apply Now' : 'تطبيق الآن';
   console.log('abcd from view 1');
 
   const images = [
@@ -110,10 +110,9 @@ const FeatureSlider = ({ sectionSubTitle, sectionTitle, sectionHeader }) => {
 
       <Container>
         
-        <Fade left>
+        <Fade up>
           <Box {...sectionHeader}>
-            {/* <Text {...sectionSubTitle} /> */}
-            <Heading {...sectionTitle} />
+            <Heading content={a} style={{textAlign: 'center'}}/>
           </Box>
           <Box className="FeatureSlider">
             <ImageGallery
@@ -160,7 +159,7 @@ FeatureSlider.defaultProps = {
     //fontSize: ['20px', '24px', '24px', '24px', '30px'],
     //fontWeight: '400',
     textAlign: 'center',
-    content: "Apply Now",
+    content: "",
     fontSize: ['20px', '28px', '28px', '28px', '30px'],
     fontWeight: 'bold',
     color: '#0f2137',

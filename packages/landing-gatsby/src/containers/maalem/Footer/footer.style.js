@@ -16,7 +16,19 @@ const FooterArea = styled.footer`
     img {
       width: 200px;
       // max-height: 20px;
-      margin-left:650px;
+      margin-left:330%;
+    }
+    @media only screen and (max-width: 1366px) {
+      margin-left:-250px;
+    }
+    @media only screen and (max-width: 667px) {
+      // padding-top: 80px;
+      // padding-bottom: 50px;
+      margin-left:100px;
+    }
+    @media only screen and (max-width: 480px) {
+          margin-left: 245%;
+
     }
   }
 `;
@@ -30,7 +42,7 @@ export const WidgetArea = styled.div`
   // border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
   .col {
-    width: calc(100% / 5);
+    width: calc(100% /5);
     text-align: center;
     // padding: 0 21px;
     // margin-bottom: 50px;
@@ -38,7 +50,7 @@ export const WidgetArea = styled.div`
       padding: 0 15px;
     }
     @media only screen and (max-width: 667px) {
-      width: calc(100% / 2);
+      width: calc(100% / 20);
       padding: 0 20px;
     }
     @media only screen and (max-width: 480px) {
@@ -145,7 +157,7 @@ export const MenuArea = styled.div`
   align-items: center;
   padding-top: 30px;
   @media only screen and (max-width: 1366px) {
-    padding-top: 50px;
+    padding-top: 10px;
   }
   > a {
     margin-right: 0;

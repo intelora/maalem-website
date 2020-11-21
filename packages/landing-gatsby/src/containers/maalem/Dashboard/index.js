@@ -11,7 +11,8 @@ import Particles from '../Particle';
 import DashboardWrapper, { DashboardObject } from './dashboard.style';
 import Fade from 'react-reveal/Fade';
 import DashboardObject1 from 'common/src/assets/image/maalem/dashbord.png';
-// import DashboardObject2 from 'common/src/assets/image/maalem/dashbord1.png';
+import DashboardObject2 from 'common/src/assets/image/maalem/dashboard2.jpg';
+ import DashboardObject3 from 'common/src/assets/image/maalem/dashboard3.gif';
 
 
 
@@ -36,8 +37,9 @@ const DashboardSection = ({
 
   return (
     <DashboardWrapper id="banner_section">
-      <Particles />
+      {/* <Particles /> */}
       <Container>
+      <Fade up>
         <Box className="row" {...row}>
           <Box
             style={
@@ -77,24 +79,36 @@ const DashboardSection = ({
               //button={<ButtonGroup />}
             />
           </Box>
+        
         </Box>
+        </Fade>
       </Container>
       <DashboardObject>
         <div className="dashboardWrapper" style={{ display:'flex'}}>
-        <Fade left>
-          <Image
+        <Fade up>
+        <Image
+            src={DashboardObject3}
+            alt="DashboardObject3"
+            style={{ width: '80%'}}
+          />
+          {/* <Image
             src={DashboardObject1}
             alt="DashboardObject1"
-            style={{ width: '60%'}}
-          />
+            // style={{ width: '90%'}}
+          /> */}
           </Fade>
-          <Fade right>
+          {/* <Image
+            src={DashboardObject3}
+            alt="DashboardObject3"
+            style={{ width: '80%'}}
+          /> */}
+          {/* <Fade right>
            <Image
-            src={DashboardObject1}
-            alt="DashboardObject1"
-            style={{ width: '60%'}}
+            src={DashboardObject2}
+            alt="DashboardObject2"
+            // style={{ width: '60%'}}
           />
-          </Fade>
+          </Fade> */}
         </div>
       </DashboardObject>
     </DashboardWrapper>

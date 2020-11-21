@@ -131,12 +131,13 @@ export const ButtonGroup = styled.div`
     text-transform: inherit;
     border-radius: 25px;
     // margin-bottom:254px;
-    width: 235px;
+    width: 197px;
     height: 10px;
-    margin-bottom:10%;
+    font-weight:700;
+    // margin-bottom:20%;
     font: initial;
-    margin-top:12%;
-    margin-left: 25% !important;
+    margin-top:7%;
+    margin-left: 29% !important;
 
     &.primary {
       position: relative;
@@ -147,7 +148,7 @@ export const ButtonGroup = styled.div`
       font-size: 19px;
       font-family: Arial, Helvetica, sans-serif;
       letter-spacing: -0.1px;
-      padding: 15px 32px;
+      // padding: 1px 0px;
       text-align: center;
       // margin-bottom:200px;
       display: inline-block;

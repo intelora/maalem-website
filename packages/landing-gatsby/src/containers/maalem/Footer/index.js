@@ -194,37 +194,50 @@ const Footer = () => {
                     ? { direction: 'rtl', textAlign: 'right' }
                     : null
                 }
-              >
-                <a
-                  className="pointer-cursor"
-                  className={testimoniall}
-                  onClick={toggelAboutUs}
-                  href="#"
-                >
-                  {cmsItemss.AboutUs}
-                </a>
+              > <a
+              className="pointer-cursor"
+              className={testimoniall}
+              onClick={toggelAboutUs}
+              href="#"
+            >
+              {cmsItemss.AboutUs}
+            </a>
 
-                <a
-                  className="pointer-cursor"
-                  className={team}
-                  onClick={toggelFAQ}
-                  href="#"
-                >
-                  {cmsItemss.faq}
-                </a>
+            <a
+              className="pointer-cursor"
+              className={team}
+              onClick={toggelFAQ}
+              href="#"
+            >
+              {cmsItemss.faq}
+            </a>
 
-                <a
-                  className="pointer-cursor"
-                  onClick={(e) => setOpen(!formOpen)}
-                >
-                  {cmsItemss.contactus}
+            <a
+              className="pointer-cursor"
+              onClick={(e) => setOpen(!formOpen)}
+            >
+              {cmsItemss.contactus}
+            </a>
+            <a className="pointer-cursor" href="#">
+              {cmsItemss.termsandconditions}
+            </a>
+            <a className="pointer-cursor" href="#">
+              {cmsItemss.privacy}
+            </a>
+                <a className="pointer-cursor" href="#product">
+               { window.sessionStorage.getItem('lang')== 'ar' ? 'Product' :'المنتج'}
                 </a>
-                <a className="pointer-cursor" href="#">
-                  {cmsItemss.termsandconditions}
+                <a className="pointer-cursor" href="#howtoapply">
+                     { window.sessionStorage.getItem('lang')== 'ar' ? 'How to Apply' :'كيفية التقديم'}
                 </a>
-                <a className="pointer-cursor" href="#">
-                  {cmsItemss.privacy}
+                <a className="pointer-cursor" href="http://122.166.172.240:3000/customer/signup?lang=">
+                 { window.sessionStorage.getItem('lang')== 'ar' ? 'Apply now' : 'قدم الآن'}
                 </a>
+                
+                <a className="pointer-cursor" href="http://122.166.172.240:3000/customer/signin?lang=">
+                { window.sessionStorage.getItem('lang')== 'ar' ? 'Login' :'تسجيل الدخول'}
+                </a>
+                <br></br>
               </MenuItemm>
               <PricingCard style={{ borderRadius:'25px',padding:'25px' }} className={
                   formOpen ? 'contact-items formOpen' : 'contact-items'
@@ -268,6 +281,7 @@ const Footer = () => {
             <CopyrightText>
               <a href="https://www.intelora.co.in">
                 {' '}
+                
                 Copyright {year} By intelora.co.in
               </a>
             </CopyrightText>

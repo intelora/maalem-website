@@ -9,6 +9,7 @@ const DashboardWrapper = styled.section`
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100%;
+ 
   position: relative;
   background-color: #fff;
   /* background-image: linear-gradient(
@@ -43,7 +44,7 @@ const DashboardWrapper = styled.section`
 
   .particle {
     position: absolute;
-    width: 50%;
+    width: 100%;
     height: 100%;
     top: 0;
     left: 0;
@@ -90,7 +91,7 @@ const DashboardWrapper = styled.section`
     line-height: 24px;
     margin-bottom: 12px;
     letter-spacing: 1.5px;
-    color: #18750c;
+    color: #d1397c;
     text-transform: uppercase;
   }
 `;
@@ -99,7 +100,7 @@ const DashboardObject = styled.div`
   position: absolute;
   width: 50%;
   height: 100%;
-  flex: right;
+  // flex: right;
   top: 0px;
 
   padding-bottom: 20px;

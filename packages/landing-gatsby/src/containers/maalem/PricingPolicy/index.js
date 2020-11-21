@@ -84,7 +84,7 @@ const PricingPolicy = () => {
             id: 2,
             title: 'Enterprise',
             suggested: false,
-            description: 'Funding at the level of your ambitions',
+            description: 'التمويل على مستوى طموحاتك',
             features: [
               { id: 1, text: 'Financing up to 15 million riyals' },
               { id: 2, text: 'Comfortable repayment of up to 2 years' },
@@ -99,7 +99,7 @@ const PricingPolicy = () => {
             id: 3,
             title: 'Enterprise New',
             suggested: false,
-            description: 'Funding at the level of your ambitions',
+            description: 'التمويل على مستوى طموحاتك',
             features: [
               { id: 1, text: 'Financing up to 15 million riyals' },
               { id: 2, text: 'Comfortable repayment of up to 2 years' },
@@ -170,7 +170,7 @@ const PricingPolicy = () => {
             id: 2,
             title: 'تمويل برنامج منشآت',
             suggested: false,
-            description: 'Funding at the level of your ambitions',
+            description: 'التمويل على مستوى طموحاتك',
             features: [
               { id: 1, text: '\tتمويل يصل إلى 15 مليون ريال ' },
               { id: 2, text: '\tسداد مريح يصل إلى سنتين ' },
@@ -185,7 +185,7 @@ const PricingPolicy = () => {
             id: 3,
             title: 'تمويل برنامج منشآت',
             suggested: false,
-            description: 'Funding at the level of your ambitions',
+            description: 'التمويل على مستوى طموحاتك',
             features: [
               { id: 1, text: '\tتمويل يصل إلى 15 مليون ريال ' },
               { id: 2, text: '\tسداد مريح يصل إلى سنتين ' },
@@ -244,7 +244,7 @@ const PricingPolicy = () => {
             type="button"
             onClick={() => handlePricingPlan('monthly')}
           >
-            Individuals financing
+            { window.sessionStorage.getItem('lang')== 'ar' ? 'Individuals financing' :'تمويل الأفراد'}
 
           </button>
           <button
@@ -252,7 +252,7 @@ const PricingPolicy = () => {
             type="button"
             onClick={() => handlePricingPlan('annualy')}
           >
-            Enterprise financing
+           { window.sessionStorage.getItem('lang')== 'ar' ? '   Enterprise financing' :'تمويل المشاريع'}
 
           </button>
         </ButtonGroup>
@@ -292,7 +292,7 @@ const PricingPolicy = () => {
                       ).style.transform = 'translateX(0)';
                     }}
                     // title={item.price === 0 ? 'Apply Now' : 'Download App'}
-                    title= 'Know More'
+                    title= { window.sessionStorage.getItem('lang')== 'ar' ? 'Know More':'تعرف أكثر'}
 
                   />
                   {/* {item.trail ? (

@@ -168,8 +168,11 @@ const Banner = () => {
            
             <a href="https://play.google.com/store/apps/details?id=com.maalem">
               <Button
-                style={{ marginLeft:'25%',
-                marginTop: '8%',
+                style={{ 
+                  marginLeft:'25%',
+                
+                  backgroundColor:'rgb(24,117,12)',
+                      color: 'white'
                }}
                 className="primary"
                 title={cmsItems[langIndex].websiteMaalemRow42Text}

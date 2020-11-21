@@ -115,7 +115,9 @@ export const MenuArea = styled.div`
     text-transform: inherit;
     padding-left: 13px;
     padding-right: 13px;
-    min-height: 42px;
+    min-height: 40px;
+    border-radius:25px;
+    margin-left:50px;
 
     &.text {
       padding: 0;

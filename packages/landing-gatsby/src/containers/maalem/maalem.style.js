@@ -2,12 +2,21 @@ import styled, { createGlobalStyle } from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 const GlobalStyle = createGlobalStyle`
+
+.element { 
+  .body{
+    direction: rtl
+  }
+}
   body {
     font-family: Arial, Helvetica, sans-serif;
-
   }
-  body:lang(ar) {
-    direction: rtl;
+  // &:lang(en) {
+  //   direction: rtl;
+  // }
+
+&:lang(ar) {
+    direction: rtl
   }
   .reuseModalParentWrapper,
   .reuseModalOverlay {

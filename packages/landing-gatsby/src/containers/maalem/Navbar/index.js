@@ -299,9 +299,13 @@ const Navbar = () => {
 
   const toggleLanguage = () => {
     if (window.sessionStorage.getItem('lang') == 'en') {
+      document.getElementsByTagName("languagee")[0].style.direction = "ltr"; 
       window.sessionStorage.setItem('lang', 'ar');
+      // document.body.style.direction = "ltr";
+    
       state.setState({ navIndex: 0 });
     } else {
+      document.getElementsByTagName("body")[0].style.direction = "rtl";
       window.sessionStorage.setItem('lang', 'en');
       state.setState({ navIndex: 1 });
     }
@@ -331,6 +335,12 @@ const Navbar = () => {
             menuItems={navMenu[state.navIndex].menu.menu}
             offset={-84}
           />
+           <a href='http://122.166.172.240:3000/customer/signin?lang='>
+          <Button
+            title={ window.sessionStorage.getItem('lang')== 'ar' ? 'LOGIN' : 'تسجيل الدخول'}
+            
+          ></Button>
+          </a>
           {/* end of main menu */}
 
           <Search className="search" ref={searchRef}>
@@ -391,12 +401,14 @@ const Navbar = () => {
               </li>
             ))}
           </Scrollspy>
-          <Button
+          <Button class="element"
             title={
               'Change Language (' + window.sessionStorage.getItem('lang') + ') '
             }
             onClick={toggleLanguage}
+            
           ></Button>
+         
         </Container>
       </MobileMenu>
       {/* end of mobile menu */}
