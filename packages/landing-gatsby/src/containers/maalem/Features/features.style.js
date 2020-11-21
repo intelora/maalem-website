@@ -43,7 +43,22 @@ export const FeatureWrapper = styled.div`
       margin-top: 15px;
     }
   }
+// .btnn{
 
+//   border-radius: 25px;
+
+//   @media only screen and (max-width: 1366px) {
+    
+//   }
+//   @media only screen and (max-width: 991px) {
+    
+//   }
+//   @media only screen and (max-width: 767px) {
+    
+//   @media only screen and (max-width: 480px) {
+   
+//   }
+// }
   .feature__block {
     align-items: flex-start;
     flex-direction: column;

@@ -89,7 +89,7 @@ const Features = () => {
                 />
               }
               button={
-                <a  href='https://play.google.com/store/apps/details?id=com.maalem'>
+                <a target="_blank" href='https://play.google.com/store/apps/details?id=com.maalem'>
                 <Button
                 style={{ marginLeft:'15%',
                 marginTop: '8%',borderRadius: '25px',marginTop:'43.4%'
@@ -140,7 +140,7 @@ const Features = () => {
                 />
               }
               button={
-                <a  href='https://play.google.com/store/apps/details?id=com.maalem'>
+                <a target="_blank" href='https://play.google.com/store/apps/details?id=com.maalem'>
                 <Button
                 style={{ marginLeft:'16%',
                 marginTop: '8%',borderRadius: '25px',marginTop:'27%'
@@ -194,7 +194,7 @@ const Features = () => {
                 />
               }
               button={
-                <a  href='https://play.google.com/store/apps/details?id=com.maalem'>
+                  <a target="_blank" href='https://play.google.com/store/apps/details?id=com.maalem'>
                 <Button
                 style={{ marginLeft:'15%',
                 marginTop: '8%',borderRadius: '25px',marginTop:'67%'
@@ -247,15 +247,13 @@ const Features = () => {
                 />
               }
               button={
-                <a  href='https://play.google.com/store/apps/details?id=com.maalem'>
-                <Button
+                <Button target="_blank" href='https://play.google.com/store/apps/details?id=com.maalem'
                 style={{ marginLeft:'15%',
                 marginTop: '5.5%',borderRadius: '25px'
                }}
                 className="blue"
                 title={cmsItems[langIndex].websiteMaalemRow42Text}
               />
-              </a>
               }
             />
           </Fade>

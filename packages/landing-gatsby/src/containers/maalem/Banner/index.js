@@ -139,23 +139,32 @@ const Banner = () => {
            
             <Fade up delay={300}>
 
-          <ButtonGroup href="https://play.google.com/store/apps/details?id=com.maalem">
+          <ButtonGroup target="_blank" href="https://play.google.com/store/apps/details?id=com.maalem">
           <Container >
           <div class='row' style={{display:'flex',  width:"90%" 
              , height:"30%" }}>
             <div className='col'  > 
+
+            <a  target="_blank" 
+              href='https://play.google.com/store/apps/details?id=com.maalem'>
             <Image 
+             
               type="button" 
               style={{ marginTop: '50px'}}
               src={Appstore} />
-              
+              </a>
               </div>
             <div className='col'>
+            <a  target="_blank" 
+              href='https://play.google.com/store/apps/details?id=com.maalem'>
             <Image
+                target="_blank" 
+                href='https://play.google.com/store/apps/details?id=com.maalem'
                 type="button"
                 style={{ marginTop: '50px' ,marginLeft:'30px' }}
                 src={GooglePlay}
               />
+              </a>
             </div>
           </div>
             {/* <div className='col-md-3'><a href="https://play.google.com/store/apps/details?id=com.maalem">
@@ -166,7 +175,7 @@ const Banner = () => {
             </a></div> */}
              </Container>
            
-            <a href="https://play.google.com/store/apps/details?id=com.maalem">
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.maalem">
               <Button
                 style={{ 
                   marginLeft:'25%',

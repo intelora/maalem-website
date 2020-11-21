@@ -317,12 +317,14 @@ const Navbar = () => {
       <Container>
         <Logo
           href="https://maalem.com.sa/en"
+          target="_blank"
           logoSrc={LogoImageAlt}
           title="Maalem Financing"
           className="main-logo"
         />
         <Logo
           href="https://maalem.com.sa/en"
+          target="_blank"
           logoSrc={LogoImageAlt}
           title="Maalem Financing"
           className="logo-alt"
@@ -335,7 +337,8 @@ const Navbar = () => {
             menuItems={navMenu[state.navIndex].menu.menu}
             offset={-84}
           />
-           <a href='http://122.166.172.240:3000/customer/signin?lang='>
+
+           <a target="_blank" href='http://122.166.172.240:3000/customer/signin?lang='>
           <Button
             title={ window.sessionStorage.getItem('lang')== 'ar' ? 'LOGIN' : 'تسجيل الدخول'}
             
@@ -373,7 +376,7 @@ const Navbar = () => {
                 </Fade>
               )
             }
-            color="#0F2137"
+               color="#0F2137"
             variant="textButton"
             onClick={() => toggleHandler('menu')}
           />

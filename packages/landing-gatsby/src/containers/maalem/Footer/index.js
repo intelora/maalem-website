@@ -164,6 +164,7 @@ const Footer = () => {
       <FooterArea>
       <Logo
         className="logo"
+        target="_blank"
         href="https://maalem.com.sa/en"
         logoSrc={LogoImage}
         title="App Classic"
@@ -195,6 +196,7 @@ const Footer = () => {
                     : null
                 }
               > <a
+              target="_blank"
               className="pointer-cursor"
               className={testimoniall}
               onClick={toggelAboutUs}
@@ -206,6 +208,7 @@ const Footer = () => {
             <a
               className="pointer-cursor"
               className={team}
+              target="_blank"
               onClick={toggelFAQ}
               href="#"
             >
@@ -213,6 +216,7 @@ const Footer = () => {
             </a>
 
             <a
+            target="_blank"
               className="pointer-cursor"
               onClick={(e) => setOpen(!formOpen)}
             >
@@ -224,17 +228,17 @@ const Footer = () => {
             <a className="pointer-cursor" href="#">
               {cmsItemss.privacy}
             </a>
-                <a className="pointer-cursor" href="#product">
+                <a className="pointer-cursor"target="_blank" href="#product">
                { window.sessionStorage.getItem('lang')== 'ar' ? 'Product' :'المنتج'}
                 </a>
-                <a className="pointer-cursor" href="#howtoapply">
+                <a className="pointer-cursor" target="_blank" href="#howtoapply">
                      { window.sessionStorage.getItem('lang')== 'ar' ? 'How to Apply' :'كيفية التقديم'}
                 </a>
-                <a className="pointer-cursor" href="http://122.166.172.240:3000/customer/signup?lang=">
+                <a className="pointer-cursor" target="_blank"href="http://122.166.172.240:3000/customer/signup?lang=">
                  { window.sessionStorage.getItem('lang')== 'ar' ? 'Apply now' : 'قدم الآن'}
                 </a>
                 
-                <a className="pointer-cursor" href="http://122.166.172.240:3000/customer/signin?lang=">
+                <a className="pointer-cursor" target="_blank" href="http://122.166.172.240:3000/customer/signin?lang=">
                 { window.sessionStorage.getItem('lang')== 'ar' ? 'Login' :'تسجيل الدخول'}
                 </a>
                 <br></br>
@@ -279,7 +283,7 @@ const Footer = () => {
               </PricingCard>
             </Menu>
             <CopyrightText>
-              <a href="https://www.intelora.co.in">
+              <a href="https://www.intelora.co.in"target="_blank">
                 {' '}
                 
                 Copyright {year} By intelora.co.in

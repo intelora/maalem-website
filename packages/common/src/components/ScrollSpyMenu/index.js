@@ -77,7 +77,7 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
         {state.menuItems.map((menu) => (
           <li className="dropdown" key={`1111`}>
             {menu.staticLink ? (
-              <a href={menu.path}>{menu.label}</a>
+              <a href={menu.path} >{menu.label}</a>
             ) : (
               <>
                 {drawerClose ? (
@@ -85,7 +85,7 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
                     {menu.item}
                   </AnchorLink>
                 ) : (
-                  <Link to={menu.href}>{menu.item}</Link>
+                  <Link to={menu.href} target="_blank">{menu.item}</Link>
                 )}
               </>
             )}
