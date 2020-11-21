@@ -84,7 +84,7 @@ const PricingPolicy = () => {
             id: 2,
             title: 'Enterprise',
             suggested: false,
-            description: 'التمويل على مستوى طموحاتك',
+            description: 'Funding lives up to your ambitions',
             features: [
               { id: 1, text: 'Financing up to 15 million riyals' },
               { id: 2, text: 'Comfortable repayment of up to 2 years' },
@@ -99,7 +99,7 @@ const PricingPolicy = () => {
             id: 3,
             title: 'Enterprise New',
             suggested: false,
-            description: 'التمويل على مستوى طموحاتك',
+            description: 'Funding lives up to your ambitions',
             features: [
               { id: 1, text: 'Financing up to 15 million riyals' },
               { id: 2, text: 'Comfortable repayment of up to 2 years' },
@@ -285,15 +285,17 @@ const PricingPolicy = () => {
                     <span>SAR {item.price}</span> /{state.active}
                   </strong> */}
                   <Button style={{ borderRadius:'25px'}}
-                     onClick={() => {
-                      window.sessionStorage.getItem('showCalculator', true);
-                      document.getElementById(
-                        'loancalculator'
-                      ).style.transform = 'translateX(0)';
-                    }}
+                    //  onClick={() => {
+                    //   window.sessionStorage.getItem('showCalculator', true);
+                    //   document.getElementById(
+                    //     'loancalculator'
+                    //   ).style.transform = 'translateX(0)';
+                    // }
+                  
+                  // }
                     // title={item.price === 0 ? 'Apply Now' : 'Download App'}
                     title= { window.sessionStorage.getItem('lang')== 'ar' ? 'Know More':'تعرف أكثر'}
-
+                    href="#"
                   />
                   {/* {item.trail ? (
                     <div className="trail">
