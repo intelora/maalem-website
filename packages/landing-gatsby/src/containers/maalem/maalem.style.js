@@ -3,7 +3,7 @@ import { themeGet } from '@styled-system/theme-get';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: 'Heebo', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
   }
   body:lang(ar) {
@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
   h4,
   h5,
   h6 {
-    font-family: 'Heebo', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
   }
   section {
     position: relative;
@@ -79,7 +79,7 @@ export const AppWrapper = styled.div`
       ul {
         li {
           a {
-            color: ${themeGet('colors.pink', '#d1397c')};
+            color: ${themeGet('colors.pink', '#2b5c44')};
             font-size: 16px;
             font-weight: 400;
             transition: all 0.3s ease;

@@ -27,13 +27,13 @@ const NavbarWrapper = styled.nav`
     justify-content: space-between;
     .main-logo {
       img {
-        width:160px;
-        height: 60px;
+        width:200px;
+        height: auto;
       }
     }
     .logo-alt {
-      width: 160px;
-      height: 40px;
+      width: 200px;
+      height: 60px;
       display: none;
     }
   }
@@ -140,7 +140,7 @@ export const MenuArea = styled.div`
     }
     &.trail {
       &:hover {
-        box-shadow: #d1397c 0px 12px 24px -10px;
+        box-shadow: #2b5c44 0px 12px 24px -10px;
       }
       @media only screen and (max-width: 991px) {
         display: none;

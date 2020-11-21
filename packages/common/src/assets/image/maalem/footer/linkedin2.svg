@@ -1,13 +1,52 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" data-name="Layer 1" viewBox="0 0 128 128"><defs><style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:url(#radial-gradient);}.cls-4{clip-path:url(#clip-path-2);}.cls-5{fill:url(#radial-gradient-2);}.cls-6{clip-path:url(#clip-path-3);}.cls-7{clip-path:url(#clip-path-4);}.cls-8{fill:url(#radial-gradient-4);}.cls-9{fill:#0177b5;}.cls-10{fill:#fff;}</style><clipPath id="clip-path"><path class="cls-1" d="M227-153.91a12,12,0,0,1,6,1.61l37.16,21.45a12,12,0,0,1,6,10.39v42.91a12,12,0,0,1-6,10.39L233-45.7a12,12,0,0,1-6,1.61,12,12,0,0,1-6-1.61L183.84-67.15a12,12,0,0,1-6-10.39v-42.91a12,12,0,0,1,6-10.39L221-152.3a12,12,0,0,1,6-1.61m0-8a20,20,0,0,0-10,2.68l-37.16,21.45a20,20,0,0,0-10,17.32v42.91a20,20,0,0,0,10,17.32L217-38.77a20,20,0,0,0,10,2.68,20,20,0,0,0,10-2.68l37.16-21.45a20,20,0,0,0,10-17.32v-42.91a20,20,0,0,0-10-17.32L237-159.23a20,20,0,0,0-10-2.68Z" style="fill: none;"/></clipPath><radialGradient id="radial-gradient" cx="190.5" cy="-41.5" r="137.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd676"/><stop offset="0.25" stop-color="#f2a454"/><stop offset="0.38" stop-color="#f05c3c"/><stop offset="0.7" stop-color="#c22f86"/><stop offset="0.96" stop-color="#6666ad"/><stop offset="0.99" stop-color="#5c6cb2"/></radialGradient><clipPath id="clip-path-2"><path class="cls-1" d="M227-115a16,16,0,0,0-16,16,16,16,0,0,0,16,16,16,16,0,0,0,16-16A16,16,0,0,0,227-115Zm0,24a8,8,0,0,1-8-8,8,8,0,0,1,8-8,8,8,0,0,1,8,8A8,8,0,0,1,227-91Z" style="fill: none;"/></clipPath><radialGradient id="radial-gradient-2" cx="190.5" cy="-41.5" r="148.5" xlink:href="#radial-gradient"/><clipPath id="clip-path-3"><path class="cls-1" d="M247-63H207a16,16,0,0,1-16-16v-40a16,16,0,0,1,16-16h40a16,16,0,0,1,16,16v40A16,16,0,0,1,247-63Zm-40-64a8,8,0,0,0-8,8v40a8,8,0,0,0,8,8h40a8,8,0,0,0,8-8v-40a8,8,0,0,0-8-8Z" style="fill: none;"/></clipPath><clipPath id="clip-path-4"><circle class="cls-1" cx="245" cy="-117" r="5" style="fill: none;"/></clipPath><radialGradient id="radial-gradient-4" cx="176.87" cy="-22.62" r="185.63" xlink:href="#radial-gradient"/></defs><title>Artboard 65</title><g class="cls-2" style="clip-path: url(#clip-path);"><circle class="cls-3" cx="190.5" cy="-41.5" r="137.5" style="fill: url(#radial-gradient);"/></g><g class="cls-4" style="clip-path: url(#clip-path-2);"><circle class="cls-5" cx="190.5" cy="-41.5" r="148.5" style="fill: url(#radial-gradient-2);"/></g><g class="cls-6" style="clip-path: url(#clip-path-3);"><circle class="cls-5" cx="190.5" cy="-41.5" r="148.5" style="fill: url(#radial-gradient-2);"/></g><g class="cls-7" style="clip-path: url(#clip-path-4);"><circle class="cls-8" cx="176.87" cy="-22.62" r="185.63" style="fill: url(#radial-gradient-4);"/></g><path class="cls-9" d="M6.84,42.55V85.45a20,20,0,0,0,10,17.32L54,124.23a20,20,0,0,0,20,0l37.16-21.45a20,20,0,0,0,10-17.32V42.55a20,20,0,0,0-10-17.32L74,3.77a20,20,0,0,0-20,0L16.84,25.23A20,20,0,0,0,6.84,42.55Z" style="fill: #0177b5;"/><path class="cls-10" d="M92,32H36a4,4,0,0,0-4,4V92a4,4,0,0,0,4,4H92a4,4,0,0,0,4-4V36A4,4,0,0,0,92,32ZM52,86H42V56H52ZM47,52a6,6,0,1,1,6-6A6,6,0,0,1,47,52ZM86,86H76V66c0-1.66-2.24-3-5-3-4,0-5,5.34-5,7V86H56V56H66v7c0-5,4.48-7,10-7A10,10,0,0,1,86,66Z" style="fill: #fff;"/>
-	<metadata>
-		<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
-			<rdf:Description about="https://iconscout.com/legal#licenses" dc:title="yumminky-social-media-65" dc:description="yumminky-social-media-65" dc:publisher="Iconscout" dc:date="2017-05-12" dc:format="image/svg+xml" dc:language="en">
-				<dc:creator>
-					<rdf:Bag>
-						<rdf:li>Juraj Sedlák</rdf:li>
-					</rdf:Bag>
-				</dc:creator>
-			</rdf:Description>
-		</rdf:RDF>
-    </metadata></svg>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="552.77px" height="552.77px" viewBox="0 0 552.77 552.77" style="enable-background:new 0 0 552.77 552.77;"
+	 xml:space="preserve">
+<g>
+	<g>
+		<path d="M17.95,528.854h71.861c9.914,0,17.95-8.037,17.95-17.951V196.8c0-9.915-8.036-17.95-17.95-17.95H17.95
+			C8.035,178.85,0,186.885,0,196.8v314.103C0,520.816,8.035,528.854,17.95,528.854z"/>
+		<path d="M17.95,123.629h71.861c9.914,0,17.95-8.036,17.95-17.95V41.866c0-9.914-8.036-17.95-17.95-17.95H17.95
+			C8.035,23.916,0,31.952,0,41.866v63.813C0,115.593,8.035,123.629,17.95,123.629z"/>
+		<path d="M525.732,215.282c-10.098-13.292-24.988-24.223-44.676-32.791c-19.688-8.562-41.42-12.846-65.197-12.846
+			c-48.268,0-89.168,18.421-122.699,55.27c-6.672,7.332-11.523,5.729-11.523-4.186V196.8c0-9.915-8.037-17.95-17.951-17.95h-64.192
+			c-9.915,0-17.95,8.035-17.95,17.95v314.103c0,9.914,8.036,17.951,17.95,17.951h71.861c9.915,0,17.95-8.037,17.95-17.951V401.666
+			c0-45.508,2.748-76.701,8.244-93.574c5.494-16.873,15.66-30.422,30.488-40.649c14.83-10.227,31.574-15.343,50.24-15.343
+			c14.572,0,27.037,3.58,37.393,10.741c10.355,7.16,17.834,17.19,22.436,30.104c4.604,12.912,6.904,41.354,6.904,85.33v132.627
+			c0,9.914,8.035,17.951,17.949,17.951h71.861c9.914,0,17.949-8.037,17.949-17.951V333.02c0-31.445-1.982-55.607-5.941-72.48
+			S535.836,228.581,525.732,215.282z"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>

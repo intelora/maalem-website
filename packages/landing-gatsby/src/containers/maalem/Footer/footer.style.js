@@ -4,7 +4,7 @@ import { themeGet } from '@styled-system/theme-get';
 const FooterArea = styled.footer`
   padding: 15px 0 40px;
 
-  background-color: ${themeGet('colors.dark gray', '	 #a6a6a6')};
+  background-color: ${themeGet('colors.dark gray', '#a6a6a6')};
   @media only screen and (max-width: 1366px) {
     padding-top: 80px;
   }
@@ -27,7 +27,7 @@ export const WidgetArea = styled.div`
   max-width: 1008px;
   width: 100%;
   margin: 0 auto;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  // border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
   .col {
     width: calc(100% / 5);
@@ -48,7 +48,7 @@ export const WidgetArea = styled.div`
     img {
       display: inline-block;
       margin-bottom: 25px;
-      width: 40px;
+      width: 20px;
     } @media only screen and (max-width: 480px) {
       width: 100%;
     }

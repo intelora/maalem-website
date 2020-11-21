@@ -88,6 +88,15 @@ const Features = () => {
                   content={cmsItems[langIndex].websiteMaalemRow9Col1HeadingText}
                 />
               }
+              button={
+                <Button
+                style={{ marginLeft:'15%',
+                marginTop: '8%',borderRadius: '25px'
+               }}
+                className="blue"
+                title={cmsItems[langIndex].websiteMaalemRow42Text}
+              />
+              }
             />
           </Fade>
 
@@ -127,7 +136,18 @@ const Features = () => {
                   content={cmsItems[langIndex].websiteMaalemRow9Col2HeadingText}
                 />
               }
+              button={
+                <Button
+                style={{ marginLeft:'15%',
+                marginTop: '8%',borderRadius: '25px'
+               }}
+                className="blue"
+                title={cmsItems[langIndex].websiteMaalemRow42Text}
+              />
+              }
+              
             />
+      
           </Fade>
 
           <Fade up delay={200} key={`feature-key${3}`}>
@@ -168,6 +188,16 @@ const Features = () => {
                   }
                 />
               }
+              button={
+                <Button
+                style={{ marginLeft:'15%',
+                marginTop: '8%',borderRadius: '25px'
+               }}
+                className="blue"
+                title={cmsItems[langIndex].websiteMaalemRow42Text}
+              />
+              }
+            
             />
           </Fade>
 
@@ -208,6 +238,15 @@ const Features = () => {
                     cmsItems[langIndex].websiteMaalemRow10Col2HeadingText
                   }
                 />
+              }
+              button={
+                <Button
+                style={{ marginLeft:'15%',
+                marginTop: '8%',borderRadius: '25px'
+               }}
+                className="blue"
+                title={cmsItems[langIndex].websiteMaalemRow42Text}
+              />
               }
             />
           </Fade>

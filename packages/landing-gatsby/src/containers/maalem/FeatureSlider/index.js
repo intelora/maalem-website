@@ -19,7 +19,7 @@ import Image1 from 'common/src/assets/image/maalem/product1_en.png';
 import Image2 from 'common/src/assets/image/maalem/product1_ar.png';
 import Image3 from 'common/src/assets/image/maalem/product2_en.png';
 import Image4 from 'common/src/assets/image/maalem/product2_ar.png';
-// import Image5 from 'common/src/assets/image/app/howtoapply/Create account 1-3 Eng.png';
+import Image5 from 'common/src/assets/image/maalem/product2_ar.png';
 
 // import DomainSection from '../container/Hosting/Domain';
 
@@ -62,7 +62,7 @@ const FeatureSlider = ({ sectionSubTitle, sectionTitle, sectionHeader }) => {
         thumbnailAlt: 'thumb five'
       },
       {
-        // original: `${Image5}`,
+        original: `${Image5}`,
         thumbnail: `${Thumb6}`,
         thumbnailLabel: title[0][3],
         originalAlt: 'slide six',
@@ -92,7 +92,7 @@ const FeatureSlider = ({ sectionSubTitle, sectionTitle, sectionHeader }) => {
         thumbnailAlt: 'thumb five'
       },
       {
-        // original: `${Image5}`,
+        original: `${Image5}`,
         thumbnail: `${Thumb6}`,
         thumbnailLabel: title[1][3],
         originalAlt: 'slide six',

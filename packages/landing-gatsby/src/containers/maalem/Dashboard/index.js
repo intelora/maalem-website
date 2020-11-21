@@ -9,8 +9,9 @@ import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import Particles from '../Particle';
 import DashboardWrapper, { DashboardObject } from './dashboard.style';
-
-import DashboardObject1 from 'common/src/assets/image/maalem/d.png';
+import Fade from 'react-reveal/Fade';
+import DashboardObject1 from 'common/src/assets/image/maalem/dashbord.png';
+// import DashboardObject2 from 'common/src/assets/image/maalem/dashbord1.png';
 
 
 
@@ -77,12 +78,21 @@ const DashboardSection = ({
         </Box>
       </Container>
       <DashboardObject>
-        <div className="dashboardWrapper">
+        <div className="dashboardWrapper" style={{ display:'flex'}}>
+        <Fade left>
           <Image
             src={DashboardObject1}
             alt="DashboardObject1"
-            style={{ width: '70%', marginLeft: '20%' }}
+            style={{ width: '60%'}}
           />
+          </Fade>
+          <Fade right>
+           <Image
+            src={DashboardObject1}
+            alt="DashboardObject1"
+            style={{ width: '60%'}}
+          />
+          </Fade>
         </div>
       </DashboardObject>
     </DashboardWrapper>
