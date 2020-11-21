@@ -92,7 +92,7 @@ const DesignedAndBuilt = (props) => {
           <div class="row" style={{ display: 'flex' }}>
             <div className="col">
               <div className="content">
-              <Heading as="h3" style={{ color:'#4e8757  '}} content={cmsItemss.loancalculator} />
+              <Heading as="h3" style={{ color:'#18750c  '}} content={cmsItemss.loancalculator} />
                 <Heading content={cmsItemss.loancalculatorheading} />
                 <Text content={cmsItemss.loancalculatordescription} />
               </div>

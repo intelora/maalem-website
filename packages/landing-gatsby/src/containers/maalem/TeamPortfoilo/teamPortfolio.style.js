@@ -245,7 +245,7 @@ export const ContentWrapper = styled.div`
     border-radius: 5px;
 
     &:hover {
-      box-shadow: #4e8757 0px 12px 24px -10px;
+      box-shadow: #18750c 0px 12px 24px -10px;
     }
   }
 `;

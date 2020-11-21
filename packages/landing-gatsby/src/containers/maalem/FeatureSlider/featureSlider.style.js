@@ -208,10 +208,12 @@ const FeatureSliderWrapper = styled.div`
           }
           &.active {
             border: 0;
-            background-color:#4e8757;
+            background-color:#18750c;
+           
             border-radius: 255px;
             .image-gallery-thumbnail-label {
               margin-top: 3px;
+              color:white;
             }
             img {
               transition: all 0.35s ease;
@@ -257,6 +259,7 @@ const FeatureSliderWrapper = styled.div`
           transition: all 0.3s ease;
           &.active {
             background-color: #d9d9d9;
+            
             width: 32px;
             height: 4px;
           }
