@@ -109,6 +109,7 @@ const FeatureSlider = ({ sectionSubTitle, sectionTitle, sectionHeader }) => {
        
 
       <Container>
+        
         <Fade left>
           <Box {...sectionHeader}>
             {/* <Text {...sectionSubTitle} /> */}

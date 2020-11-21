@@ -79,7 +79,7 @@ export const AppWrapper = styled.div`
       ul {
         li {
           a {
-            color: ${themeGet('colors.pink', '#2b5c44')};
+            color: ${themeGet('colors.pink', '#4e8757')};
             font-size: 16px;
             font-weight: 400;
             transition: all 0.3s ease;

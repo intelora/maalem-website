@@ -149,6 +149,7 @@ const FeatureSliderWrapper = styled.div`
             outline: none;
             &:focus {
               outline: none;
+              
             }
           }
           img {
@@ -192,12 +193,13 @@ const FeatureSliderWrapper = styled.div`
           }
           .image-gallery-thumbnail-label {
             position: relative;
-            margin-top: 10px;
-            font-size: 19px;
+            margin-top: 5px;
+            font-size: 16px;
             line-height: 24px;
+            font-family:bold;
             letter-spacing: -0.01em;
             color: #0f2137;
-            font-family: 'Open sans';
+            font-family: 'Arial,Helvetica,sans-serif';
             top: 0;
             text-shadow: none;
             transform: none;
@@ -206,8 +208,10 @@ const FeatureSliderWrapper = styled.div`
           }
           &.active {
             border: 0;
+            background-color:#4e8757;
+            border-radius: 255px;
             .image-gallery-thumbnail-label {
-              margin-top: 30px;
+              margin-top: 3px;
             }
             img {
               transition: all 0.35s ease;
@@ -252,7 +256,7 @@ const FeatureSliderWrapper = styled.div`
           margin-bottom: 10px;
           transition: all 0.3s ease;
           &.active {
-            background-color: rgb(26, 115, 232);
+            background-color: #d9d9d9;
             width: 32px;
             height: 4px;
           }
