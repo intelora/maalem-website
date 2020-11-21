@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 const FooterArea = styled.footer`
-  padding: 96px 0 60px;
+  padding: 15px 0 40px;
 
-  background-color: ${themeGet('colors.dark gray', '#595959')};
+  background-color: ${themeGet('colors.dark gray', '	 #a6a6a6')};
   @media only screen and (max-width: 1366px) {
     padding-top: 80px;
   }
@@ -14,8 +14,9 @@ const FooterArea = styled.footer`
   }
   .logo {
     img {
-      width: 128px;
-      height: auto;
+      width: 200px;
+      // max-height: 20px;
+      margin-left:650px;
     }
   }
 `;
@@ -31,8 +32,8 @@ export const WidgetArea = styled.div`
   .col {
     width: calc(100% / 5);
     text-align: center;
-    padding: 0 21px;
-    margin-bottom: 50px;
+    // padding: 0 21px;
+    // margin-bottom: 50px;
     @media only screen and (max-width: 991px) {
       padding: 0 15px;
     }
@@ -47,7 +48,9 @@ export const WidgetArea = styled.div`
     img {
       display: inline-block;
       margin-bottom: 25px;
-      width: 80px;
+      width: 40px;
+    } @media only screen and (max-width: 480px) {
+      width: 100%;
     }
 
     h3 {
@@ -89,7 +92,7 @@ export const MenuArea = styled.div`
     height: auto;
     background: #f3f3f3;
     font-weight: 700;
-    transform: translateX(100%);
+    transform: translateX(100%);  
     -webkit-transform: translateX(100%);
     -ms-transform: translateX(100%);
     transition: transform 0.6s ease;
@@ -145,21 +148,21 @@ export const MenuArea = styled.div`
 `;
 
 export const Menu = styled.ul`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 37px;
-  margin-bottom: 15px;
+  // display: flex;
+  align-items: right;
+  justify-content: right;
+  // flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 10px;
   @media only screen and (max-width: 667px) {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 `;
 
 export const MenuItem = styled.li`
-  margin: 0 18px;
+  
   @media only screen and (max-width: 667px) {
-    margin: 5px 15px;
+    margin: 1px 15px;
   }
   a {
     color: ${themeGet('colors.white', '#ffffff')};

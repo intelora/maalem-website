@@ -1,0 +1,164 @@
+.emiloancalstyle
+{
+    width: 75vw;
+}
+.emidetails
+{
+    
+    text-align: center;
+    background-color:#ffffff;
+    font-weight: normal;
+    color: #000000;
+    padding:10px 10px;
+}
+.loanemi
+{
+    /* border-bottom: 1px solid; */
+    padding: 5px 10px;
+}
+.loanamount 
+{
+    font-weight: bold;
+}
+
+form {
+    margin: 20px auto;
+    width: 420px;
+}
+.form-row {
+    padding: 5px 10px;
+}
+label {
+    display: block;
+    margin: 3px 0;
+}
+.form-row input {
+    padding: 3px 1px;
+    width: 100%;
+}
+input.currency {
+    text-align: right;
+    padding-right: 15px;
+}
+.input-group .form-control {
+    float: none;
+}
+.input-group .input-buttons {
+    position: relative;
+    z-index: 3;
+}
+.dfs_calculatorstyle 
+{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 3%;
+}
+.dfs_calculateHeading
+{
+    font-size: 22px;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 25px;
+    font-weight: bold;
+    font-family: Montserrat;
+}
+.MuiSlider-rail {
+    width: 100%;
+    height: 2px;
+    display: block;
+    opacity: 0.38;
+    position: absolute;
+    border-radius: 1px;
+    background-color: gray!important;
+}
+.backgroundstyling
+{
+    /* background-image: url('../../assets/images/bankdetail.jpg'); */
+    padding:5% 0%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+@media (min-width: 320px) and (max-width: 480px) {
+    .emiloancalstyle {
+        width: 93vw;
+    }
+    .dfs-loanamtstyle
+    {
+      margin-top: 25px;
+    }
+  
+}
+@media(min-width:525px) and (max-width:768px)
+{
+    .emiloancalstyle {
+        width: 100vw!important;
+        margin-top: 25px;
+    }
+    .emicalfontstyle
+    {
+        font-size: 12px!important;
+    }
+}
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.pie__segment:before{
+    background-color: #206FB7;
+    height: 100%;
+    position: relative;
+    transform: translate(0,100%) rotate(45deg);
+    transform-origin: 50% 0;
+    width: 100%;
+}
+
+.pie{
+    background: #4CAF50;
+    border-radius: 100%;
+    height: calc(var(--size, 200) * 1px);
+    position: relative;
+    width: calc(var(--size,200) *1px);
+}
+
+/* input{
+    line-height: 25px;
+    border-radius:2px;
+    box-shadow:1px;
+} */
+
+.form-control{
+    margin-bottom: 10px;
+}

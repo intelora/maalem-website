@@ -217,6 +217,34 @@ const Navbar = () => {
     setState({ ...state, searchToggle: false })
   );
 
+  // const data = {
+  //   nav: [
+      
+  //        {
+  //           id: 1,
+  //           title: 'HOME',
+  //         },
+  //         {
+  //           id: 2,
+  //           title: 'PRODUCT',
+  //         },
+  //         {
+  //           id: 3,
+  //           title: 'HOW TO APPLY',
+  //         },
+  //         {
+  //           id: 4,
+  //           title: 'APPLY NOW',
+  //         },
+
+  //         {
+  //           id: 5,
+  //           title: 'Home', 
+  //         },
+  //       ],
+     
+  //   ]
+  // };
   const toggleHandler = (type) => {
     if (type === 'search') {
       setState({

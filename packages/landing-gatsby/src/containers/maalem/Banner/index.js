@@ -171,7 +171,7 @@ const Banner = () => {
                 style={{ marginLeft:'25%',
                 marginTop: '8%',
                }}
-                className="lightblue"
+                className="blue"
                 title={cmsItems[langIndex].websiteMaalemRow42Text}
               />
             </a>

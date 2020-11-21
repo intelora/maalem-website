@@ -6,8 +6,8 @@ const FeatureSliderWrapper = styled.div`
   padding-top: 75px;
   @media (max-width: 1440px) {
     //padding-top: 140px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    // padding-top: 100px;
+    // padding-bottom: 100px;
   }
   /* .FeatureSliderInner {
     span:nth-child(1) {
@@ -62,7 +62,7 @@ const FeatureSliderWrapper = styled.div`
   } */
   .FeatureSlider {
     //padding-top: 200px;
-    padding-top: 150px;
+    padding-top: 120px;
     padding-bottom: 100px;
     position: relative;
 
@@ -153,7 +153,7 @@ const FeatureSliderWrapper = styled.div`
           }
           img {
             transition: all 0.35s ease;
-            width: 30px;
+            width: 50px;
           }
 
           &:nth-child(1) {
@@ -197,7 +197,7 @@ const FeatureSliderWrapper = styled.div`
             line-height: 24px;
             letter-spacing: -0.01em;
             color: #0f2137;
-            font-family: ''Heebo',sans-serif';
+            font-family: 'Open sans';
             top: 0;
             text-shadow: none;
             transform: none;

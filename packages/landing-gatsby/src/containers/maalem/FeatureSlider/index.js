@@ -8,12 +8,12 @@ import 'react-image-gallery/styles/css/image-gallery.css';
 import Container from 'common/src/components/UI/Container';
 import FeatureSliderWrapper from './featureSlider.style';
 
-import Thumb2 from 'common/src/assets/image/app/eyd.png';
-import Thumb1 from 'common/src/assets/image/app/capp.png';
+import Thumb2 from 'common/src/assets/image/app/a.svg';
+import Thumb1 from 'common/src/assets/image/app/cap.svg';
 import Thumb3 from 'common/src/assets/image/app/an.png';
 import Thumb4 from 'common/src/assets/image/app/3.svg';
-import Thumb5 from 'common/src/assets/image/app/an.png';
-import Thumb6 from 'common/src/assets/image/app/a.png';
+import Thumb5 from 'common/src/assets/image/app/id.svg';
+import Thumb6 from 'common/src/assets/image/app/validation.svg';
 
 import Image1 from 'common/src/assets/image/maalem/product1_en.png';
 import Image2 from 'common/src/assets/image/maalem/product1_ar.png';
@@ -106,12 +106,9 @@ const FeatureSlider = ({ sectionSubTitle, sectionTitle, sectionHeader }) => {
   return (
     <>
       <FeatureSliderWrapper>
-        <div className="FeatureSliderInner">
-          <span> </span>
-          <span> </span>
-          <span> </span>
-        </div>
-        <Container>
+       
+
+      <Container>
           <Box {...sectionHeader}>
             {/* <Text {...sectionSubTitle} /> */}
             <Heading {...sectionTitle} />
@@ -127,7 +124,7 @@ const FeatureSlider = ({ sectionSubTitle, sectionTitle, sectionHeader }) => {
               autoPlay={true}
             />
           </Box>
-        </Container>
+          </Container>
       </FeatureSliderWrapper>
     </>
   );

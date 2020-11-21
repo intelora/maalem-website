@@ -4,7 +4,7 @@ import Box from 'common/src/components/Box';
 import Text from 'common/src/components/Text';
 import Image from 'common/src/components/Image';
 import Logo from 'common/src/components/UIElements/Logo';
-import LogoImage from 'common/src/assets/image/maalem/logo-white.png';
+import LogoImage from 'common/src/assets/image/maalem/logo.png';
 import Heading from 'common/src/components/Heading';
 import Container from 'common/src/components/UI/Container';
 import TeamPortfolio from '../../../containers/maalem/TeamPortfoilo';
@@ -133,12 +133,11 @@ const Footer = () => {
 
   function toggelFAQ() {
     if (
-      document.getElementById('testimonial').style.display === 'none' ||
-      document.getElementById('testimonial').style.display == 'none'
+      document.getElementById('testimonial').style.display = 'none' 
     ) {
       document.getElementById('testimonial').style.display = 'block';
 
-      window.location.href = '#';
+      window.location.href = '#pricing';
     } else {
       document.getElementById('testimonial').style.display = 'none';
     }
@@ -146,8 +145,7 @@ const Footer = () => {
 
   function toggelAboutUs() {
     if (
-      document.getElementById('team').style.display === 'none' ||
-      document.getElementById('team').style.display == 'none'
+      document.getElementById('team').style.display = 'none'
     ) {
       document.getElementById('team').style.display = 'block';
 
@@ -164,9 +162,20 @@ const Footer = () => {
       <div className={team}>
         <TeamPortfolio />
       </div>
+      
       <FooterArea>
+      <Logo
+        className="logo"
+        href="https://maalem.com.sa/en"
+        logoSrc={LogoImage}
+        title="App Classic"
+      />
         <Container>
-          <WidgetArea
+         
+          <MenuArea>
+          
+            <Menu>
+            <WidgetArea
             style={
               window.sessionStorage.getItem('lang') === 'en'
                 ? { direction: 'rtl', textAlign: 'right' }
@@ -177,19 +186,10 @@ const Footer = () => {
               <Box className="col" key={`footer-widget--key${item.id}`}>
                 <a onClick={(e) => openSocialMediaPage(index)}>
                   <Image src={item.icon.publicURL} alt={item.title} />
-                  <Heading as="h3" content={item.title} />
                 </a>
               </Box>
             ))}
           </WidgetArea>
-          <MenuArea>
-            <Logo
-              className="logo"
-              href="https://maalem.com.sa/en"
-              logoSrc={LogoImage}
-              title="App Classic"
-            />
-            <Menu>
               <MenuItemm
                 style={
                   window.sessionStorage.getItem('lang') === 'en'

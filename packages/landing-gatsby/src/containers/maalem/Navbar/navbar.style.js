@@ -4,7 +4,7 @@ import searchIcon from 'common/src/assets/image/appClassic/search.svg';
 
 const NavbarWrapper = styled.nav`
   width: 100%;
-  padding: 25px 0 26px;
+  padding: 10px 0 25px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.102);
   position: fixed;
   z-index: 9999;
@@ -18,7 +18,7 @@ const NavbarWrapper = styled.nav`
     color:black;
   }
   @media only screen and (max-width: 1366px) {
-    padding: 20px 0 21px;
+    padding: 10px 0 25px;
   }
   > div.container {
     width: 100%;
@@ -27,13 +27,13 @@ const NavbarWrapper = styled.nav`
     justify-content: space-between;
     .main-logo {
       img {
-        width: 160px;
-        height: auto;
+        width:160px;
+        height: 60px;
       }
     }
     .logo-alt {
-      width: 128px;
-      height: auto;
+      width: 160px;
+      height: 40px;
       display: none;
     }
   }

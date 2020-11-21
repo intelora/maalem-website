@@ -57,18 +57,21 @@ export const AppWrapper = styled.div`
 
   .sticky-active {
     .navbar {
-      // padding: 20px 0 21px;
+      
       background-color: ${themeGet('colors.white', '#fffff')};
       fobt-size:bold;
       // box-shadow: 0px 3px 8px 0px rgba(43, 83, 135, 0.08);
       @media only screen and (max-width: 1366px) {
         // padding: 15px 0 16px;
+        padding: 15px 0 25px;
       }
       .main-logo {
         display: none;
+        width:200px;  
       }
       .logo-alt {
         display: block;
+        width:200px;
       }
       .mobile-menu {
         top: 72px;
@@ -119,7 +122,7 @@ export const ContentWrapper = styled.div`
 export const SectionHeader = styled.header`
   // max-width: 352px;
   width: 100%;
-  ,argin-top:10px;
+  margin-top:10px;
   margin: 0 auto 58px;
   text-align: center;
   @media only screen and (max-width: 991px) {
