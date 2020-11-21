@@ -8,6 +8,8 @@ import LogoImage from 'common/src/assets/image/maalem/logo.png';
 import Heading from 'common/src/components/Heading';
 import Container from 'common/src/components/UI/Container';
 import TeamPortfolio from '../../../containers/maalem/TeamPortfoilo';
+import Button from 'common/src/components/Button';
+import PricingCard from '../PricingPolicy/pricingPolicy.style';
 import GlobalStyle, {
   AppWrapper,
   ContentWrapper,
@@ -133,9 +135,8 @@ const Footer = () => {
     if (
       document.getElementById('testimonial').style.display = 'none' 
     ) {
-      document.getElementById('testimonial').style.display = 'block';
-
       window.location.href = '#pricing';
+      document.getElementById('testimonial').style.display = 'block';
     } else {
       document.getElementById('testimonial').style.display = 'none';
     }
@@ -145,9 +146,8 @@ const Footer = () => {
     if (
       document.getElementById('team').style.display = 'none'
     ) {
-      document.getElementById('team').style.display = 'block';
-
       window.location.href = '#banner_section';
+      document.getElementById('team').style.display = 'block';
     } else {
       document.getElementById('team').style.display = 'none';
     }
@@ -226,13 +226,11 @@ const Footer = () => {
                   {cmsItemss.privacy}
                 </a>
               </MenuItemm>
-
-              <div
-                className={
+              <PricingCard style={{ borderRadius:'25px',padding:'25px' }} className={
                   formOpen ? 'contact-items formOpen' : 'contact-items'
-                }
-              >
+                }>
                 <button
+
                   className="close-btn"
                   onClick={(e) => setOpen(!formOpen)}
                 >
@@ -240,6 +238,7 @@ const Footer = () => {
                 </button>
                 <label htmlFor="name">Name</label>
                 <input
+                style={{ borderRadius:'25px' }}
                   type="text"
                   id="name"
                   placeholder="Enter Name"
@@ -247,6 +246,7 @@ const Footer = () => {
                 />
                 <label htmlFor="email">Email:</label>
                 <input
+                style={{ borderRadius:'25px' }}
                   type="email"
                   id="email"
                   placeholder="Enter email"
@@ -254,6 +254,7 @@ const Footer = () => {
                 />
                 <label htmlFor="query">Query:</label>
                 <textarea
+                style={{ borderRadius:'25px' }}
                   id="query"
                   name="query"
                   placeholder="Write your query here"
@@ -261,10 +262,8 @@ const Footer = () => {
                   cols="30"
                 ></textarea>
 
-                <button type="submit" onClick={(e) => setOpen(!formOpen)}>
-                  Submit
-                </button>
-              </div>
+                <Button style={{ marginLeft:'37%',borderRadius:'25px' }}type="submit" title=' Submit'onClick={(e) => setOpen(!formOpen)}/>
+              </PricingCard>
             </Menu>
             <CopyrightText>
               <a href="https://www.intelora.co.in">

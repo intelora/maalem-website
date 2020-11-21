@@ -144,17 +144,19 @@ const FeatureSliderWrapper = styled.div`
 
         .image-gallery-thumbnail {
           border: 0;
-          width: 125px;
+         
+          width: 145px;
+          height:130px;
           .image-gallery-thumbnail-inner {
             outline: none;
             &:focus {
               outline: none;
-              
             }
           }
           img {
             transition: all 0.35s ease;
             width: 50px;
+            margin-top:20px;
           }
 
           &:nth-child(1) {

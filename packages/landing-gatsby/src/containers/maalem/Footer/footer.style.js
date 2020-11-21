@@ -98,7 +98,7 @@ export const MenuArea = styled.div`
     transition: transform 0.6s ease;
     -webkit-transition: transform 0.6s ease;
     -ms-transition: transform 0.6s ease;
-    padding: 10px;
+    padding: 0px;
     border: solid 1px #ddd label {
       display: inline-block;
       max-width: 100%;
@@ -109,12 +109,17 @@ export const MenuArea = styled.div`
     textarea {
       background: transparent;
       width: 100%;
+      margin-top:2px;
       margin-bottom: 10px;
-      border: solid 1px #0f2137;
+      border:  0.3px #0f2137;
+      box-shadow:2px solid gray;
+      border: 0px solid;
       padding: 10px;
+      box-shadow: 1px 3px #888888;
+      // padding: 10px;
     }
     button {
-      background: #0f2137;
+      background: #616161;
       border: 0;
       color: #fff;
       padding: 10px 15px;
@@ -123,9 +128,9 @@ export const MenuArea = styled.div`
       margin-bottom: 10px;
       width: 100%;
       text-align: right;
-      font-size: 20px;
+      font-size: 30px;
       background: transparent;
-      color: #0f2137;
+      color: #616161;
       padding: 0;
       font-weight: bold;
     }
