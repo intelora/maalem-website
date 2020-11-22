@@ -91,7 +91,7 @@ const Features = () => {
               button={
                 <a target="_blank" href='https://play.google.com/store/apps/details?id=com.maalem'>
                 <Button
-                style={{ marginLeft:'15%',
+                style={{ marginLeft:'15%',paddingBottom:'10px',
                 marginTop: '8%',borderRadius: '25px',marginTop:'43.4%'
                }}
                 className="blue"
@@ -142,7 +142,7 @@ const Features = () => {
               button={
                 <a target="_blank" href='https://play.google.com/store/apps/details?id=com.maalem'>
                 <Button
-                style={{ marginLeft:'16%',
+                style={{ marginLeft:'16%', paddingBottom:'10px',
                 marginTop: '8%',borderRadius: '25px',marginTop:'27%'
                }}
                 className="blue"

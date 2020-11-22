@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Box from 'common/src/components/Box';
@@ -164,7 +165,6 @@ const Footer = () => {
       <FooterArea>
       <Logo
         className="logo"
-        target="_blank"
         href="https://maalem.com.sa/en"
         logoSrc={LogoImage}
         title="App Classic"
@@ -173,7 +173,7 @@ const Footer = () => {
          
           <MenuArea>
           
-            <Menu>
+            {/* <Menu> */}
             <WidgetArea
             style={
               window.sessionStorage.getItem('lang') === 'en'
@@ -195,8 +195,9 @@ const Footer = () => {
                     ? { direction: 'rtl', textAlign: 'right' }
                     : null
                 }
-              > <a
-              target="_blank"
+              > 
+          <WidgetArea style={{display:'flex'}}>
+              <a
               className="pointer-cursor"
               className={testimoniall}
               onClick={toggelAboutUs}
@@ -208,7 +209,6 @@ const Footer = () => {
             <a
               className="pointer-cursor"
               className={team}
-              target="_blank"
               onClick={toggelFAQ}
               href="#"
             >
@@ -216,32 +216,38 @@ const Footer = () => {
             </a>
 
             <a
-            target="_blank"
               className="pointer-cursor"
               onClick={(e) => setOpen(!formOpen)}
             >
               {cmsItemss.contactus}
             </a>
+            <br></br><br></br> <br></br>
+            <WidgetArea >
             <a className="pointer-cursor" href="#">
               {cmsItemss.termsandconditions}
             </a>
             <a className="pointer-cursor" href="#">
               {cmsItemss.privacy}
             </a>
-                <a className="pointer-cursor"target="_blank" href="#product">
-               { window.sessionStorage.getItem('lang')== 'ar' ? 'Product' :'المنتج'}
+                <a className="pointer-cursor" href="#pricing">
+                  Product
                 </a>
-                <a className="pointer-cursor" target="_blank" href="#howtoapply">
-                     { window.sessionStorage.getItem('lang')== 'ar' ? 'How to Apply' :'كيفية التقديم'}
+            </WidgetArea>
+            <br></br> <br></br> <br></br>
+              <WidgetArea>
+                <a className="pointer-cursor" href="#HowtoApplay">
+                  How to Apply
                 </a>
-                <a className="pointer-cursor" target="_blank"href="http://122.166.172.240:3000/customer/signup?lang=">
-                 { window.sessionStorage.getItem('lang')== 'ar' ? 'Apply now' : 'قدم الآن'}
+                <a className="pointer-cursor" href="http://122.166.172.240:3000/customer/signup?lang=">
+                  Apply now
                 </a>
                 
-                <a className="pointer-cursor" target="_blank" href="http://122.166.172.240:3000/customer/signin?lang=">
-                { window.sessionStorage.getItem('lang')== 'ar' ? 'Login' :'تسجيل الدخول'}
+                <a className="pointer-cursor" href="http://122.166.172.240:3000/customer/signin?lang=">
+                Login
                 </a>
-                <br></br>
+                </WidgetArea>
+                <br></br> <br></br>
+                </WidgetArea>
               </MenuItemm>
               <PricingCard style={{ borderRadius:'25px',padding:'25px' }} className={
                   formOpen ? 'contact-items formOpen' : 'contact-items'
@@ -281,11 +287,10 @@ const Footer = () => {
 
                 <Button style={{ marginLeft:'37%',borderRadius:'25px' }}type="submit" title=' Submit'onClick={(e) => setOpen(!formOpen)}/>
               </PricingCard>
-            </Menu>
+            {/* </Menu> */}
             <CopyrightText>
-              <a href="https://www.intelora.co.in"target="_blank">
+              <a href="https://www.intelora.co.in">
                 {' '}
-                
                 Copyright {year} By intelora.co.in
               </a>
             </CopyrightText>
