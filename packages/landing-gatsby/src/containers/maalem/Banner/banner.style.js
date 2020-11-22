@@ -9,17 +9,17 @@ const BannerWrapper = styled.div`
   z-index: 99;
   background-image: -moz-linear-gradient(
     139deg,
-    rgb(24,117,12) 0%,
+    rgb(24, 117, 12) 0%,
     rgb(0, 63, 135) 100%
   );
   background-image: -webkit-linear-gradient(
     139deg,
-    rgb(24,117,12) 0%,
+    rgb(24, 117, 12) 0%,
     rgb(0, 63, 135) 100%
   );
   background-image: -ms-linear-gradient(
     139deg,
-    rgb(24,117,12) 0%,
+    rgb(24, 117, 12) 0%,
     rgb(0, 63, 135) 100%
   );
   @media only screen and (min-width: 1201px) and (max-width: 1440px) {
@@ -112,7 +112,8 @@ export const RatingInfo = styled.div`
 export const BannerImage = styled.div`
   flex-shrink: 0;
   img {
-    max-width: 55%;
+    //max-width: 55%;
+    max-width: 70%;
     margin-left: 70px;
     // margin-top: 10px;
     @media only screen and (max-width: 1440px) {
@@ -120,19 +121,18 @@ export const BannerImage = styled.div`
     }
     @media only screen and (max-width: 1199px) {
       // display: none;
-      margin-left: -10px;
-      margin-bottom:50px;
+      margin-left: 2%;
+      margin-bottom: 50px;
     }
     @media only screen and (max-width: 999px) {
-        display: none;
-     // margin-right: 10px;
+      display: none;
+      // margin-right: 10px;
     }
     @media only screen and (max-width: 468px) {
       // display: none;
       margin-right: 100px;
     }
   }
- 
 `;
 
 export const ButtonGroup = styled.div`
@@ -141,13 +141,13 @@ export const ButtonGroup = styled.div`
     text-transform: inherit;
     border-radius: 25px;
     // margin-bottom:254px;
-    width: 197px;
+    width: 200px;
     height: 10px;
-    font-weight:700;
+    font-weight: 700;
     // margin-bottom:20%;
     font: initial;
-    margin-top:7%;
-    margin-left: 29% !important;
+    margin-top: 5%;
+    //margin-left: 29% !important;
 
     &.primary {
       position: relative;
@@ -187,23 +187,23 @@ export const ButtonGroup = styled.div`
     }
     @media only screen and (max-width: 1440px) {
       // display: none;
-     // margin-right: 10px;
-      margin-bottom:10px;
+      // margin-right: 10px;
+      margin-bottom: 10px;
     }
     @media only screen and (max-width: 1199px) {
       // display: none;
-     // margin-right: 10px;
-      margin-bottom:10px;
+      // margin-right: 10px;
+      margin-bottom: 10px;
     }
     @media only screen and (max-width: 999px) {
       // display: none;
-     // margin-right: 10px;
-      margin-bottom:10px;
+      // margin-right: 10px;
+      margin-bottom: 10px;
     }
     @media only screen and (max-width: 468px) {
       // display: none;
-     // margin-right: 10px;
-      margin-bottom:10px;
+      // margin-right: 10px;
+      margin-bottom: 10px;
     }
   }
 `;

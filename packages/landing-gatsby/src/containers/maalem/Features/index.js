@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-  import Fade from 'react-reveal/Fade';
+import Fade from 'react-reveal/Fade';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Icon } from 'react-icons-kit';
 import { mediaRecordOutline } from 'react-icons-kit/typicons/mediaRecordOutline';
@@ -22,22 +22,18 @@ const Features = () => {
   const data = {};
   const cmsItems = JSON.parse(window.sessionStorage.getItem('cmsItems'));
   const langIndex = window.sessionStorage.getItem('lang') === 'ar' ? 1 : 0;
-
   const cmsItems2 = JSON.parse(window.sessionStorage.getItem('cmsItems2'));
-
   const cmsItemss = cmsItems2[langIndex];
 
-  // console.log('cmsItemss',cmsItemss);
-  console.log('abcd from view 2');
   return (
     <SectionWrapper id="features">
       <Container>
         <SectionHeader
-          style={
+        /* style={
             window.sessionStorage.getItem('lang') === 'en'
               ? { direction: 'rtl', textAlign: 'right' }
               : null
-          }
+          } */
         >
           <Fade up>
             <Heading
@@ -62,17 +58,7 @@ const Features = () => {
                 <Fragment>
                   <Icon className="plus" icon={plus} />
                   <Icon className="circle" icon={mediaRecordOutline} />
-                  <Image style={{  
-                    position: 'relative',
-                    width: '150px',
-                    height: '100px',
-                    overflow: 'hidden',
-                    borderRadius:'50%',
-                    marginLeft:'20%',
-                    marginBottom:'10%',
-                    marginTop:'10%'
-                      }}
-                      src={ProductImage1} alt="1112" />
+                  <Image src={ProductImage1} alt="1112" />
                   <Icon className="star" icon={starOutline} />
                 </Fragment>
               }
@@ -89,16 +75,15 @@ const Features = () => {
                 />
               }
               button={
-                <a target="_blank" href='https://play.google.com/store/apps/details?id=com.maalem'>
-                <Button
-                style={{ marginLeft:'15%',paddingBottom:'10px',
-                marginTop: '8%',borderRadius: '25px',marginTop:'43.4%'
-               }}
-                className="blue"
-               
-                title={cmsItems[langIndex].websiteMaalemRow42Text}
-              />
-              </a>
+                <a
+                  target="_blank"
+                  href="https://play.google.com/store/apps/details?id=com.maalem"
+                >
+                  <Button
+                    className="feature-btn"
+                    title={cmsItems[langIndex].websiteMaalemRow42Text}
+                  />
+                </a>
               }
             />
           </Fade>
@@ -114,16 +99,7 @@ const Features = () => {
                 <Fragment>
                   <Icon className="plus" icon={plus} />
                   <Icon className="circle" icon={mediaRecordOutline} />
-                  <Image  style={{  
-                    position: 'relative',
-                    width: '150px',
-                    height: '100px',
-                    overflow: 'hidden',
-                    borderRadius:'50%',
-                    marginLeft:'20%',
-                    marginBottom:'10%',
-                    marginTop:'10%'
-                      }}src={ProductImage2} alt="1112" />
+                  <Image src={ProductImage2} alt="1112" />
                   <Icon className="star" icon={starOutline} />
                 </Fragment>
               }
@@ -140,19 +116,17 @@ const Features = () => {
                 />
               }
               button={
-                <a target="_blank" href='https://play.google.com/store/apps/details?id=com.maalem'>
-                <Button
-                style={{ marginLeft:'16%', paddingBottom:'10px',
-                marginTop: '8%',borderRadius: '25px',marginTop:'27%'
-               }}
-                className="blue"
-                title={cmsItems[langIndex].websiteMaalemRow42Text}
-              />
-              </a>
+                <a
+                  target="_blank"
+                  href="https://play.google.com/store/apps/details?id=com.maalem"
+                >
+                  <Button
+                    className="feature-btn"
+                    title={cmsItems[langIndex].websiteMaalemRow42Text}
+                  />
+                </a>
               }
-              
             />
-      
           </Fade>
 
           <Fade up delay={200} key={`feature-key${3}`}>
@@ -166,16 +140,7 @@ const Features = () => {
                 <Fragment>
                   <Icon className="plus" icon={plus} />
                   <Icon className="circle" icon={mediaRecordOutline} />
-                  <Image style={{  
-                    position: 'relative',
-                    width: '150px',
-                    height: '100px',
-                    overflow: 'hidden',
-                    borderRadius:'50%',
-                    marginLeft:'20%',
-                    marginBottom:'10%',
-                    marginTop:'10%'
-                      }} src={ProductImage3} alt="1112" />
+                  <Image src={ProductImage3} alt="1112" />
                   <Icon className="star" icon={starOutline} />
                 </Fragment>
               }
@@ -194,17 +159,16 @@ const Features = () => {
                 />
               }
               button={
-                  <a target="_blank" href='https://play.google.com/store/apps/details?id=com.maalem'>
-                <Button
-                style={{ marginLeft:'15%',
-                marginTop: '8%',borderRadius: '25px',marginTop:'67%'
-               }}
-                className="blue"
-                title={cmsItems[langIndex].websiteMaalemRow42Text}
-              />
-              </a>
+                <a
+                  target="_blank"
+                  href="https://play.google.com/store/apps/details?id=com.maalem"
+                >
+                  <Button
+                    className="feature-btn"
+                    title={cmsItems[langIndex].websiteMaalemRow42Text}
+                  />
+                </a>
               }
-            
             />
           </Fade>
 
@@ -219,16 +183,7 @@ const Features = () => {
                 <Fragment>
                   <Icon className="plus" icon={plus} />
                   <Icon className="circle" icon={mediaRecordOutline} />
-                  <Image  style={{  
-                    position: 'relative',
-                    width: '150px',
-                    height: '100px',
-                    overflow: 'hidden',
-                    borderRadius:'50%',
-                    marginLeft:'20%',
-                    marginBottom:'10%',
-                    marginTop:'10%'
-                      }}src={ProductImage4} alt="1112" />
+                  <Image src={ProductImage4} alt="1112" />
                   <Icon className="star" icon={starOutline} />
                 </Fragment>
               }
@@ -247,13 +202,15 @@ const Features = () => {
                 />
               }
               button={
-                <Button target="_blank" href='https://play.google.com/store/apps/details?id=com.maalem'
-                style={{ marginLeft:'15%',
-                marginTop: '5.5%',borderRadius: '25px'
-               }}
-                className="blue"
-                title={cmsItems[langIndex].websiteMaalemRow42Text}
-              />
+                <a
+                  target="_blank"
+                  href="https://play.google.com/store/apps/details?id=com.maalem"
+                >
+                  <Button
+                    className="feature-btn"
+                    title={cmsItems[langIndex].websiteMaalemRow42Text}
+                  />
+                </a>
               }
             />
           </Fade>
