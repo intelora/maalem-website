@@ -4,7 +4,7 @@ import { themeGet } from '@styled-system/theme-get';
 const FooterArea = styled.footer`
   padding: 15px 0 40px;
 
-  background-color: ${themeGet('colors.dark gray', '#616161')};
+  background-color: ${themeGet('colors.dark gray', '#272b1c')};
   @media only screen and (max-width: 1366px) {
     padding-top: 80px;
   }
@@ -20,6 +20,9 @@ const FooterArea = styled.footer`
     }
     @media only screen and (max-width: 1366px) {
       margin-left:-250px;
+    }
+    @media only screen and (max-width: 999px) {
+      margin-left:150px;
     }
     @media only screen and (max-width: 667px) {
       // padding-top: 80px;
@@ -131,7 +134,7 @@ export const MenuArea = styled.div`
       // padding: 10px;
     }
     button {
-      background: #616161;
+      background: #272b1c;
       border: 0;
       color: #fff;
       padding: 10px 15px;
@@ -142,7 +145,7 @@ export const MenuArea = styled.div`
       text-align: right;
       font-size: 30px;
       background: transparent;
-      color: #616161;
+      color: #272b1c;
       padding: 0;
       font-weight: bold;
     }

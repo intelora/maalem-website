@@ -118,11 +118,21 @@ export const BannerImage = styled.div`
     @media only screen and (max-width: 1440px) {
       margin-top: 50px;
     }
+    @media only screen and (max-width: 1199px) {
+      // display: none;
+      margin-left: -10px;
+      margin-bottom:50px;
+    }
+    @media only screen and (max-width: 999px) {
+        display: none;
+     // margin-right: 10px;
+    }
+    @media only screen and (max-width: 468px) {
+      // display: none;
+      margin-right: 100px;
+    }
   }
-  @media only screen and (max-width: 1199px) {
-    display: none;
-    margin-top: 50px;
-  }
+ 
 `;
 
 export const ButtonGroup = styled.div`
@@ -174,6 +184,26 @@ export const ButtonGroup = styled.div`
           height: 25px;
         }
       }
+    }
+    @media only screen and (max-width: 1440px) {
+      // display: none;
+     // margin-right: 10px;
+      margin-bottom:10px;
+    }
+    @media only screen and (max-width: 1199px) {
+      // display: none;
+     // margin-right: 10px;
+      margin-bottom:10px;
+    }
+    @media only screen and (max-width: 999px) {
+      // display: none;
+     // margin-right: 10px;
+      margin-bottom:10px;
+    }
+    @media only screen and (max-width: 468px) {
+      // display: none;
+     // margin-right: 10px;
+      margin-bottom:10px;
     }
   }
 `;
