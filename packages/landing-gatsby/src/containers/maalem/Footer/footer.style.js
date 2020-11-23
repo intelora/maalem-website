@@ -27,16 +27,16 @@ const FooterArea = styled.footer`
     padding-left: 17%;
   }
   @media only screen and (max-width: 1366px) {
-    margin-left:2%;
+    margin-left: 2%;
   }
   @media only screen and (max-width: 999px) {
-    margin-left:2%;
+    margin-left: 0;
   }
   @media only screen and (max-width: 667px) {
-    margin-left:2%;
+    margin-left: 0;
   }
   @media only screen and (max-width: 480px) {
-    margin-left:2%;
+    margin-left: 0;
   }
 
   .row a {

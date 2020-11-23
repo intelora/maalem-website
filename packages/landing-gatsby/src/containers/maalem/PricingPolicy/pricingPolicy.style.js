@@ -63,7 +63,7 @@ export const PricingArea = styled.div`
 
 export const InnerWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 51px;
   @media only screen and (max-width: 667px) {
     padding-top: 50px;
@@ -71,13 +71,14 @@ export const InnerWrapper = styled.div`
     margin-bottom: -40px;
     overflow-x: scroll;
     overflow-y: hidden;
+    justify-content: initial;
   }
 `;
 
 export const PricingCard = styled.div`
-  width: calc(100% / 2 - 25px);
+  width: calc(100% / 3 - 25px);
   // max-width: 340px;
-  width: 45%;
+  //width: 45%;
   margin-left: 20px;
   padding: 20px;
   border-radius: 15px;
@@ -89,7 +90,7 @@ export const PricingCard = styled.div`
   display: flex;
   flex-direction: column;
   @media only screen and (max-width: 1366px) {
-    width: calc(100% / 2 - 20px);
+    width: calc(100% / 3 - 20px);
   }
   @media only screen and (max-width: 991px) {
     width: calc(100% / 2 - 15px);
@@ -159,7 +160,8 @@ export const PricingCard = styled.div`
       li {
         color: ${themeGet('colors.quoteText', '#343D48')};
         font-size: 16px;
-        margin-bottom: 21px;
+        display: flex;
+        margin-bottom: 20px;
         i {
           color: ${themeGet('colors.primary', '#2563FF')};
           margin-right: 8px;

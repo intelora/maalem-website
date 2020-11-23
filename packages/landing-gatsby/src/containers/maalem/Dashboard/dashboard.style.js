@@ -9,7 +9,7 @@ const DashboardWrapper = styled.section`
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100%;
- 
+
   position: relative;
   background-color: #fff;
   /* background-image: linear-gradient(
@@ -91,7 +91,7 @@ const DashboardWrapper = styled.section`
     line-height: 24px;
     margin-bottom: 12px;
     letter-spacing: 1.5px;
-    color: #d1397c;
+    color: #18750c;
     text-transform: uppercase;
   }
 `;
