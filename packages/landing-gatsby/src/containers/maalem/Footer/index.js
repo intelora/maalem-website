@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Box from 'common/src/components/Box';
@@ -13,7 +12,7 @@ import Button from 'common/src/components/Button';
 import PricingCard from '../PricingPolicy/pricingPolicy.style';
 import GlobalStyle, {
   AppWrapper,
-  ContentWrapper,
+  ContentWrapper
 } from '../../../containers/maalem/maalem.style';
 import FooterArea, {
   WidgetArea,
@@ -21,7 +20,7 @@ import FooterArea, {
   Menu,
   MenuItem,
   MenuItemm,
-  CopyrightText,
+  CopyrightText
 } from './footer.style';
 import Testimonial from '../Testimonial';
 
@@ -55,7 +54,7 @@ const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
   const cmsItems = JSON.parse(window.sessionStorage.getItem('cmsItems'));
-  const language = window.sessionStorage.getItem('lang'); 
+  const language = window.sessionStorage.getItem('lang');
   const langIndex = language === 'ar' ? 0 : 1;
   const { logo, menu, widgets } = data.maalemJson.footer;
   widgets[0].title = cmsItems[langIndex].websiteMaalemRow28IconFacebookCol1;
@@ -94,13 +93,15 @@ const Footer = () => {
 
   function openSocialMediaPage(index) {
     if (index == 0) {
-      window.open('https://www.facebook.com/pages/category/Financial-Service/Maalem-Financing-104818407547676/');
+      window.open(
+        'https://www.facebook.com/pages/category/Financial-Service/Maalem-Financing-104818407547676/'
+      );
     } else if (index == 1) {
       window.open('https://twitter.com/maalemfinancing?lang=en');
     } else if (index == 2) {
       window.open('https://www.instagram.com/maalemfinancing/');
     } else if (index == 3) {
-      window.open('https://www.linkedin.com/company/maalem-financing-company') ;
+      window.open('https://www.linkedin.com/company/maalem-financing-company');
     } else if (index == 4) {
       window.open('https://maalem.com.sa/en');
     }
@@ -133,9 +134,7 @@ const Footer = () => {
   // const i4 =  data.maalemJson.footer.menulocal[4]['text']='Privacy';
 
   function toggelFAQ() {
-    if (
-      document.getElementById('testimonial').style.display = 'none' 
-    ) {
+    if ((document.getElementById('testimonial').style.display = 'none')) {
       window.location.href = '#pricing';
       document.getElementById('testimonial').style.display = 'block';
     } else {
@@ -144,9 +143,7 @@ const Footer = () => {
   }
 
   function toggelAboutUs() {
-    if (
-      document.getElementById('team').style.display = 'none'
-    ) {
+    if ((document.getElementById('team').style.display = 'none')) {
       window.location.href = '#banner_section';
       document.getElementById('team').style.display = 'block';
     } else {
@@ -161,140 +158,195 @@ const Footer = () => {
       <div className={team}>
         <TeamPortfolio />
       </div>
-      
+
       <FooterArea>
-      <Logo
-        className="logo"
-        href="https://maalem.com.sa/en"
-        logoSrc={LogoImage}
-        title="App Classic"
-      />
-        <Container>
-         
-          <MenuArea>
-          
-            {/* <Menu> */}
-            <WidgetArea
-            style={
-              window.sessionStorage.getItem('lang') === 'en'
-                ? { direction: 'rtl', textAlign: 'right' }
-                : null
-            }
-          >
-            {widgets.map((item, index) => (
-              <Box className="col" key={`footer-widget--key${item.id}`}>
-                <a onClick={(e) => openSocialMediaPage(index)}>
-                  <Image src={item.icon.publicURL} alt={item.title} />
-                </a>
-              </Box>
-            ))}
-          </WidgetArea>
-              <MenuItemm
+        <div className="row col-md-12">
+          <div className="logoo row">
+            <Logo
+              className="logo"
+              href="https://maalem.com.sa/en"
+              logoSrc={LogoImage}
+              title="App Classic"
+            />
+          </div>
+          <div className="column">
+            <div className="social row">
+              <WidgetArea
                 style={
                   window.sessionStorage.getItem('lang') === 'en'
                     ? { direction: 'rtl', textAlign: 'right' }
                     : null
                 }
-              > 
-          <WidgetArea style={{display:'flex'}}>
+              >
+                {widgets.map((item, index) => (
+                  <Box className="col" key={`footer-widget--key${item.id}`}>
+                    <a onClick={(e) => openSocialMediaPage(index)}>
+                      <Image src={item.icon.publicURL} alt={item.title} />
+                    </a>
+                  </Box>
+                ))}
+              </WidgetArea>
+            </div>
+          </div>
+          <div className="column">
+            <div className="row">
               <a
-              className="pointer-cursor"
-              className={testimoniall}
-              onClick={toggelAboutUs}
-              href="#"
-            >
-              {cmsItemss.AboutUs}
-            </a>
-
-            <a
-              className="pointer-cursor"
-              className={team}
-              onClick={toggelFAQ}
-              href="#"
-            >
-              {cmsItemss.faq}
-            </a>
-
-            <a
-              className="pointer-cursor"
-              onClick={(e) => setOpen(!formOpen)}
-            >
-              {cmsItemss.contactus}
-            </a>
-            <br></br><br></br> <br></br>
-            <WidgetArea >
-            <a className="pointer-cursor" href="#">
-              {cmsItemss.termsandconditions}
-            </a>
-            <a className="pointer-cursor" href="#">
-              {cmsItemss.privacy}
-            </a>
-                <a className="pointer-cursor" href="#pricing">
-                  Product
-                </a>
-            </WidgetArea>
-            <br></br> <br></br> <br></br>
-              <WidgetArea>
-                <a className="pointer-cursor" href="#HowtoApplay">
-                  How to Apply
-                </a>
-                <a className="pointer-cursor" href="http://122.166.172.240:3000/customer/signup?lang=">
-                  Apply now
-                </a>
-                
-                <a className="pointer-cursor" href="http://122.166.172.240:3000/customer/signin?lang=">
-                Login
-                </a>
-                </WidgetArea>
-                <br></br> <br></br>
-                </WidgetArea>
-              </MenuItemm>
-              <PricingCard style={{ borderRadius:'25px',padding:'25px' }} className={
-                  formOpen ? 'contact-items formOpen' : 'contact-items'
-                }>
-                <button
-
-                  className="close-btn"
-                  onClick={(e) => setOpen(!formOpen)}
-                >
-                  &times;
-                </button>
-                <label htmlFor="name">Name</label>
-                <input
-                style={{ borderRadius:'25px' }}
-                  type="text"
-                  id="name"
-                  placeholder="Enter Name"
-                  name="name"
-                />
-                <label htmlFor="email">Email:</label>
-                <input
-                style={{ borderRadius:'25px' }}
-                  type="email"
-                  id="email"
-                  placeholder="Enter email"
-                  name="email"
-                />
-                <label htmlFor="query">Query:</label>
-                <textarea
-                style={{ borderRadius:'25px' }}
-                  id="query"
-                  name="query"
-                  placeholder="Write your query here"
-                  rows="4"
-                  cols="30"
-                ></textarea>
-
-                <Button style={{ marginLeft:'37%',borderRadius:'25px' }}type="submit" title=' Submit'onClick={(e) => setOpen(!formOpen)}/>
-              </PricingCard>
-            {/* </Menu> */}
-            <CopyrightText>
-              <a href="https://www.intelora.co.in">
-                {' '}
-                Copyright {year} By intelora.co.in
+                className="pointer-cursor"
+                className={testimoniall}
+                onClick={toggelAboutUs}
+                href="#HowtoApplay"
+              >
+                {cmsItemss.AboutUs}
               </a>
-            </CopyrightText>
+            </div>
+
+            <div className="row">
+              <a
+                className="pointer-cursor"
+                className={team}
+                onClick={toggelFAQ}
+                href="#testimonial"
+              >
+                {cmsItemss.faq}
+              </a>
+            </div>
+
+            <div className="row">
+              <a
+                className="pointer-cursor"
+                href="#contactus"
+                onClick={(e) => setOpen(!formOpen)}
+              >
+                {cmsItemss.contactus}
+              </a>
+            </div>
+
+            <div className="row">
+              <a className="pointer-cursor" href="#">
+                {cmsItemss.termsandconditions}
+              </a>
+            </div>
+          </div>
+          <div className="column">
+            <div className="row">
+              <a className="pointer-cursor" href="#">
+                {cmsItemss.privacy}
+              </a>
+            </div>
+            <div className="row">
+              <a className="pointer-cursor" href="#pricing">    
+                Product
+              </a>
+            </div>
+            <div className="row">
+              <a className="pointer-cursor" href="#HowtoApplay">
+                How to Apply
+              </a>
+            </div>
+            <div className="row">
+              <a
+                className="pointer-cursor"
+                href="http://122.166.172.240:3000/customer/signup?lang="
+              >
+                Apply now
+              </a>
+            </div>
+            <div className="row">
+              <a
+                className="pointer-cursor"
+                href="http://122.166.172.240:3000/customer/signin?lang="
+              >
+                Login
+              </a>
+            </div>
+          </div>
+          <div className="column">
+            <div className="row">
+              <a
+                className="pointer-cursor"
+                href="http://122.166.172.240:3000/customer/signin?lang="
+              >
+               Customer
+              </a>
+            </div>
+            <div className="row">
+              <a
+                className="pointer-cursor"
+                href="http://122.166.172.240:3000/agent/signin?lang="
+              >
+                Agent
+              </a>
+            </div>
+            <div className="row">
+              <a
+                className="pointer-cursor"
+                href="http://122.166.172.240:3000/business/signin?lang="
+              >
+                Admin
+              </a>
+            </div>
+            <div className="row">
+              <a
+                className="pointer-cursor"
+                href="http://122.166.172.240:3000/agent/sme/signin?lang="
+              >
+                SME
+              </a>
+            </div>
+          </div>
+        </div>
+        <Container>
+          <MenuArea>
+            <PricingCard id="contactus"
+              style={{ borderRadius: '25px', padding: '25px' }}
+              className={formOpen ? 'contact-items formOpen' : 'contact-items'}
+            >
+              <button className="close-btn" onClick={(e) => setOpen(!formOpen)}>
+                &times;
+              </button>
+              <label htmlFor="name">Name</label>
+              <input
+                style={{ borderRadius: '25px' }}
+                type="text"
+                id="name"
+                placeholder="Enter Name"
+                name="name"
+              />
+              <label htmlFor="email">Email:</label>
+              <input
+                style={{ borderRadius: '25px' }}
+                type="email"
+                id="email"
+                placeholder="Enter email"
+                name="email"
+              />
+              <label htmlFor="query">Query:</label>
+              <textarea
+                style={{ borderRadius: '25px' }}
+                id="query"
+                name="query"
+                placeholder="Write your query here"
+                rows="4"
+                cols="30"
+              ></textarea>
+
+              <Button
+                style={{ marginLeft: '37%', borderRadius: '25px' }}
+                type="submit"
+                title=" Submit"
+                onClick={(e) => setOpen(!formOpen)}
+              />
+            </PricingCard>
+            {/* </Menu> */}
           </MenuArea>
+          <div className="row" id="copyright">
+            <CopyrightText>
+              <a href="https://maalem.com.sa/?lang=">
+                Copyright {year} By maalem.com.sa
+              </a>
+            </CopyrightText>{' '}
+          </div>
+
           {/* End of footer menu area */}
         </Container>
       </FooterArea>
