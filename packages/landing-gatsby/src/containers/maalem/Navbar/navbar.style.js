@@ -10,12 +10,12 @@ const NavbarWrapper = styled.nav`
   z-index: 9999;
   transition: all 0.3s ease;
   ul.scrollspy__menu.menu.navbar li,
-  ul.scrollspy__menu.menu.navbar li a:focus{
+  ul.scrollspy__menu.menu.navbar li a:focus {
     // font-weight: bold;
     transition: all 0.3s ease;
     // font-size: 18px;
     text-decoration: underline;
-    color:black;
+    color: #ffffff;
   }
   @media only screen and (max-width: 1366px) {
     padding: 10px 0 25px;
@@ -27,7 +27,7 @@ const NavbarWrapper = styled.nav`
     justify-content: space-between;
     .main-logo {
       img {
-        width:200px;
+        width: 200px;
         height: auto;
       }
     }
@@ -51,7 +51,7 @@ const NavbarWrapper = styled.nav`
       &.is-current {
         a {
           font-weight: 700;
-        
+          color: yellow;
         }
       }
     }
@@ -116,8 +116,8 @@ export const MenuArea = styled.div`
     padding-left: 13px;
     padding-right: 13px;
     min-height: 40px;
-    border-radius:25px;
-    margin-left:50px;
+    border-radius: 25px;
+    margin-left: 50px;
 
     &.text {
       padding: 0;
@@ -167,7 +167,7 @@ export const MenuArea = styled.div`
   .navbar {
     overflow: hidden;
   }
-  
+
   .navbar a {
     float: left;
     // font-size: 16px;
@@ -183,9 +183,9 @@ export const MenuArea = styled.div`
     float: left;
     overflow: hidden;
   }
-  
+
   .dropdown .dropbtn {
-    font-size: 16px;  
+    font-size: 16px;
     border: none;
     outline: none;
     color: black;
@@ -194,22 +194,28 @@ export const MenuArea = styled.div`
     font-family: inherit;
     margin: 0;
   }
-  
- 
-  
+
   .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-image: -webkit-linear-gradient( 139deg, rgb(100,43,115) 0%, rgb(198,66,110) 100% );   
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-image: -webkit-linear-gradient(
+      139deg,
+      rgb(100, 43, 115) 0%,
+      rgb(198, 66, 110) 100%
+    );
     z-index: 1;
-    margin-top:30px;
+    margin-top: 30px;
     border-top: solid #343d48;
   }
-  .bgGradient{
-    background-image: -webkit-linear-gradient( 139deg, rgb(100,43,115) 0%, rgb(198,66,110) 100% );   
+  .bgGradient {
+    background-image: -webkit-linear-gradient(
+      139deg,
+      rgb(100, 43, 115) 0%,
+      rgb(198, 66, 110) 100%
+    );
   }
   .dropdown-content a {
     float: none;
@@ -219,12 +225,12 @@ export const MenuArea = styled.div`
     display: block;
     text-align: left;
   }
-  
+
   // .dropdown-content a:hover {
   //   background-color: #eee;
   //   color: #000000;
   // }
-  
+
   // .dropdown:hover .dropdown-content {
   //   display: inline-block;
   // }

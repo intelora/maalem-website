@@ -20,17 +20,20 @@ export const FeatureWrapper = styled.div`
 
   > div {
     width: calc(100% / 4 - 20px);
-    margin: 38px 0 30px; 
+    margin: 38px 0 30px;
     border: 1px solid #ccc;
-    margin: 38px 0 30px; 
-    border: 0px solid #ccc;
-    box-shadow: 11px 11px 16px -16px black;
+    margin: 38px 0 30px;
     padding: 24px;
-    border-radius: 15px;
-    box-shadow: 0 6px 50px rgba(38,78,118,0.1);
     position: relative;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
     @media only screen and (max-width: 1366px) {
-      width: calc(100% / 4 - 20px);
+      width: calc(100% / 4 - 15px);
     }
     @media only screen and (max-width: 991px) {
       width: calc(100% / 2 - 30px);
@@ -43,23 +46,9 @@ export const FeatureWrapper = styled.div`
       margin-top: 15px;
     }
   }
-// .btnn{
-
-//   border-radius: 25px;
-
-//   @media only screen and (max-width: 1366px) {
-    
-//   }
-//   @media only screen and (max-width: 991px) {
-    
-//   }
-//   @media only screen and (max-width: 767px) {
-    
-//   @media only screen and (max-width: 480px) {
-   
-//   }
-// }
   .feature__block {
+    display: flex;
+    flex-grow: 1;
     align-items: flex-start;
     flex-direction: column;
     @media only screen and (max-width: 767px) {
@@ -69,9 +58,16 @@ export const FeatureWrapper = styled.div`
     }
     .icon__wrapper {
       position: relative;
+      img {
+        width: 100%;
+
+        border-radius: 50%;
+        margin-bottom: 10%;
+      }
       @media only screen and (max-width: 1366px) {
         flex-direction: column;
-        img { }
+        flex-grow: 1;
+        display: flex;
       }
       @media only screen and (max-width: 480px) {
         img {
@@ -102,7 +98,9 @@ export const FeatureWrapper = styled.div`
       }
     }
     .content__wrapper {
-      padding-left: 0;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
       @media only screen and (max-width: 1366px) {
         padding-left: 0px;
       }
@@ -125,8 +123,15 @@ export const FeatureWrapper = styled.div`
         color: ${themeGet('colors.textColor')};
         font-size: 16px;
         line-height: 25px;
-        margin: 10px; 
+        margin: 10px;
         padding-bottom: 40px;
+      }
+      .button__wrapper {
+        text-align: center;
+        margin-top: auto;
+      }
+      .feature-btn {
+        border-radius: 25px;
       }
     }
     &:hover {

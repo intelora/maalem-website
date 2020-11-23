@@ -78,11 +78,16 @@ export const PricingCard = styled.div`
   width: calc(100% / 2 - 25px);
   // max-width: 340px;
   width: 45%;
-  margin-left:20px;
+  margin-left: 20px;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 6px 50px ${themeGet('colors.shadow', 'rgba(38, 78, 118, 0.1)')};
   position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  display: flex;
+  flex-direction: column;
   @media only screen and (max-width: 1366px) {
     width: calc(100% / 2 - 20px);
   }
@@ -171,6 +176,7 @@ export const PricingCard = styled.div`
     padding: 17px 30px;
     border-top: 1px solid #f3f4f5;
     text-align: center;
+    margin-top: auto;
     @media only screen and (max-width: 480px) {
       padding: 30px 10px 20px;
     }
