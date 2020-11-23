@@ -46,6 +46,9 @@ const BannerWrapper = styled.div`
     }
     @media only screen and (max-width: 480px) {
       flex-wrap: wrap;
+      div {
+        width: 100%;
+      }
     }
   }
   .download-container {
@@ -128,13 +131,10 @@ export const BannerImage = styled.div`
       margin-top: 50px;
     }
     @media only screen and (max-width: 1199px) {
-      // display: none;
       margin-left: 2%;
       margin-bottom: 50px;
     }
     @media only screen and (max-width: 999px) {
-      // display: none;
-      // margin-right: 10px;
       max-width: 55%;
       margin-top: 50px;
     }
@@ -146,8 +146,7 @@ export const BannerImage = styled.div`
   }
 `;
 
-export const ButtonGroup = styled.div`
-  // margin-top: 0px;
+export const ButtonGroup = styled.div` 
   .reusecore__button {
     text-transform: inherit;
     border-radius: 25px;
@@ -157,8 +156,7 @@ export const ButtonGroup = styled.div`
     font-weight: 700;
     // margin-bottom:20%;
     font: initial;
-    margin-top: 5%;
-    //margin-left: 29% !important;
+    margin-top: 5%; 
 
     &.primary {
       position: relative;
