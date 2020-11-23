@@ -70,7 +70,7 @@ export const FeatureWrapper = styled.div`
       }
       @media only screen and (max-width: 1366px) {
         flex-direction: column;
-        flex-grow: 1;
+        //flex-grow: 1;
         display: flex;
       }
       @media only screen and (max-width: 480px) {
@@ -128,7 +128,7 @@ export const FeatureWrapper = styled.div`
         font-size: 16px;
         line-height: 25px;
         margin: 10px;
-        padding-bottom: 40px;
+        padding-bottom: 20px;
       }
       .button__wrapper {
         text-align: center;
