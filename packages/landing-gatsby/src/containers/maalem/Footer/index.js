@@ -234,13 +234,23 @@ const Footer = () => {
               </a>
             </div>
             <div className="row">
-              <a className="pointer-cursor" href="#pricing">    
-                Product
+              <a className="pointer-cursor" href="#pricing"> 
+              {
+                window.sessionStorage.getItem('lang') === 'ar'
+                  ? 'Product'
+                  : 'المنتج'
+              }   
+                
               </a>
             </div>
             <div className="row">
               <a className="pointer-cursor" href="#HowtoApplay">
-                How to Apply
+              {
+                window.sessionStorage.getItem('lang') === 'ar'
+                  ? 'How to Apply'
+                  : 'كيفية التقديم'
+              }   
+               
               </a>
             </div>
             <div className="row">
@@ -248,7 +258,12 @@ const Footer = () => {
                 className="pointer-cursor"
                 href="http://122.166.172.240:3000/customer/signup?lang="
               >
-                Apply now
+                 {
+                window.sessionStorage.getItem('lang') === 'ar'
+                  ? 'Apply now'
+                  : 'قدم الآن'
+              }  
+                
               </a>
             </div>
             <div className="row">
@@ -256,7 +271,12 @@ const Footer = () => {
                 className="pointer-cursor"
                 href="http://122.166.172.240:3000/customer/signin?lang="
               >
-                Login
+                 {
+                window.sessionStorage.getItem('lang') === 'ar'
+                  ? 'Login'
+                  : 'تسجيل الدخول'
+              }  
+                
               </a>
             </div>
           </div>
@@ -266,7 +286,12 @@ const Footer = () => {
                 className="pointer-cursor"
                 href="http://122.166.172.240:3000/customer/signin?lang="
               >
-               Customer
+                 {
+                window.sessionStorage.getItem('lang') === 'ar'
+                  ? 'Customer'
+                  : 'الزبون'
+              }  
+               
               </a>
             </div>
             <div className="row">
@@ -274,7 +299,12 @@ const Footer = () => {
                 className="pointer-cursor"
                 href="http://122.166.172.240:3000/agent/signin?lang="
               >
-                Agent
+                 {
+                window.sessionStorage.getItem('lang') === 'ar'
+                  ? 'Agent'
+                  : 'وكيل'
+              }  
+                
               </a>
             </div>
             <div className="row">
@@ -282,7 +312,12 @@ const Footer = () => {
                 className="pointer-cursor"
                 href="http://122.166.172.240:3000/business/signin?lang="
               >
-                Admin
+                 {
+                window.sessionStorage.getItem('lang') === 'ar'
+                  ? 'Admin'
+                  : 'مشرف'
+              }  
+                
               </a>
             </div>
             <div className="row">
@@ -290,7 +325,12 @@ const Footer = () => {
                 className="pointer-cursor"
                 href="http://122.166.172.240:3000/agent/sme/signin?lang="
               >
-                SME
+                 {
+                window.sessionStorage.getItem('lang') === 'ar'
+                  ? 'SME'
+                  : 'الشركات الصغيرة والمتوسطة'
+              }  
+                
               </a>
             </div>
           </div>
