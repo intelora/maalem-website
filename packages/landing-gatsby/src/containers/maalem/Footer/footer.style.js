@@ -4,7 +4,7 @@ import { themeGet } from '@styled-system/theme-get';
 const FooterArea = styled.footer`
   padding: 15px 0 40px;
 
-  background-color: ${themeGet('colors.dark gray', '#272b1c')};
+  background-color: ${themeGet('colors.dark gray', '#171b09')};
   @media only screen and (max-width: 1366px) {
     padding-top: 80px;
   }
@@ -12,26 +12,59 @@ const FooterArea = styled.footer`
     padding-top: 80px;
     padding-bottom: 50px;
   }
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 50%;
+  }
+  .row {
+    color: white !important;
+    margin-top: 4%;
+    margin-left: 4%;
+  }
+  .row .social {
+    padding-left: 17%;
+  }
+  @media only screen and (max-width: 1366px) {
+    margin-left:2%;
+  }
+  @media only screen and (max-width: 999px) {
+    margin-left:2%;
+  }
+  @media only screen and (max-width: 667px) {
+    margin-left:2%;
+  }
+  @media only screen and (max-width: 480px) {
+    margin-left:2%;
+  }
+
+  .row a {
+    color: #ccc;
+    padding: 20px;
+  }
+
+  #copyright {
+    text-align: center;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
   .logo {
     img {
       width: 240px;
-      // max-height: 20px;
-      margin-left:260%;
     }
     @media only screen and (max-width: 1366px) {
-      margin-left:-250px;
     }
     @media only screen and (max-width: 999px) {
-      margin-left:150px;
     }
     @media only screen and (max-width: 667px) {
-      // padding-top: 80px;
-      // padding-bottom: 50px;
-      margin-left:100px;
     }
     @media only screen and (max-width: 480px) {
-          margin-left: 245%;
-
     }
   }
 `;
@@ -45,15 +78,17 @@ export const WidgetArea = styled.div`
   // border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
   .col {
-    width: calc(100% /5);
+    // margin-top:3%;
+    width: calc(100% / 6);
     text-align: center;
+
     // padding: 0 21px;
     // margin-bottom: 50px;
     @media only screen and (max-width: 991px) {
       padding: 0 15px;
     }
     @media only screen and (max-width: 667px) {
-      width: calc(100% / 20);
+      width: calc(100% / 6);
       padding: 0 20px;
     }
     @media only screen and (max-width: 480px) {
@@ -64,7 +99,8 @@ export const WidgetArea = styled.div`
       display: inline-block;
       margin-bottom: 25px;
       width: 20px;
-    } @media only screen and (max-width: 480px) {
+    }
+    @media only screen and (max-width: 480px) {
       width: 100%;
     }
 
@@ -107,7 +143,7 @@ export const MenuArea = styled.div`
     height: auto;
     background: #f3f3f3;
     font-weight: 700;
-    transform: translateX(100%);  
+    transform: translateX(100%);
     -webkit-transform: translateX(100%);
     -ms-transform: translateX(100%);
     transition: transform 0.6s ease;
@@ -124,10 +160,10 @@ export const MenuArea = styled.div`
     textarea {
       background: transparent;
       width: 100%;
-      margin-top:2px;
+      margin-top: 2px;
       margin-bottom: 10px;
-      border:  0.3px #0f2137;
-      box-shadow:2px solid gray;
+      border: 0.3px #0f2137;
+      box-shadow: 2px solid gray;
       border: 0px solid;
       padding: 10px;
       box-shadow: 1px 3px #888888;
@@ -180,7 +216,6 @@ export const Menu = styled.ul`
 `;
 
 export const MenuItem = styled.li`
-  
   @media only screen and (max-width: 667px) {
     margin: 1px 15px;
   }
