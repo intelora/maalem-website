@@ -46,7 +46,13 @@ const BannerWrapper = styled.div`
     }
     @media only screen and (max-width: 480px) {
       flex-wrap: wrap;
+      div {
+        width: 100%;
+      }
     }
+  }
+  .download-container {
+    text-align: center;
   }
   .bannerBottomShape {
     width: 20%;
@@ -63,9 +69,10 @@ export const BannerContent = styled.div`
   width: 50%;
   flex-shrink: 0;
   @media only screen and (max-width: 1199px) {
-    //flex-shrink: 0;
+  }
+
+  @media only screen and (max-width: 999px) {
     //width: 100%;
-    //margin-top: 25px;
   }
 
   h1 {
@@ -74,9 +81,14 @@ export const BannerContent = styled.div`
     font-weight: 700;
     color: ${themeGet('colors.menu', '#0D233E')};
     margin-bottom: 24px;
-    @media only screen and (max-width: 1366px) {
+    /* @media only screen and (max-width: 1366px) {
       font-size: 32px;
       line-height: 42px;
+      margin-bottom: 20px;
+    } */
+    @media only screen and (max-width: 1366px) {
+      font-size: 1.8rem;
+      line-height: 2rem;
       margin-bottom: 20px;
     }
   }
@@ -88,7 +100,7 @@ export const BannerContent = styled.div`
   }
 `;
 
-export const RatingInfo = styled.div`
+/* export const RatingInfo = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 22px;
@@ -107,7 +119,7 @@ export const RatingInfo = styled.div`
   img {
     margin-left: 9px;
   }
-`;
+`; */
 
 export const BannerImage = styled.div`
   flex-shrink: 0;
@@ -115,28 +127,26 @@ export const BannerImage = styled.div`
     //max-width: 55%;
     max-width: 70%;
     margin-left: 70px;
-    // margin-top: 10px;
     @media only screen and (max-width: 1440px) {
       margin-top: 50px;
     }
     @media only screen and (max-width: 1199px) {
-      // display: none;
       margin-left: 2%;
       margin-bottom: 50px;
     }
     @media only screen and (max-width: 999px) {
-      display: none;
-      // margin-right: 10px;
+      max-width: 55%;
+      margin-top: 50px;
     }
+
     @media only screen and (max-width: 468px) {
-      // display: none;
+      display: none;
       margin-right: 100px;
     }
   }
 `;
 
-export const ButtonGroup = styled.div`
-  // margin-top: 0px;
+export const ButtonGroup = styled.div` 
   .reusecore__button {
     text-transform: inherit;
     border-radius: 25px;
@@ -146,15 +156,16 @@ export const ButtonGroup = styled.div`
     font-weight: 700;
     // margin-bottom:20%;
     font: initial;
-    margin-top: 5%;
-    //margin-left: 29% !important;
+    margin-top: 5%; 
 
     &.primary {
       position: relative;
+      color: '#ffffff'; 
+      border: 2px solid rgb(0 146 2);
 
       // left:50px;
-      background-color: ${themeGet('colors.white', '#ffffff')};
-      color: ${themeGet('colors.black', '#00000')};
+      //background-color: ${themeGet('colors.white', '#18750C')};
+      //color: ${themeGet('colors.black', '#00000')};
       font-size: 19px;
       font-family: Arial, Helvetica, sans-serif;
       letter-spacing: -0.1px;
@@ -207,7 +218,7 @@ export const ButtonGroup = styled.div`
     }
   }
 `;
-export const VideoGroup = styled.div`
+/* export const VideoGroup = styled.div`
   display: flex;
   margin-top: 60px;
   @media only screen and (max-width: 768px) {
@@ -244,7 +255,7 @@ export const VideoWrapper = styled.div`
     top: 0;
     left: 0;
   }
-`;
+`; */
 export const CustomerWrapper = styled.div`
   max-width: 850px;
   padding: 0px 0 70px;
@@ -278,7 +289,8 @@ export const CustomerWrapper = styled.div`
 export const ImageWrapper = styled.div`
   display: flex;
   align-items: center;
-  max-width: 55% @media only screen and (max-width: 991px) {
+  max-width: 55%;
+  @media only screen and (max-width: 991px) {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;

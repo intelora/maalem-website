@@ -108,15 +108,16 @@ const Banner = () => {
   console.log('cms items ==== ===');
 
   return (
-    <BannerWrapper id="home">
+    <BannerWrapper
+      id="home"
+      style={
+        window.sessionStorage.getItem('lang') === 'en'
+          ? { direction: 'rtl', textAlign: 'right' }
+          : null
+      }
+    >
       <Container>
-        <BannerContent
-          style={
-            window.sessionStorage.getItem('lang') === 'en'
-              ? { direction: 'rtl', textAlign: 'right' }
-              : null
-          }
-        >
+        <BannerContent>
           <Fade up delay={100}>
             <Heading
               as="h1"
@@ -161,8 +162,8 @@ const Banner = () => {
                           type="button"
                           style={
                             window.sessionStorage.getItem('lang') === 'ar'
-                              ? { marginTop: '50px', marginLeft: '30px' }
-                              : { marginTop: '50px', marginRight: '30px' }
+                              ? { marginTop: '50px', marginLeft: '40px' }
+                              : { marginTop: '50px', marginRight: '40px' }
                           }
                           src={GooglePlay}
                         />
@@ -170,18 +171,13 @@ const Banner = () => {
                     </div>
                   </div>
                 </Container>
-                <Container>
+                <Container className="download-container">
                   <a
                     target="_blank"
                     href="https://play.google.com/store/apps/details?id=com.maalem"
                     style={{ textAlign: 'center' }}
                   >
                     <Button
-                      style={{
-                        backgroundColor: 'rgb(24,117,12)',
-                        color: 'white',
-                        border: '2px solid rgb(0 146 2)',
-                      }}
                       className="primary"
                       title={cmsItems[langIndex].websiteMaalemRow42Text}
                     />

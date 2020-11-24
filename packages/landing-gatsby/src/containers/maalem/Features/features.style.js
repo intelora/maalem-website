@@ -42,8 +42,13 @@ export const FeatureWrapper = styled.div`
       width: calc(100% / 2 - 15px);
     }
     @media only screen and (max-width: 480px) {
-      width: 100%;
-      margin-top: 15px;
+      width: 90%;
+      margin: 15px auto;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 15px;
+      .feature__block .content__wrapper {
+        text-align: left;
+      }
     }
   }
   .feature__block {
@@ -60,18 +65,17 @@ export const FeatureWrapper = styled.div`
       position: relative;
       img {
         width: 100%;
-
         border-radius: 50%;
-        margin-bottom: 10%;
+        transition: all 0.51s;
       }
       @media only screen and (max-width: 1366px) {
         flex-direction: column;
-        flex-grow: 1;
+        //flex-grow: 1;
         display: flex;
       }
       @media only screen and (max-width: 480px) {
         img {
-          height: 70px;
+          height: initial;
         }
       }
       i {
@@ -124,7 +128,7 @@ export const FeatureWrapper = styled.div`
         font-size: 16px;
         line-height: 25px;
         margin: 10px;
-        padding-bottom: 40px;
+        padding-bottom: 20px;
       }
       .button__wrapper {
         text-align: center;
@@ -148,6 +152,9 @@ export const FeatureWrapper = styled.div`
           &.star {
             transform: translate(0, 13px) scale(1) rotate(180deg);
           }
+        }
+        img {
+          border-radius: 5px;
         }
       }
     }

@@ -15,7 +15,7 @@ const NavbarWrapper = styled.nav`
     transition: all 0.3s ease;
     // font-size: 18px;
     text-decoration: underline;
-    color: #ffffff;
+    color: #daa747;
   }
   @media only screen and (max-width: 1366px) {
     padding: 10px 0 25px;
@@ -265,7 +265,7 @@ export const Search = styled.div`
       color: ${themeGet('colors.textColor', 'rgba(52, 61, 72, 0.8)')};
     }
     &:focus {
-      border-color: ${themeGet('colors.primary', '#2563FF')};
+      //border-color: ${themeGet('colors.primary', '#2563FF')};
     }
   }
 `;
