@@ -40,7 +40,10 @@ const Features = () => {
               as="h5"
               content={cmsItems[langIndex].websiteMaalemRow2Text}
             />
-            <Heading content={cmsItems[langIndex].websiteMaalemRow3Text} />
+            <Heading
+              as="h2"
+              content={cmsItems[langIndex].websiteMaalemRow3Text}
+            />
           </Fade>
         </SectionHeader>
         <FeatureWrapper>

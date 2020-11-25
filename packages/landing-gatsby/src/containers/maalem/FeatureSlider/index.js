@@ -102,7 +102,7 @@ const FeatureSlider = ({ sectionSubTitle, sectionTitle, sectionHeader }) => {
         <Container>
           <Fade up>
             <Box {...sectionHeader}>
-              <Heading content={a} style={{ textAlign: 'center' }} />
+              <Heading content={a} as="h2" style={{ textAlign: 'center' }} />
             </Box>
             <Box className="FeatureSlider">
               <ImageGallery
@@ -112,7 +112,7 @@ const FeatureSlider = ({ sectionSubTitle, sectionTitle, sectionHeader }) => {
                 showFullscreenButton={false}
                 showNav={false}
                 showBullets={true}
-                autoPlay={true}
+                autoPlay={false}
               />
             </Box>
           </Fade>

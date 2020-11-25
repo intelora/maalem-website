@@ -135,7 +135,8 @@ export const FeatureWrapper = styled.div`
         margin-top: auto;
       }
       .feature-btn {
-        border-radius: 25px;
+        border-radius: 5px;
+        box-shadow: 0 3px 4px rgba(38, 78, 118, 0.1);
       }
     }
     &:hover {

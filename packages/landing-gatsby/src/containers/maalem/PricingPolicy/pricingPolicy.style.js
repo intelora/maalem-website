@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 const SectionWrapper = styled.section`
-  // padding: 35px 0;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
   @media only screen and (max-width: 1366px) {
     padding: 60px 0;
   }
@@ -37,8 +38,10 @@ export const ButtonGroup = styled.div`
     }
 
     &.active {
-      color: ${themeGet('colors.headingColor', '#0f2137')};
-      background-color: ${themeGet('colors.white', '#ffffff')};
+      //color: ${themeGet('colors.headingColor', '#0f2137')};
+      //background-color: ${themeGet('colors.white', '#ffffff')};
+      color: #ffffff;
+      background-color: #31a135;
       box-shadow: 0 3px 4px
         ${themeGet('colors.shadow', 'rgba(38, 78, 118, 0.1)')};
     }
@@ -195,7 +198,7 @@ export const PricingCard = styled.div`
       }
     }
     .reusecore__button {
-      border-radius: 25px;
+      //border-radius: 25px;
       @media only screen and (max-width: 767px) {
         width: 100%;
       }

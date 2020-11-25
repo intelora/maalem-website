@@ -149,7 +149,7 @@ export const BannerImage = styled.div`
 export const ButtonGroup = styled.div` 
   .reusecore__button {
     text-transform: inherit;
-    border-radius: 25px;
+    //border-radius: 25px;
     // margin-bottom:254px;
     width: 200px;
     height: 10px;

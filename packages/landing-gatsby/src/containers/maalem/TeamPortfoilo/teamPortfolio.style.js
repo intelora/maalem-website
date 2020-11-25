@@ -145,7 +145,7 @@ export const ContentWrapper = styled.div`
         left: 34px; */
         top: -116px;
         left: 94px;
-        background-color: rgb(24,117,12);
+        background-color: #31a135;
         box-shadow: 0px 16px 57px 0px rgba(57, 81, 111, 0.1);
         border-radius: 28px 28px 28px 0;
         width: 122%;
@@ -169,7 +169,7 @@ export const ContentWrapper = styled.div`
           height: 0;
           border-style: solid;
           border-width: 22px 19px 0 0;
-          border-color: rgb(24,117,12) transparent transparent transparent;
+          border-color: rgb(24, 117, 12) transparent transparent transparent;
           position: absolute;
           bottom: -22px;
           left: 0;
