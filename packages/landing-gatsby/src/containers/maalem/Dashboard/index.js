@@ -12,11 +12,8 @@ import DashboardWrapper, { DashboardObject } from './dashboard.style';
 import Fade from 'react-reveal/Fade';
 import DashboardObject1 from 'common/src/assets/image/maalem/dashbord.png';
 import DashboardObject2 from 'common/src/assets/image/maalem/dashboard1.png';
- import DashboardObject3 from 'common/src/assets/image/maalem/dashboard3.gif';
+import DashboardObject3 from 'common/src/assets/image/maalem/dashboard3.gif';
 
-
-
-  
 const DashboardSection = ({
   row,
   col,
@@ -39,77 +36,57 @@ const DashboardSection = ({
     <DashboardWrapper id="banner_section">
       {/* <Particles /> */}
       <Container>
-      <Fade up>
-        <Box className="row" {...row}>
-          <Box
-            style={
-              window.sessionStorage.getItem('lang') === 'en'
-                ? { direction: 'rtl', textAlign: 'right' }
-                : null
-            }
-            className="col"
-            {...col}
-          >
-            <Heading
-              className="subtitle"
-              as="h5"
-              content={cmsItems[langIndex].websiteMaalemRow24}
-            />
-            <FeatureBlock
-              title={
-                <Heading
-                
-                
-                  content={cmsItems[langIndex].websiteMaalemRow25}
-                  {...title}
-                />
+        <Fade up>
+          <Box className="row" {...row}>
+            <Box
+              style={
+                window.sessionStorage.getItem('lang') === 'en'
+                  ? { direction: 'rtl', textAlign: 'right' }
+                  : null
               }
-              description={
-                <Text
-                  content={cmsItems[langIndex].websiteMaalemRow26}
-                  {...description}
-                />
-              }
-              description={
-                <Text
-                  content={cmsItems[langIndex].websiteMaalemRow27}
-                  {...description}
-                />
-              }
-              //button={<ButtonGroup />}
-            />
+              className="col"
+              {...col}
+            >
+              <Heading
+                className="subtitle"
+                as="h5"
+                content={cmsItems[langIndex].websiteMaalemRow24}
+              />
+              <FeatureBlock
+                title={
+                  <Heading
+                    content={cmsItems[langIndex].websiteMaalemRow25}
+                    {...title}
+                  />
+                }
+                description={
+                  <Text
+                    content={cmsItems[langIndex].websiteMaalemRow26}
+                    {...description}
+                  />
+                }
+                description={
+                  <Text
+                    content={cmsItems[langIndex].websiteMaalemRow27}
+                    {...description}
+                  />
+                }
+                //button={<ButtonGroup />}
+              />
+            </Box>
           </Box>
-        
-        </Box>
         </Fade>
       </Container>
       <DashboardObject>
-        <div className="dashboardWrapper" style={{ display:'flex'}}>
-        <Fade up>
-        <Image
-            src={DashboardObject2}
-            alt="DashboardObject2"
-            style={{ width: '60%'}}
-          />
-        {/* <Image
-            src={DashboardObject3}
-            alt="DashboardObject3"
-            style={{ width: '80%'}}
-          /> */}
-          {/* <Image
-            src={DashboardObject1}
-            alt="DashboardObject1"
-            // style={{ width: '90%'}}
-          /> */}
-          </Fade>
-          {/* <Image
-            src={DashboardObject3}
-            alt="DashboardObject3"
-            style={{ width: '80%'}}
-          /> */}
+        <div className="dashboardWrapper" style={{ display: 'flex' }}>
           <Fade right>
-           
-          </Fade> 
+            <Image
+              src={DashboardObject2}
+              alt="Mobile and Laptop Dashboar Image"
+              style={{ width: '55%', marginLeft: 'auto', marginRight: '10%' }}
+            />
+          </Fade>
+          <Fade right></Fade>
         </div>
       </DashboardObject>
     </DashboardWrapper>

@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 import Mockup from 'common/src/assets/image/app/iphone-mockup.png';
+import MockupBgImg from 'common/src/assets/image/maalem/footer/apply-now_bg.png';
 
 const FeatureSliderWrapper = styled.div`
   position: relative;
   padding-top: 75px;
+  //background: #ffffff;
+  background-image: url(${MockupBgImg});
+  background-size: initial;
   .image-gallery-content {
     width: 90%;
     margin: auto;
-    //border: 1px solid red;
     display: flex;
     justify-content: space-around;
   }
@@ -16,7 +19,7 @@ const FeatureSliderWrapper = styled.div`
   .FeatureSlider {
     //padding-top: 200px;
     padding-top: 80px;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
     position: relative;
 
     .image-gallery {
@@ -88,6 +91,7 @@ const FeatureSliderWrapper = styled.div`
       width: 40%;
       .image-gallery-thumbnails {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background: #ffffff;
         width: 100%;
         margin: auto;
         overflow: initial;
@@ -132,7 +136,8 @@ const FeatureSliderWrapper = styled.div`
             order: 4 
           } */
           .image-gallery-thumbnail-label {
-            text-transform: uppercase;
+            //text-transform: uppercase;
+            font-size: 1.3em;
             position: initial;
             padding: 0;
             line-height: initial;
@@ -196,8 +201,7 @@ const FeatureSliderWrapper = styled.div`
           margin-bottom: 10px;
           transition: all 0.3s ease;
           &.active {
-            background-color: #d9d9d9;
-
+            background-color: #18750c;
             width: 32px;
             height: 4px;
           }

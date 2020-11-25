@@ -9,14 +9,9 @@ const DashboardWrapper = styled.section`
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100%;
-
   position: relative;
-  background-color: #fff;
-  /* background-image: linear-gradient(
-		to bottom,
-		#fff 35%,
-		rgb(244, 246, 250) 100%
-	); */
+  background: #fcfcfc;
+  border-top: 1px solid #ededed;
   @media (max-width: 1800px) {
     padding-bottom: 180px;
   }
@@ -103,7 +98,7 @@ const DashboardObject = styled.div`
   // flex: right;
   top: 0px;
 
-  padding-bottom: 20px;
+  //padding-bottom: 20px;
   right: 0;
   display: flex;
   align-items: center;

@@ -116,7 +116,7 @@ export const MenuArea = styled.div`
     padding-left: 13px;
     padding-right: 13px;
     min-height: 40px;
-    border-radius: 25px;
+    //border-radius: 25px;
     margin-left: 50px;
 
     &.text {

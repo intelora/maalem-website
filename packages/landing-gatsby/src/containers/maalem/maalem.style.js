@@ -66,9 +66,8 @@ export const AppWrapper = styled.div`
 
   .sticky-active {
     .navbar {
-      
       background-color: ${themeGet('colors.white', '#fffff')};
-      fobt-size:bold;
+      fobt-size: bold;
       // box-shadow: 0px 3px 8px 0px rgba(43, 83, 135, 0.08);
       @media only screen and (max-width: 1366px) {
         // padding: 15px 0 16px;
@@ -76,11 +75,11 @@ export const AppWrapper = styled.div`
       }
       .main-logo {
         display: none;
-        width:200px;  
+        width: 200px;
       }
       .logo-alt {
         display: block;
-        width:200px;
+        width: 200px;
       }
       .mobile-menu {
         top: 72px;
@@ -88,7 +87,7 @@ export const AppWrapper = styled.div`
       ul {
         li {
           a {
-            color: ${themeGet('colors.pink', 'rgb(24,117,12)')};
+            color: ${themeGet('colors.pink', '#31a135')};
             font-size: 16px;
             font-weight: 400;
             transition: all 0.3s ease;
@@ -131,7 +130,7 @@ export const ContentWrapper = styled.div`
 export const SectionHeader = styled.header`
   // max-width: 352px;
   width: 100%;
-  margin-top:10px;
+  margin-top: 10px;
   margin: 0 auto 58px;
   text-align: center;
   @media only screen and (max-width: 991px) {
