@@ -4,6 +4,7 @@ import { themeGet } from '@styled-system/theme-get';
 const SectionWrapper = styled.section`
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
+  padding: 80px 0;
   @media only screen and (max-width: 1366px) {
     padding: 60px 0;
   }
@@ -18,8 +19,7 @@ export const ButtonGroup = styled.div`
   //max-width: 320px;
   width: 450px;
   padding: 6px;
-  margin: 0 auto;
-  border-radius: 5px;
+  margin: 0 auto; 
   background-color: ${themeGet('colors.inactiveField', '#f7f8fb')};
 
   button {
@@ -198,17 +198,9 @@ export const PricingCard = styled.div`
       }
     }
     .reusecore__button {
-      //border-radius: 25px;
+      border-radius: 5px;
       @media only screen and (max-width: 767px) {
         width: 100%;
-      }
-    }
-    .trail {
-      margin-top: 22px;
-      a {
-        color: rgba(37, 99, 255, 0.9);
-        font-size: 15px;
-        font-weight: 500;
       }
     }
   }

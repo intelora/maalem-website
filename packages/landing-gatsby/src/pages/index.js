@@ -11,20 +11,16 @@ import DashboardFeatures from '../containers/maalem/Dashboard';
 import DesignedAndBuilt from '../containers/maalem/DesignedAndBuilt';
 import PricingPolicy from '../containers/maalem/PricingPolicy';
 import Footer from '../containers/maalem/Footer';
-
+import Faq from '../containers/maalem/Faq';
+import AboutUs from '../containers/maalem/AboutUs';
 import GlobalStyle, {
   AppWrapper,
-  ContentWrapper
+  ContentWrapper,
 } from '../containers/maalem/maalem.style';
 import '@redq/reuse-modal/es/index.css';
 
 import SEO from '../components/seo';
 import FeatureSlider from '../containers/maalem/FeatureSlider';
-
-const langIndexx = window.sessionStorage.getItem('lang') === 'ar' ? 0 : 1;
-const cmsItems = JSON.parse(window.sessionStorage.getItem('cmsItems'));
-
-const cmsItems2 = JSON.parse(window.sessionStorage.getItem('cmsItems2'));
 
 export default function () {
   return (
@@ -36,10 +32,8 @@ export default function () {
           : { direction: 'ltr', textAlign: 'left' }
       }
     >
-      
-
       <>
-        <SEO title="Maalem Financing"  />
+        <SEO title="Maalem Financing" />
         <Modal />
         <ResetCSS />
         <GlobalStyle />
@@ -51,10 +45,12 @@ export default function () {
           <ContentWrapper>
             <Banner />
             <Features />
-            <PricingPolicy /> 
+            <PricingPolicy />
             <FeatureSlider />
             <DesignedAndBuilt />
+            <AboutUs />
             <DashboardFeatures />
+            <Faq />
           </ContentWrapper>
           <Footer />
         </AppWrapper>

@@ -83,7 +83,7 @@ const DashboardSection = ({
             <Image
               src={DashboardObject2}
               alt="Mobile and Laptop Dashboar Image"
-              style={{ width: '55%', marginLeft: 'auto', marginRight: '10%' }}
+              style={{ width: '55%', marginLeft: 'auto', marginRight: '21%' }}
             />
           </Fade>
           <Fade right></Fade>
@@ -111,7 +111,7 @@ DashboardSection.defaultProps = {
   col: {
     pr: '15px',
     pl: '15px',
-    width: [1, '70%', '50%', '45%'],
+    width: [1, '70%', '50%', '55%'],
   },
   title: {
     fontSize: ['22px', '30px', '30px', '30px', '36px'],

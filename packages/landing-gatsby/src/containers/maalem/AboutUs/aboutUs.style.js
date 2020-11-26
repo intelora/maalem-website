@@ -2,14 +2,14 @@ import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 const SectionWrapper = styled.div`
+  border-top: 1px solid #ededed;
   padding: 175px 0 175px;
   overflow: hidden;
-  display: none;
   @media only screen and (max-width: 1440px) {
     padding: 175px 0 125px;
   }
   @media only screen and (max-width: 1099px) {
-    padding: 125px 0 125px;
+    padding: 80px 0 80px;
   }
   @media only screen and (max-width: 768px) {
     padding: 75px 0;
@@ -21,11 +21,12 @@ const SectionWrapper = styled.div`
 
 export const ContentWrapper = styled.div`
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
   @media only screen and (max-width: 1099px) {
-    flex-direction: column;
-    justify-content: center;
+    //flex-direction: column;
+    //justify-content: center;
     .team-bubble-icon {
       justify-content: space-around;
       display: flex;
@@ -42,7 +43,7 @@ export const ContentWrapper = styled.div`
     margin-right: 100px;
     @media only screen and (max-width: 1099px) {
       //width: 100%;
-      width: 40%;
+      //width: 40%;
       justify-content: space-around;
       margin-right: 0;
       padding-bottom: 70px;
@@ -202,7 +203,8 @@ export const ContentWrapper = styled.div`
     }
   }
   .content {
-    width: 393px;
+    //width: 393px;
+    width: 50%;
     @media only screen and (max-width: 1099px) {
       //width: 100%;
     }

@@ -264,11 +264,6 @@ const PricingPolicy = () => {
             {data.pricing[langIndex][state.active].map((item) => (
               <PricingCard key={`${state.active}-card--key${item.id}`}>
                 <Fade up delay={200}>
-                  {/* {item.suggested && (
-                    <span className="tag">
-                      <img src={crown} alt="Crown" />
-                    </span>
-                  )} */}
                   <div className="card-header">
                     <Heading as="h3" content={item.title} />
                     <Text content={item.description} />
@@ -283,11 +278,7 @@ const PricingPolicy = () => {
                     </ul>
                   </div>
                   <div className="card-footer">
-                    {/* <strong>
-                    <span>SAR {item.price}</span> /{state.active}
-                  </strong> */}
                     <Button
-                      style={{ borderRadius: '25px' }}
                       onClick={() => {
                         window.sessionStorage.getItem('showCalculator', true);
                         document.getElementById(
@@ -302,15 +293,6 @@ const PricingPolicy = () => {
                       }
                       href="#"
                     />
-                    {/* {item.trail ? (
-                    <div className="trail">
-                      <a href={item.trailLink}>
-                        Reffer A Friend : #AB{item.trail}C
-                      </a>
-                    </div>
-                  ) : (
-                    ''
-                  )} */}
                   </div>
                 </Fade>
               </PricingCard>

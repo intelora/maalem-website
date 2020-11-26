@@ -10,7 +10,7 @@ import Rating from 'common/src/components/Rating';
 import GlideCarousel from 'common/src/components/GlideCarousel';
 import GlideSlide from 'common/src/components/GlideCarousel/glideSlide';
 import { SectionHeader } from '../maalem.style';
-import SectionWrapper, { CarouselWrapper } from './testimonial.style';
+import SectionWrapper, { CarouselWrapper } from './faq.style';
 
 const Testimonial = () => {
   const data = useStaticQuery(graphql`
@@ -50,7 +50,7 @@ const Testimonial = () => {
   const faqItems = JSON.parse(window.sessionStorage.getItem('faqItems'));
   const langIndex = window.sessionStorage.getItem('lang') === 'ar' ? 0 : 1;
   return (
-    <SectionWrapper id="testimonial">
+    <SectionWrapper id="faq">
       <Container>
         <SectionHeader
           style={

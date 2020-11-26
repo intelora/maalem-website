@@ -16,7 +16,7 @@ const FooterWrapper = styled.section`
   background-repeat-x: repeat;
   z-index: 1;
   @media (max-width: 1440px) {
-    padding: 80px 0 60px;
+    padding: 50px 0 50px;
   }
   @media (max-width: 990px) {
   }
@@ -85,7 +85,7 @@ const FooterWrapper = styled.section`
     }
   }
   .appDownload {
-    margin-top: 60px;
+    //margin-top: 60px;
     margin-bottom: 30px;
   }
   .imageWrapper {
@@ -108,7 +108,7 @@ const FooterWrapper = styled.section`
     margin-right: 0;
     //width: calc(100% - 80px);
     @media (max-width: 1440px) {
-      margin-top: 80px;
+      margin-top: 50px;
     }
     @media (max-width: 768px) {
       width: calc(100% - 20px);
@@ -205,7 +205,6 @@ export const SelectWrapper = styled.div`
   svg {
     position: absolute;
     top: 1px;
-    right: 10px;
     path {
       fill: ${themeGet('colors.secondaryText', '#616970')};
     }

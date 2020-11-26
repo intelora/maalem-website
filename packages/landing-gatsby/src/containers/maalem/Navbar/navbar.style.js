@@ -19,6 +19,7 @@ const NavbarWrapper = styled.nav`
   }
   @media only screen and (max-width: 1366px) {
     padding: 10px 0 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   }
   > div.container {
     width: 100%;
@@ -116,8 +117,6 @@ export const MenuArea = styled.div`
     padding-left: 13px;
     padding-right: 13px;
     min-height: 40px;
-    //border-radius: 25px;
-    margin-left: 50px;
 
     &.text {
       padding: 0;
@@ -201,21 +200,13 @@ export const MenuArea = styled.div`
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    background-image: -webkit-linear-gradient(
-      139deg,
-      rgb(100, 43, 115) 0%,
-      rgb(198, 66, 110) 100%
-    );
+    background-image: -webkit-linear-gradient(139deg, #31a135 0%, #031e3c 100%);
     z-index: 1;
     margin-top: 30px;
     border-top: solid #343d48;
   }
   .bgGradient {
-    background-image: -webkit-linear-gradient(
-      139deg,
-      rgb(100, 43, 115) 0%,
-      rgb(198, 66, 110) 100%
-    );
+    background-image: -webkit-linear-gradient(139deg, #31a135 0%, #031e3c 100%);
   }
   .dropdown-content a {
     float: none;
@@ -225,15 +216,6 @@ export const MenuArea = styled.div`
     display: block;
     text-align: left;
   }
-
-  // .dropdown-content a:hover {
-  //   background-color: #eee;
-  //   color: #000000;
-  // }
-
-  // .dropdown:hover .dropdown-content {
-  //   display: inline-block;
-  // }
 `;
 
 export const Search = styled.div`
