@@ -124,7 +124,7 @@ DashboardSection.defaultProps = {
   },
   description: {
     fontSize: '16px',
-    color: '#343d48cc',
+    //color: '#343d48cc',
     lineHeight: '1.85',
     mb: '0',
   },
