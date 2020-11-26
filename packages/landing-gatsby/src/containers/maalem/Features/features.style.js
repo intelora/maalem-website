@@ -120,11 +120,11 @@ export const FeatureWrapper = styled.div`
         @media only screen and (max-width: 1366px) {
           font-size: 18px;
           margin-bottom: 5px;
-          margin: 10px;
+          margin: 10px; 
         }
       }
       p {
-        color: ${themeGet('colors.textColor')};
+        //color: ${themeGet('colors.textColor')};
         font-size: 16px;
         line-height: 25px;
         margin: 10px;

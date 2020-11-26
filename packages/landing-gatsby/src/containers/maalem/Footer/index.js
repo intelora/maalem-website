@@ -198,7 +198,9 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
             </SelectWrapper> */}
             <Heading
               content={
-                langIndex === 0 ? 'Download The App' : 'قم بتنزيل التطبيق'
+                window.sessionStorage.getItem('lang') === 'ar'
+                  ? 'Download The App'
+                  : 'قم بتنزيل التطبيق'
               }
               {...titleStyle}
               className="appDownload"
@@ -218,7 +220,11 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
             {Data.rideJson.menuWidget.map((widget) => (
               <Box className="col" {...col} key={widget.id}>
                 <Heading
-                  content={langIndex === 0 ? widget.title[0] : widget.title[1]}
+                  content={
+                    window.sessionStorage.getItem('lang') === 'ar'
+                      ? widget.title[0]
+                      : widget.title[1]
+                  }
                   {...titleStyle}
                 />
                 <List
@@ -234,18 +240,18 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
                         className="ListItem"
                         onClick={showAboutUs}
                       >
-                        {langIndex === 0 ? 'About Us' : 'معلومات عنا'}
+                        {window.sessionStorage.getItem('lang') === 'ar'
+                          ? 'About Us'
+                          : 'معلومات عنا'}
                       </a>
                     </ListItem>
                   )}
                   {widget.menuItems.map((item) => (
                     <ListItem key={`list__item-${item.id}`}>
-                      <a
-                        href={item.url}
-                        className="ListItem"
-                        onClick={item.calFunc && item.calFunc}
-                      >
-                        {item.text[langIndex]}
+                      <a href={item.url} className="ListItem">
+                        {window.sessionStorage.getItem('lang') === 'ar'
+                          ? item.text[0]
+                          : item.text[1]}
                       </a>
                     </ListItem>
                   ))}
