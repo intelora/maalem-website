@@ -26,18 +26,6 @@ const FaqSection = ({
   titleStyle,
   descriptionStyle,
 }) => {
-  /* const Data = useStaticQuery(graphql`
-    query {
-      agencyJson {
-        faq {
-          id
-          description
-          expend
-          title
-        }
-      }
-    }
-  `); */
   const langIndexx = window.sessionStorage.getItem('lang') === 'ar' ? 0 : 1;
   const cmsItems2 = JSON.parse(window.sessionStorage.getItem('cmsItems2'));
   const cmsItemss = cmsItems2[langIndexx];
@@ -70,7 +58,6 @@ const FaqSection = ({
       <Container>
         <Box {...sectionHeader}>
           {/* <Text content="FAQ" {...sectionSubTitle} /> */}
-          <Heading content="About Us" {...sectionTitle} />
         </Box>
         <Box className="row">
           <Accordion>

@@ -112,7 +112,7 @@ const FeatureSlider = ({ sectionSubTitle, sectionTitle, sectionHeader }) => {
                 showFullscreenButton={false}
                 showNav={false}
                 showBullets={true}
-                autoPlay={false}
+                autoPlay={true}
               />
             </Box>
           </Fade>

@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 const DashboardWrapper = styled.section`
-  padding-top: 120px;
-  padding-bottom: 240px;
+  padding-top: 30px;
+  padding-bottom: 60px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,19 +13,14 @@ const DashboardWrapper = styled.section`
   background: #fcfcfc;
   border-top: 1px solid #ededed;
   @media (max-width: 1800px) {
-    padding-bottom: 180px;
   }
   @media (max-width: 1600px) {
-    padding-top: 80px;
-    padding-bottom: 160px;
   }
   @media (max-width: 1440px) {
-    padding-top: 30px;
+    padding-top: 160px;
     padding-bottom: 100px;
   }
   @media (max-width: 1024px) {
-    padding-top: 30px;
-    padding-bottom: 60px;
   }
   @media (max-width: 767px) {
     padding-top: 20px;

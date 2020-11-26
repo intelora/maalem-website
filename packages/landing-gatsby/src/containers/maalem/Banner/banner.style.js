@@ -7,21 +7,9 @@ const BannerWrapper = styled.div`
   overflow: hidden;
   position: relative;
   z-index: 99;
-  background-image: -moz-linear-gradient(
-    139deg,
-    rgb(24, 117, 12) 0%,
-    rgb(0, 63, 135) 100%
-  );
-  background-image: -webkit-linear-gradient(
-    139deg,
-    rgb(24, 117, 12) 0%,
-    rgb(0, 63, 135) 100%
-  );
-  background-image: -ms-linear-gradient(
-    139deg,
-    rgb(24, 117, 12) 0%,
-    rgb(0, 63, 135) 100%
-  );
+  background-image: -moz-linear-gradient(139deg, #31a135 0%, #031e3c 100%);
+  background-image: -webkit-linear-gradient(139deg, #31a135 0%, #031e3c 100%);
+  background-image: -ms-linear-gradient(139deg, #31a135 0%, #031e3c 100%);
   @media only screen and (min-width: 1201px) and (max-width: 1440px) {
     min-height: 100vh;
   }
@@ -146,32 +134,25 @@ export const BannerImage = styled.div`
   }
 `;
 
-export const ButtonGroup = styled.div` 
+export const ButtonGroup = styled.div`
   .reusecore__button {
     text-transform: inherit;
-    //border-radius: 25px;
-    // margin-bottom:254px;
+    border-radius: 5px;
+    margin-bottom: 254px;
     width: 200px;
     height: 10px;
     font-weight: 700;
-    // margin-bottom:20%;
     font: initial;
-    margin-top: 5%; 
+    margin-top: 5%;
 
     &.primary {
       position: relative;
-      color: '#ffffff'; 
-      border: 2px solid rgb(0 146 2);
-
-      // left:50px;
-      //background-color: ${themeGet('colors.white', '#18750C')};
-      //color: ${themeGet('colors.black', '#00000')};
+      color: '#ffffff';
+      border: 2px solid #50c755;
       font-size: 19px;
       font-family: Arial, Helvetica, sans-serif;
       letter-spacing: -0.1px;
-      // padding: 1px 0px;
       text-align: center;
-      // margin-bottom:200px;
       display: inline-block;
       &:hover {
         box-shadow: #1e2a4a 0px 12px 24px -10px;

@@ -29,52 +29,62 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
       menuWidget: [
         {
           id: 1,
-          title: 'My Account',
+          title: ['My Account', 'حسابي'],
           menuItems: [
             {
-              id: 5,
-              text: 'Login',
+              id: 1,
+              text: ['Login', 'تسجيل الدخول'],
               url: 'http://122.166.172.240:3000/customer/signin?lang=',
             },
             {
-              id: 6,
-              text: 'Customer',
+              id: 2,
+              text: ['Customer', 'الزبون'],
               url: 'http://122.166.172.240:3000/customer/signin?lang=',
             },
             {
-              id: 7,
-              text: 'Agent',
+              id: 3,
+              text: ['Agent', 'وكيل'],
               url: 'http://122.166.172.240:3000/agent/signin?lang=',
             },
             {
-              id: 8,
-              text: 'Admin',
+              id: 4,
+              text: ['Admin', 'مشرف'],
               url: 'http://122.166.172.240:3000/business/signin?lang=',
+            },
+            {
+              id: 5,
+              text: ['SME', 'الشركات الصغيرة والمتوسطة'],
+              url: 'http://122.166.172.240:3000/agent/sme/signin?lang=',
             },
           ],
         },
         {
           id: 2,
-          title: 'Quick Links',
+          title: ['Quick Links', 'روابط سريعة'],
           menuItems: [
-            {
+            /* {
               id: 1,
-              text: 'Home',
-              url: '#',
-            },
+              text: ['Home', 'الصفحة الرئيسية'],
+              url: '#'
+            }, 
             {
               id: 2,
-              text: 'Product',
+              text: ['About Us', 'معلومات عنا'],
+              url: '#HowtoApplay'
+            },*/
+            {
+              id: 1,
+              text: ['Product', 'المنتج'],
               url: '#features',
             },
             {
-              id: 3,
-              text: 'How To Apply',
+              id: 2,
+              text: ['How To Apply', 'كيفية التقديم'],
               url: '#HowtoApplay',
             },
             {
-              id: 4,
-              text: 'Apply Now',
+              id: 3,
+              text: ['Apply Now', 'قدم الآن'],
               url: 'http://122.166.172.240:3000/customer/signup?lang=',
             },
           ],
@@ -115,31 +125,66 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
       ],
     },
   };
-  const navMenu = JSON.parse(window.sessionStorage.getItem('menuItems'));
-  console.log('::navMenu:: ', navMenu);
+  // Local state
+  const [langIndex, setLangIndex] = React.useState(1); // default en
+  // On page mount with DOM
+  React.useEffect(() => {
+    setLangIndex(window.sessionStorage.getItem('lang') !== 'en' ? 0 : 1);
+    document.getElementById('faq').style.display = 'none';
+    document.getElementById('aboutUs').style.display = 'none';
+  }, []);
+
+  // Hidden Page
+  const showFaq = () => {
+    const faqSection = document.getElementById('faq');
+    faqSection.style.display = faqSection && 'block';
+  };
+
+  const showAboutUs = () => {
+    const aboutUsSection = document.getElementById('aboutUs');
+    aboutUsSection.style.display = aboutUsSection && 'block';
+    /* if (aboutUsSection.style.display === 'none') {
+      aboutUsSection.style.display = 'block';
+    } else {
+      window.location.href = '#aboutUs';
+    } */
+  };
+
+  // Toggle change language.
   const toggleLanguage = () => {
     const selectedLang = window.sessionStorage.getItem('lang');
     const footerElement = document.querySelector('#footerSection');
-    if (selectedLang == 'en') {
+    if (selectedLang === 'en') {
       footerElement.style.direction = 'ltr';
       window.sessionStorage.setItem('lang', 'ar');
+      setLangIndex(0);
     } else {
       footerElement.style.direction = 'rtl';
       window.sessionStorage.setItem('lang', 'en');
+      setLangIndex(1);
     }
   };
+
   return (
     <FooterWrapper id="footerSection">
       <Container noGutter mobileGutter width="1200px">
         <Box className="row" {...row}>
           <Box {...colOne}>
-            <Heading content="Language" {...titleStyle} />
+            {/* <Heading
+              content={langIndex === 0 ? 'Language' : 'لغة'}
+              {...titleStyle}
+            />
             <SelectWrapper>
-              <select aria-label="language switcher" onChange={toggleLanguage}>
+              <select
+                aria-label="language switcher"
+                onChange={toggleLanguage}
+                value={langIndex === 1 ? 'ar' : 'en'}
+              >
                 <option value="en">English</option>
                 <option value="ar">Arabic</option>
               </select>
               <svg
+                style={{ right: langIndex === 1 ? '65px' : '10px' }}
                 xmlns="http://www.w3.org/2000/svg"
                 width="21.994"
                 height="21.991"
@@ -150,9 +195,11 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
                   transform="translate(-424.002 -10269.002)"
                 />
               </svg>
-            </SelectWrapper>
+            </SelectWrapper> */}
             <Heading
-              content="Download The App"
+              content={
+                langIndex === 0 ? 'Download The App' : 'قم بتنزيل التطبيق'
+              }
               {...titleStyle}
               className="appDownload"
             />
@@ -170,15 +217,46 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
           <Box {...colTwo}>
             {Data.rideJson.menuWidget.map((widget) => (
               <Box className="col" {...col} key={widget.id}>
-                <Heading content={widget.title} {...titleStyle} />
-                <List>
+                <Heading
+                  content={langIndex === 0 ? widget.title[0] : widget.title[1]}
+                  {...titleStyle}
+                />
+                <List
+                  style={{
+                    direction: langIndex === 1 ? 'ltr' : 'rtl',
+                    textAlign: langIndex === 1 ? 'right' : 'left',
+                  }}
+                >
+                  {widget.title[0] === 'Quick Links' && (
+                    <ListItem key={`list__item-faq`}>
+                      <a
+                        href="#aboutUs"
+                        className="ListItem"
+                        onClick={showAboutUs}
+                      >
+                        {langIndex === 0 ? 'About Us' : 'معلومات عنا'}
+                      </a>
+                    </ListItem>
+                  )}
                   {widget.menuItems.map((item) => (
                     <ListItem key={`list__item-${item.id}`}>
-                      <a href={item.url} className="ListItem">
-                        {item.text}
+                      <a
+                        href={item.url}
+                        className="ListItem"
+                        onClick={item.calFunc && item.calFunc}
+                      >
+                        {item.text[langIndex]}
                       </a>
                     </ListItem>
                   ))}
+
+                  {widget.title[0] === 'Quick Links' && (
+                    <ListItem key={`list__item-faq`}>
+                      <a href="#faq" className="ListItem" onClick={showFaq}>
+                        {langIndex === 0 ? 'Faq' : 'التعليمات'}
+                      </a>
+                    </ListItem>
+                  )}
                 </List>
               </Box>
             ))}
@@ -205,7 +283,7 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
         </Box>
         <Box className="row copyRight" {...row}>
           <Text
-            content="Copyright 2020 @Maalem Financing."
+            content="Copyright 2020 &copy; Maalem Financing."
             className="copyRightText"
           />
           <SocialProfile

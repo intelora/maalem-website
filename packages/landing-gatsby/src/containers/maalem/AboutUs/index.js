@@ -6,8 +6,9 @@ import Heading from 'common/src/components/Heading';
 import Button from 'common/src/components/Button';
 import Image from 'common/src/components/Image';
 import Container from 'common/src/components/UI/Container';
-import SectionWrapper, { ContentWrapper } from './teamPortfolio.style';
+import SectionWrapper, { ContentWrapper } from './aboutUs.style';
 import FaqSection from '../../../containers/maalem/FaqSection';
+import { SectionHeader } from '../maalem.style';
 
 const TeamPortfoiloSection = () => {
   const data = useStaticQuery(graphql`
@@ -37,15 +38,19 @@ const TeamPortfoiloSection = () => {
   const cmsItemss = cmsItems2[langIndexx];
 
   return (
-    <SectionWrapper id="team">
+    <SectionWrapper id="aboutUs">
       <Container>
+        <SectionHeader>
+          <Heading as="h5" content="About Us" />
+          <Heading as="h2" content="Know more about our company" />
+        </SectionHeader>
         <ContentWrapper
           className="team-bubble-icon"
-          style={
+          /* style={
             window.sessionStorage.getItem('lang') === 'ar'
               ? { direction: 'rtl', textAlign: 'right' }
               : { direction: 'ltr', textAlign: 'left' }
-          }
+          } */
         >
           <div className="image">
             {teammember.map((item, index) => (
@@ -85,16 +90,6 @@ const TeamPortfoiloSection = () => {
             }
           >
             <FaqSection />
-            {/* <Heading as="h3" content={cmsItemss.new_fields_four} />
-            <Text content={cmsItemss.aboutus_heading} />
-            <Text content={cmsItemss.aboutus_description} />
-
-            <Heading as="h3" content={cmsItemss.aboutus_headingnew} />
-            <Text content={cmsItemss.new_fields_one} />
-
-            <Heading as="h3" content={cmsItemss.aboutus_messageheading} />
-            <Text content={cmsItemss.new_fields_two} />
-            <Text content={cmsItemss.new_fields_three} /> */}
           </div>
         </ContentWrapper>
       </Container>

@@ -4,7 +4,6 @@ import { themeGet } from '@styled-system/theme-get';
 const SectionWrapper = styled.section`
   padding: 75px 0 125px;
   overflow: hidden;
-  display: none;
   @media only screen and (max-width: 1440px) {
     padding: 75px 0;
   }
@@ -47,9 +46,9 @@ export const CarouselWrapper = styled.div`
     &:hover {
       box-shadow: 0 10px 50px rgba(38, 78, 118, 0.1);
       height: auto;
-	    overflow: auto;
-	    text-overflow: clip;
-	    white-space: normal
+      overflow: auto;
+      text-overflow: clip;
+      white-space: normal;
     }
 
     h3 {

@@ -131,21 +131,28 @@ const Navbar = () => {
 
   const toggleLanguage = () => {
     if (window.sessionStorage.getItem('lang') == 'en') {
-      document.getElementsByTagName('languagee')[0].style.direction = 'ltr';
+      document.getElementsByTagName('body')[0].style.direction = 'ltr';
       window.sessionStorage.setItem('lang', 'ar');
       // document.body.style.direction = "ltr";
 
-      state.setState({ navIndex: 0 });
+      setState({ ...state, navIndex: 0 });
     } else {
       document.getElementsByTagName('body')[0].style.direction = 'rtl';
       window.sessionStorage.setItem('lang', 'en');
-      state.setState({ navIndex: 1 });
+      setState({ ...state, navIndex: 1 });
     }
   };
 
   console.log('navMenu=', navMenu);
   return (
-    <NavbarWrapper className="navbar">
+    <NavbarWrapper
+      className="navbar"
+      style={
+        window.sessionStorage.getItem('lang') === 'en'
+          ? { direction: 'rtl', textAlign: 'right' }
+          : { direction: 'ltr', textAlign: 'left' }
+      }
+    >
       <Container>
         <Logo
           href="https://maalem.com.sa/en"
