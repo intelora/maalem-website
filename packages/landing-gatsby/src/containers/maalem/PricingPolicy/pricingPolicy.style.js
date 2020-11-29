@@ -22,6 +22,10 @@ export const ButtonGroup = styled.div`
   margin: 0 auto; 
   background-color: ${themeGet('colors.inactiveField', '#f7f8fb')};
 
+  @media only screen and (max-width: 480px) { 
+    display: block;
+    width: 100%;
+  }
   button {
     border: 0;
     padding: 15px 26px;

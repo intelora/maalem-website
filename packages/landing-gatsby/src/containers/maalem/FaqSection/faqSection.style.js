@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 const FaqSectionWrapper = styled.section`
-  padding: 80px 0;
+  //padding: 80px 0;
   overflow: hidden;
   @media (max-width: 990px) {
     padding: 40px 0 60px 0;
@@ -27,10 +27,16 @@ const FaqSectionWrapper = styled.section`
 
       .accordion__header {
         padding: 20px 30px;
+        div h3 {
+          font-weight: bold;
+        }
       }
 
       .accordion__body {
         padding: 5px 30px 20px;
+        p {
+          color: inherit;
+        }
       }
     }
   }

@@ -130,13 +130,13 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
   // On page mount with DOM
   React.useEffect(() => {
     setLangIndex(window.sessionStorage.getItem('lang') !== 'en' ? 0 : 1);
-    document.getElementById('faq').style.display = 'none';
+    document.getElementById('faq_section').style.display = 'none';
     document.getElementById('aboutUs').style.display = 'none';
   }, []);
 
   // Hidden Page
   const showFaq = () => {
-    const faqSection = document.getElementById('faq');
+    const faqSection = document.getElementById('faq_section');
     faqSection.style.display = faqSection && 'block';
   };
 
@@ -216,7 +216,13 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
             </Box>
           </Box>
           {/* End of footer logo column */}
-          <Box {...colTwo}>
+          <Box
+            {...colTwo}
+            style={{
+              direction: langIndex === 1 ? 'ltr' : 'rtl',
+              textAlign: langIndex === 1 ? 'right' : 'left',
+            }}
+          >
             {Data.rideJson.menuWidget.map((widget) => (
               <Box className="col" {...col} key={widget.id}>
                 <Heading
@@ -227,12 +233,7 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
                   }
                   {...titleStyle}
                 />
-                <List
-                  style={{
-                    direction: langIndex === 1 ? 'ltr' : 'rtl',
-                    textAlign: langIndex === 1 ? 'right' : 'left',
-                  }}
-                >
+                <List>
                   {widget.title[0] === 'Quick Links' && (
                     <ListItem key={`list__item-faq`}>
                       <a
@@ -259,7 +260,9 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
                   {widget.title[0] === 'Quick Links' && (
                     <ListItem key={`list__item-faq`}>
                       <a href="#faq" className="ListItem" onClick={showFaq}>
-                        {langIndex === 0 ? 'Faq' : 'التعليمات'}
+                        {window.sessionStorage.getItem('lang') === 'ar'
+                          ? 'Faq'
+                          : 'التعليمات'}
                       </a>
                     </ListItem>
                   )}
@@ -345,8 +348,8 @@ Footer.defaultProps = {
   // widget title default style
   titleStyle: {
     color: '#FFFFFF',
-    fontSize: ['18px', '20px', '20px', '24px', '24px'],
-    fontWeight: '600',
+    fontSize: ['18px', '20px', '20px', '28px', '28px'],
+    fontWeight: 'bold',
     lineHeight: '1.34',
     mb: ['15px', '18px', '18px', '20px', '30px'],
     fontFamily: 'Arial, Helvetica, sans-serif',
@@ -361,7 +364,7 @@ Footer.defaultProps = {
     color: '#FFFFFF',
     fontSize: '16px',
     mb: '12px',
-    fontWeight: '600',
+    fontWeight: 'bold',
     fontFamily: 'Arial, Helvetica, sans-serif',
   },
 };
