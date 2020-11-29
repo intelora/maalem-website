@@ -97,6 +97,9 @@ const FeatureSliderWrapper = styled.div`
         overflow: initial;
         padding: 0;
       }
+      @media only screen and (max-width: 480px) {
+        width: 55%;
+      }
       .image-gallery-thumbnails-container {
         display: flex;
         flex-direction: column;
@@ -117,6 +120,10 @@ const FeatureSliderWrapper = styled.div`
             box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
             &:focus {
               outline: none;
+            }
+            @media only screen and (max-width: 480px) {
+              height: initial;
+              padding: 15px;
             }
           }
           img {
@@ -149,6 +156,9 @@ const FeatureSliderWrapper = styled.div`
             white-space: normal;
             //width: 100%;
             width: auto;
+          }
+          @media only screen and (max-width: 480px) {
+            font-size: 0.5rem;
           }
           &.active {
             border: 0;
@@ -205,6 +215,26 @@ const FeatureSliderWrapper = styled.div`
             width: 32px;
             height: 4px;
           }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      .image-gallery-slide-wrapper {
+        height: initial;
+        &:after {
+          box-shadow: none;
+        }
+      }
+      .image-gallery-thumbnail {
+        img {
+          display: none;
+        }
+      }
+      .image-gallery-thumbnails-wrapper {
+        //width: initial;
+        .image-gallery-thumbnails {
+          // margin: initial;
         }
       }
     }

@@ -1,117 +1,200 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-import Fade from 'react-reveal/Fade';
+import Box from 'common/src/components/Box';
 import Text from 'common/src/components/Text';
 import Heading from 'common/src/components/Heading';
 import Button from 'common/src/components/Button';
-import Image from 'common/src/components/Image';
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTitle,
+  AccordionBody,
+  IconWrapper,
+  OpenIcon,
+  CloseIcon,
+} from 'common/src/components/Accordion';
 import Container from 'common/src/components/UI/Container';
-import Rating from 'common/src/components/Rating';
-import GlideCarousel from 'common/src/components/GlideCarousel';
-import GlideSlide from 'common/src/components/GlideCarousel/glideSlide';
-import { SectionHeader } from '../maalem.style';
-import SectionWrapper, { CarouselWrapper } from './faq.style';
+import { Icon } from 'react-icons-kit';
+import { plus } from 'react-icons-kit/entypo/plus';
+import { minus } from 'react-icons-kit/entypo/minus';
 
-const Testimonial = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      maalemJson {
-        testimonial {
-          slogan
-          title
-          reviews {
-            id
-            title
-            description
-            avatar
-            name
-            designation
-            review
-          }
-        }
-      }
-    }
-  `);
-  const { slogan, title, reviews, isVisible } = data.maalemJson.testimonial;
+import FaqWrapper from './faq.style';
 
-  const glideOptions = {
-    type: 'carousel',
-    gap: 0,
-    isVisible: false,
-    autoplay: 5000,
-    perView: 2,
-    animationDuration: 700,
-    breakpoints: {
-      991: {
-        perView: 1,
-      },
-    },
-  };
+const FaqSection = ({
+  sectionWrapper,
+  row,
+  col,
+  secTitleWrapper,
+  secHeading,
+  secText,
+  title,
+  description,
+  buttonWrapper,
+  button,
+}) => {
   const faqItems = JSON.parse(window.sessionStorage.getItem('faqItems'));
   const langIndex = window.sessionStorage.getItem('lang') === 'ar' ? 0 : 1;
-  return (
-    <SectionWrapper id="faq">
-      <Container>
-        <SectionHeader
-          style={
-            window.sessionStorage.getItem('lang') === 'en'
-              ? { direction: 'rtl', textAlign: 'right' }
-              : null
-          }
-        >
-          <Fade up>
-            <Heading as="h5" content={faqItems[langIndex].title} />
-            <Heading content={faqItems[langIndex].detail} />
-          </Fade>
-        </SectionHeader>
 
-        <CarouselWrapper>
-          <Fade up delay={100}>
-            <GlideCarousel
-              options={glideOptions}
-              nextButton={
-                <Button
-                  icon={<i className="flaticon-next" />}
-                  aria-label="Next"
-                  variant="fab"
-                />
-              }
-              prevButton={
-                <Button
-                  icon={<i className="flaticon-left-arrow" />}
-                  aria-label="Prev"
-                  variant="fab"
-                />
-              }
-            >
-              <Fragment>
-                {faqItems[langIndex].faqs.item.map((item, index) => (
-                  <GlideSlide key={`testimonial--key${index}`}>
-                    <div className="review-card">
-                      <Heading as="h3" content={item.q} />
-                      <Text content={item.a} />
-                      <div className="card-footer">
-                        {/* <div className="image">
-                          <Image src={item.avatar} alt="Client Image" />
-                        </div>
-                        <div className="reviewer-info">
-                          <div className="content">
-                            <Heading as="h4" content={item.name} />
-                            <Text content={item.designation} />
-                          </div>
-                          <Rating rating={item.review} />
-                        </div> */}
-                      </div>
-                    </div>
-                  </GlideSlide>
-                ))}
-              </Fragment>
-            </GlideCarousel>
-          </Fade>
-        </CarouselWrapper>
+  return (
+    <Box
+      {...sectionWrapper}
+      id="faq_section"
+      style={{
+        position: 'relative',
+        height: '100vh',
+        backgroundImage:
+          'url(https://superprops-gatsby.now.sh/static/mockup_bg-8ac4d5ce5392865387022d41b3e57ee9.svg)',
+        display: 'flex',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '150%',
+        backgroundPosition: 'bottom center',
+      }}
+    >
+      <Container>
+        <Box {...secTitleWrapper}>
+          <Text
+            {...secText}
+            content={
+              window.sessionStorage.getItem('lang') === 'ar'
+                ? 'FREQUENTLY ASK QUESTION'
+                : 'كثيرا ما يطرح سؤالا'
+            }
+          />
+          <Heading
+            as="h2"
+            {...secHeading}
+            content={
+              window.sessionStorage.getItem('lang') === 'ar'
+                ? 'Want to ask something from us?'
+                : 'تريد أن تسأل شيئا منا؟'
+            }
+          />
+        </Box>
+        <Box {...row}>
+          <Box {...col}>
+            <FaqWrapper>
+              <Accordion>
+                <>
+                  {faqItems[langIndex].faqs.item.map((accordionItem, index) => (
+                    <AccordionItem
+                      className="accordion_item"
+                      key={`accordion-${index}`}
+                      expanded={accordionItem.expend}
+                    >
+                      <>
+                        <AccordionTitle className="accordion_title">
+                          <>
+                            <Heading {...title} content={accordionItem.q} />
+                            <IconWrapper>
+                              <OpenIcon>
+                                <Icon icon={minus} size={18} />
+                              </OpenIcon>
+                              <CloseIcon>
+                                <Icon icon={plus} size={18} />
+                              </CloseIcon>
+                            </IconWrapper>
+                          </>
+                        </AccordionTitle>
+                        <AccordionBody className="accordion_body">
+                          <Text {...description} content={accordionItem.a} />
+                        </AccordionBody>
+                      </>
+                    </AccordionItem>
+                  ))}
+                </>
+              </Accordion>
+            </FaqWrapper>
+            {/* <Box {...buttonWrapper}>
+              <a href="#1">
+                <Button {...button} title="EXPLORE FORUM" />
+              </a>
+            </Box> */}
+          </Box>
+        </Box>
       </Container>
-    </SectionWrapper>
+    </Box>
   );
 };
 
-export default Testimonial;
+FaqSection.propTypes = {
+  sectionWrapper: PropTypes.object,
+  secTitleWrapper: PropTypes.object,
+  row: PropTypes.object,
+  col: PropTypes.object,
+  secHeading: PropTypes.object,
+  secText: PropTypes.object,
+  title: PropTypes.object,
+  description: PropTypes.object,
+  buttonWrapper: PropTypes.object,
+  button: PropTypes.object,
+};
+
+FaqSection.defaultProps = {
+  sectionWrapper: {
+    as: 'section',
+    pt: ['20px', '30px', '50px', '50px'],
+    pb: ['60px', '80px', '80px', '80px'],
+  },
+  secTitleWrapper: {
+    mb: ['55px', '65px'],
+  },
+  secText: {
+    as: 'span',
+    display: 'block',
+    textAlign: 'center',
+    fontSize: '14px',
+    letterSpacing: '0.15em',
+    fontWeight: '700',
+    color: '#31a135',
+    mb: '5px',
+  },
+  secHeading: {
+    textAlign: 'center',
+    fontSize: ['20px', '24px'],
+    fontWeight: '500',
+    color: '#0f2137',
+    letterSpacing: '-0.025em',
+    mb: '0',
+    lineHeight: '1.67',
+  },
+  row: {
+    flexBox: true,
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  },
+  col: {
+    //width: ['100%', '100%', '75%', '75%']
+    width: ['75%', '75%', '50%', '50%'],
+  },
+  title: {
+    fontSize: ['16px', '19px'],
+    fontWeight: '400',
+    color: 'headingColor',
+    letterSpacing: '-0.025em',
+    mb: 0,
+  },
+  description: {
+    fontSize: '15px',
+    color: 'textColor',
+    lineHeight: '1.75',
+    mb: 0,
+  },
+  buttonWrapper: {
+    mt: '50px',
+    flexBox: true,
+    justifyContent: 'center',
+  },
+  button: {
+    type: 'button',
+    fontSize: '14px',
+    fontWeight: '600',
+    borderRadius: '4px',
+    pl: ['22px'],
+    pr: ['22px'],
+    colors: 'secondaryWithBg',
+    minWidth: '150px',
+  },
+};
+
+export default FaqSection;
