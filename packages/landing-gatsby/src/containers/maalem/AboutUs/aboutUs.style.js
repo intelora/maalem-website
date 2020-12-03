@@ -2,14 +2,15 @@ import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 const SectionWrapper = styled.div`
-  border-top: 1px solid #ededed;
   padding: 175px 0 175px;
   overflow: hidden;
   @media only screen and (max-width: 1440px) {
-    padding: 175px 0 125px;
+    //padding: 175px 0 125px;
+    padding: 75px 0 125px;
+    border-top: 1px solid #ededed;
   }
   @media only screen and (max-width: 1099px) {
-    padding: 80px 0 80px;
+    padding: 125px 0 125px;
   }
   @media only screen and (max-width: 768px) {
     padding: 75px 0;
@@ -21,19 +22,13 @@ const SectionWrapper = styled.div`
 
 export const ContentWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
+  margin-top: 116px;
   @media only screen and (max-width: 1099px) {
-    //flex-direction: column;
-    //justify-content: center;
-    .team-bubble-icon {
-      justify-content: space-around;
-      display: flex;
-      flex-direction: row;
-    }
+    flex-direction: column;
+    justify-content: center;
   }
-
   .image {
     width: calc(100% - 493px);
     display: flex;
@@ -42,13 +37,11 @@ export const ContentWrapper = styled.div`
     padding-bottom: 100px;
     margin-right: 100px;
     @media only screen and (max-width: 1099px) {
-      //width: 100%;
-      //width: 40%;
+      width: 100%;
       justify-content: space-around;
       margin-right: 0;
       padding-bottom: 70px;
-      //left: 10%;
-      left: 0;
+      left: 10%;
     }
     @media only screen and (max-width: 768px) {
       width: 100%;
@@ -67,15 +60,12 @@ export const ContentWrapper = styled.div`
       @media only screen and (max-width: 1099px) {
         position: relative;
         width: 33%;
-        //height: 200px;
-        height: 130;
+        height: 200px;
       }
       @media only screen and (max-width: 480px) {
         width: 40%;
       }
       img {
-        border-radius: 100px;
-        width: 100px;
         &:hover {
           box-shadow: 0px 20px 57px 0px rgba(57, 81, 111, 0.28);
           @media only screen and (max-width: 1099px) {
@@ -142,11 +132,9 @@ export const ContentWrapper = styled.div`
       .author_name {
         position: absolute;
         padding: 20px;
-        /* top: -59px;
-        left: 34px; */
-        top: -116px;
-        left: 94px;
-        background-color: #31a135;
+        top: -59px;
+        left: 34px;
+        background-color: rgb(209, 57, 124);
         box-shadow: 0px 16px 57px 0px rgba(57, 81, 111, 0.1);
         border-radius: 28px 28px 28px 0;
         width: 122%;
@@ -170,7 +158,7 @@ export const ContentWrapper = styled.div`
           height: 0;
           border-style: solid;
           border-width: 22px 19px 0 0;
-          border-color: rgb(24, 117, 12) transparent transparent transparent;
+          border-color: rgb(209, 57, 124) transparent transparent transparent;
           position: absolute;
           bottom: -22px;
           left: 0;
@@ -184,6 +172,9 @@ export const ContentWrapper = styled.div`
         overflow: hidden;
         @media only screen and (max-width: 1099px) {
           border-radius: 0;
+          img {
+            border-radius: 50%;
+          }
         }
       }
       &.active {
@@ -203,10 +194,9 @@ export const ContentWrapper = styled.div`
     }
   }
   .content {
-    //width: 393px;
-    width: 50%;
+    width: 393px;
     @media only screen and (max-width: 1099px) {
-      //width: 100%;
+      width: 100%;
     }
     @media only screen and (max-width: 991px) {
       width: 100%;
@@ -247,7 +237,7 @@ export const ContentWrapper = styled.div`
     border-radius: 5px;
 
     &:hover {
-      box-shadow: #18750c 0px 12px 24px -10px;
+      box-shadow: #d1397c 0px 12px 24px -10px;
     }
   }
 `;

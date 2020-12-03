@@ -115,8 +115,8 @@ const PricingPolicy = () => {
       },
 
       {
-        slogan: 'PRICING PLAN',
-        title: 'Choose your pricing policy',
+        slogan: 'اختر التمويل الذي يلبي احتياجاتك.',
+        title: 'سواء كنت تبحث عن التمويل الشخصي، أو عن عملك،',
         monthly: [
           {
             id: 1,
