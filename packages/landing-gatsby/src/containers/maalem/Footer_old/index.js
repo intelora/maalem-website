@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Box from 'common/src/components/Box';
 import Text from 'common/src/components/Text';
 import Image from 'common/src/components/Image';
-import Logo from 'common/src/components/UIElements/Logo';
 import LogoImage from 'common/src/assets/image/maalem/logo.png';
 import Heading from 'common/src/components/Heading';
 import Container from 'common/src/components/UI/Container';
@@ -27,9 +26,6 @@ const Footer = () => {
     query {
       maalemJson {
         footer {
-          logo {
-            publicURL
-          }
           menu {
             id
             link
@@ -158,14 +154,7 @@ const Footer = () => {
 
       <FooterArea>
         <div className="row col-md-12">
-          <div className="logoo row">
-            <Logo
-              className="logo"
-              href="https://maalem.com.sa/en"
-              logoSrc={LogoImage}
-              title="App Classic"
-            />
-          </div>
+          <div className="logoo row"></div>
           <div className="column">
             <div className="social row">
               <WidgetArea

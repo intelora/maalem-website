@@ -13,8 +13,8 @@ import Button from 'common/src/components/Button';
 import Container from 'common/src/components/UI/Container';
 import useOnClickOutside from 'common/src/hooks/useOnClickOutside';
 import NavbarWrapper, { MenuArea, MobileMenu, Search } from './navbar.style';
-import LogoImage from 'common/src/assets/image/maalem/logo-white.png';
-import LogoImageAlt from 'common/src/assets/image/maalem/logo.png';
+import LogoImage from 'common/src/assets/image/maalem/logo.png';
+import LogoImageAlt from 'common/src/assets/image/maalem/logo2.png';
 import { cmsItems, cmsItems2, navBarData, faqData } from '../data/cmsData';
 
 const Navbar = () => {
@@ -154,22 +154,20 @@ const Navbar = () => {
       }
     >
       <Container>
-        <div className="imagediv">
-          <Logo
-            href="https://maalem.com.sa/en"
-            target="_blank"
-            logoSrc={LogoImageAlt}
-            title="Quara Finance"
-            className="main-logo"
-          />
-          <Logo
-            href="https://maalem.com.sa/en"
-            target="_blank"
-            logoSrc={LogoImageAlt}
-            title="Quara Finance"
-            className="logo-alt"
-          />
-        </div>
+        <Logo
+          href="https://maalem.com.sa/en"
+          target="_blank"
+          logoSrc={LogoImageAlt}
+          title="Quara Finance"
+          className="main-logo"
+        />
+        <Logo
+          href="https://maalem.com.sa/en"
+          target="_blank"
+          logoSrc={LogoImage}
+          title="Quara Finance"
+          className="logo-alt"
+        />
 
         {/* end of logo */}
 

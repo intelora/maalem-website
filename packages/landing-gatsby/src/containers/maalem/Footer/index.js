@@ -6,7 +6,7 @@ import Text from 'common/src/components/Text';
 import Image from 'common/src/components/Image';
 import Heading from 'common/src/components/Heading';
 import Logo from 'common/src/components/UIElements/Logo';
-import LogoImage from 'common/src/assets/image/maalem/logo.png';
+import LogoImageAlt from 'common/src/assets/image/maalem/logo2.png';
 import Container from 'common/src/components/UI/Container';
 import SocialProfile from '../SocialProfile';
 import FooterWrapper, {
@@ -274,7 +274,7 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
               <Logo
                 className="logo"
                 href="https://maalem.com.sa/en"
-                logoSrc={LogoImage}
+                logoSrc={LogoImageAlt}
                 title="App Classic"
               />
               {/* <Heading content="Contact Us" {...titleStyle} /> */}
@@ -293,7 +293,7 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
         </Box>
         <Box className="row copyRight" {...row}>
           <Text
-            content="Copyright 2020 &copy; Maalem Financing."
+            content="Copyright 2020 &copy; Quara Finance."
             className="copyRightText"
           />
           <SocialProfile

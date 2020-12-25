@@ -28,12 +28,12 @@ const NavbarWrapper = styled.nav`
     justify-content: space-between;
     .main-logo {
       img {
-        width: 60px;
+        width: 200px;
         height: auto;
       }
     }
     .logo-alt {
-      width: 60px;
+      width: 200px;
       height: 60px;
       display: none;
     }
