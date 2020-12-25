@@ -34,27 +34,28 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
             {
               id: 1,
               text: ['Login', 'تسجيل الدخول'],
-              url: 'http://122.166.172.240:3000/customer/signin?lang=',
+              url: 'https://businessportal.maalem.com.sa/customer/signin?lang=',
             },
             {
               id: 2,
               text: ['Customer', 'الزبون'],
-              url: 'http://122.166.172.240:3000/customer/signin?lang=',
+              url: 'https://businessportal.maalem.com.sa/customer/signin?lang=',
             },
             {
               id: 3,
               text: ['Agent', 'وكيل'],
-              url: 'http://122.166.172.240:3000/agent/signin?lang=',
+              url: 'https://businessportal.maalem.com.sa/agent/signin?lang=',
             },
             {
               id: 4,
               text: ['Admin', 'مشرف'],
-              url: 'http://122.166.172.240:3000/business/signin?lang=',
+              url: 'https://businessportal.maalem.com.sa/business/signin?lang=',
             },
             {
               id: 5,
               text: ['SME', 'الشركات الصغيرة والمتوسطة'],
-              url: 'http://122.166.172.240:3000/agent/sme/signin?lang=',
+              url:
+                'https://businessportal.maalem.com.sa/agent/sme/signin?lang=',
             },
           ],
         },
@@ -85,7 +86,7 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
             {
               id: 3,
               text: ['Apply Now', 'قدم الآن'],
-              url: 'http://122.166.172.240:3000/customer/signup?lang=',
+              url: 'https://businessportal.maalem.com.sa/customer/signup?lang=',
             },
           ],
         },

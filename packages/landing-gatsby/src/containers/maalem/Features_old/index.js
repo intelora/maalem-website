@@ -32,7 +32,6 @@ const cmsData = [
 const title = cmsItems[langIndex].websiteMaalemRow1Text.split('#'); // cmsItems[langIndex].websiteMaalemRow1Text.split('#');
 const applyNowHeading = langIndex != 0 ? 'Apply Now' : 'تطبيق الآن';
 // console.log('abcd from view 1');
-console.log('eeeeeeeeeeeeeeeeeeeeeee', title);
 const images = [
   {
     original: `${Image1}`,

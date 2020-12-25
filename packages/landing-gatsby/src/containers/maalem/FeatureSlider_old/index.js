@@ -30,9 +30,10 @@ const cmsData = [
   'Enter Your Id # Choose A Product # Apply # Get Instant Approval',
 ];
 const title = cmsItems[langIndex].websiteMaalemRow1Text.split('#'); // cmsItems[langIndex].websiteMaalemRow1Text.split('#');
-{window.sessionStorage.getItem('lang')== 'ar'? 'Apply Now' : 'تطبيق الآن';} 
+{
+  window.sessionStorage.getItem('lang') == 'ar' ? 'Apply Now' : 'تطبيق الآن';
+}
 // console.log('abcd from view 1');
-console.log('eeeeeeeeeeeeeeeeeeeeeee', title);
 const images = [
   {
     original: `${Image1}`,

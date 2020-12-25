@@ -8,7 +8,7 @@ export const navBarData = [
         { item: 'How To Apply', href: '#HowtoApplay' },
         {
           item: 'Apply Now',
-          href: 'http://122.166.172.240:3000/customer/signup?lang=',
+          href: 'https://businessportal.maalem.com.sa/customer/signup?lang=',
         },
       ],
     },
@@ -27,7 +27,7 @@ export const navBarData = [
         { item: 'كيفية التقديم', href: '#HowtoApplay' },
         {
           item: 'قدم الآن',
-          href: 'http://122.166.172.240:3000/customer/signin',
+          href: 'https://businessportal.maalem.com.sa/customer/signin',
           target: '_blank',
         },
       ],
@@ -317,12 +317,12 @@ export const cmsItems = [
     websiteMaalemRow19Col2Heading: 'Integrated digital solutions',
     websiteMaalemRow1Text:
       'Enter Your Id # Choose A Product # Apply # Get Instant Approval',
-    websiteMaalemRow2Text: 'Maalem Financing',
+    websiteMaalemRow2Text: 'Quara Finance',
     websiteMaalemRow3Text: 'Easier, faster financing',
     websiteMaalemRow4Text:
       'An application that allows you to obtain your instant financing easily',
     websiteMaalemRow5Text: 'Download the app now',
-    websiteMaalemRow6Text: 'Why finance Maalem ?',
+    websiteMaalemRow6Text: 'Why Quara Finance?',
     websiteMaalemRow7Text:
       'Milest offers the best financing solutions in the Kingdom of Saudi Arabia',
     websiteMaalemRow8Text:
@@ -350,7 +350,7 @@ export const cmsItems = [
     websiteMaalemRow15Col2TitleTextpRow5: 'Request your financing now!',
     websiteMaalemRow16Col1: 'Individuals financing',
     websiteMaalemRow16Col2: 'Enterprise financing',
-    websiteMaalemRow17Col1Title: 'Maalem financing',
+    websiteMaalemRow17Col1Title: 'Quara Finance',
     websiteMaalemRow17Col1TitleText:
       'Financing that understands and meets the needs of small and medium enterprises.',
     websiteMaalemRow17Col1TitleTextp: 'Features of Milest Fund',

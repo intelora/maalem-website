@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 
 const Layout = ({ children }) => (
-  <StaticQuery
+  <div
     query={graphql`
       query SiteTitleQuery {
         site {
@@ -13,7 +13,7 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
         <main>{children}</main>
       </>

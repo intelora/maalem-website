@@ -1,7 +1,7 @@
 {
   "name": "gatsby-landing",
   "private": true,
-  "description": "Maalem Financing Landing with Gatsby Static site generator.",
+  "description": "Quara Finance Landing with Gatsby Static site generator.",
   "version": "6.0.0",
   "dependencies": {
     "@glidejs/glide": "^3.4.1",

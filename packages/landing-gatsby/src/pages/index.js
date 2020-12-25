@@ -33,7 +33,7 @@ export default function () {
       }
     >
       <>
-        <SEO title="Maalem Financing" />
+        <SEO title="Quara Finance" />
         <Modal />
         <ResetCSS />
         <GlobalStyle />

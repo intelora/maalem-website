@@ -143,7 +143,7 @@ const Navbar = () => {
     }
   };
 
-  console.log('navMenu=', navMenu);
+  // console.log('navMenu=', navMenu);
   return (
     <NavbarWrapper
       className="navbar"
@@ -154,20 +154,23 @@ const Navbar = () => {
       }
     >
       <Container>
-        <Logo
-          href="https://maalem.com.sa/en"
-          target="_blank"
-          logoSrc={LogoImageAlt}
-          title="Maalem Financing"
-          className="main-logo"
-        />
-        <Logo
-          href="https://maalem.com.sa/en"
-          target="_blank"
-          logoSrc={LogoImageAlt}
-          title="Maalem Financing"
-          className="logo-alt"
-        />
+        <div className="imagediv">
+          <Logo
+            href="https://maalem.com.sa/en"
+            target="_blank"
+            logoSrc={LogoImageAlt}
+            title="Quara Finance"
+            className="main-logo"
+          />
+          <Logo
+            href="https://maalem.com.sa/en"
+            target="_blank"
+            logoSrc={LogoImageAlt}
+            title="Quara Finance"
+            className="logo-alt"
+          />
+        </div>
+
         {/* end of logo */}
 
         <MenuArea className={state.searchToggle ? '' : ''}>
@@ -179,7 +182,7 @@ const Navbar = () => {
 
           <a
             target="_blank"
-            href="http://122.166.172.240:3000/customer/signin?lang="
+            href="https://businessportal.maalem.com.sa/customer/signin?lang="
           >
             <Button
               title={

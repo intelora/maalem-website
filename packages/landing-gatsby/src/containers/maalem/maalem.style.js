@@ -75,11 +75,11 @@ export const AppWrapper = styled.div`
       }
       .main-logo {
         display: none;
-        width: 200px;
+        width: 60px;
       }
       .logo-alt {
         display: block;
-        width: 200px;
+        width: 60px;
       }
       .mobile-menu {
         top: 72px;

@@ -247,7 +247,7 @@ const Footer = () => {
             <div className="row">
               <a
                 className="pointer-cursor"
-                href="http://122.166.172.240:3000/customer/signup?lang="
+                href="https://businessportal.maalem.com.sa/customer/signup?lang="
               >
                 {window.sessionStorage.getItem('lang') === 'ar'
                   ? 'Apply now'
@@ -257,7 +257,7 @@ const Footer = () => {
             <div className="row">
               <a
                 className="pointer-cursor"
-                href="http://122.166.172.240:3000/customer/signin?lang="
+                href="https://businessportal.maalem.com.sa/customer/signin?lang="
               >
                 {window.sessionStorage.getItem('lang') === 'ar'
                   ? 'Login'
@@ -269,7 +269,7 @@ const Footer = () => {
             <div className="row">
               <a
                 className="pointer-cursor"
-                href="http://122.166.172.240:3000/customer/signin?lang="
+                href="https://businessportal.maalem.com.sa/customer/signin?lang="
               >
                 {window.sessionStorage.getItem('lang') === 'ar'
                   ? 'Customer'
@@ -279,7 +279,7 @@ const Footer = () => {
             <div className="row">
               <a
                 className="pointer-cursor"
-                href="http://122.166.172.240:3000/agent/signin?lang="
+                href="https://businessportal.maalem.com.sa/agent/signin?lang="
               >
                 {window.sessionStorage.getItem('lang') === 'ar'
                   ? 'Agent'
@@ -289,7 +289,7 @@ const Footer = () => {
             <div className="row">
               <a
                 className="pointer-cursor"
-                href="http://122.166.172.240:3000/business/signin?lang="
+                href="https://businessportal.maalem.com.sa/business/signin?lang="
               >
                 {window.sessionStorage.getItem('lang') === 'ar'
                   ? 'Admin'
@@ -299,7 +299,7 @@ const Footer = () => {
             <div className="row">
               <a
                 className="pointer-cursor"
-                href="http://122.166.172.240:3000/agent/sme/signin?lang="
+                href="https://businessportal.maalem.com.sa/agent/sme/signin?lang="
               >
                 {window.sessionStorage.getItem('lang') === 'ar'
                   ? 'SME'
