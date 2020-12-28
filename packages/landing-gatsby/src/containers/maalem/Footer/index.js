@@ -293,7 +293,7 @@ const Footer = ({ row, col, colOne, colTwo, titleStyle }) => {
         </Box>
         <Box className="row copyRight" {...row}>
           <Text
-            content="Copyright 2020 &copy; Quara Finance."
+            content="Copyright 2020 &copy; Maalem Financing."
             className="copyRightText"
           />
           <SocialProfile

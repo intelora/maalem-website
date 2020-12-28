@@ -317,12 +317,12 @@ export const cmsItems = [
     websiteMaalemRow19Col2Heading: 'Integrated digital solutions',
     websiteMaalemRow1Text:
       'Enter Your Id # Choose A Product # Apply # Get Instant Approval',
-    websiteMaalemRow2Text: 'Quara Finance',
+    websiteMaalemRow2Text: 'Maalem Financing',
     websiteMaalemRow3Text: 'Easier, faster financing',
     websiteMaalemRow4Text:
       'An application that allows you to obtain your instant financing easily',
     websiteMaalemRow5Text: 'Download the app now',
-    websiteMaalemRow6Text: 'Why Quara Finance?',
+    websiteMaalemRow6Text: 'Why Maalem Financing?',
     websiteMaalemRow7Text:
       'Milest offers the best financing solutions in the Kingdom of Saudi Arabia',
     websiteMaalemRow8Text:
@@ -350,7 +350,7 @@ export const cmsItems = [
     websiteMaalemRow15Col2TitleTextpRow5: 'Request your financing now!',
     websiteMaalemRow16Col1: 'Individuals financing',
     websiteMaalemRow16Col2: 'Enterprise financing',
-    websiteMaalemRow17Col1Title: 'Quara Finance',
+    websiteMaalemRow17Col1Title: 'Maalem Financing',
     websiteMaalemRow17Col1TitleText:
       'Financing that understands and meets the needs of small and medium enterprises.',
     websiteMaalemRow17Col1TitleTextp: 'Features of Milest Fund',

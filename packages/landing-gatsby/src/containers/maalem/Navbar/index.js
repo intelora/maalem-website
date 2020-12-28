@@ -158,14 +158,14 @@ const Navbar = () => {
           href="https://maalem.com.sa/en"
           target="_blank"
           logoSrc={LogoImageAlt}
-          title="Quara Finance"
+          title="Maalem Financing"
           className="main-logo"
         />
         <Logo
           href="https://maalem.com.sa/en"
           target="_blank"
           logoSrc={LogoImage}
-          title="Quara Finance"
+          title="Maalem Financing"
           className="logo-alt"
         />
 
